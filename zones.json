@@ -1,0 +1,1317 @@
+[
+    {
+        "id": -1,
+        "name": "[!] Join the Discord .gg/F8kc4FKjnw",
+        "cover": "{HTML_URL}mga-apps/discord-widget/icon.png",
+        "url": "https://discord.gg/F8kc4FKjnw"
+    },
+    {
+        "id": 0,
+        "name": "[!] Suggestions",
+        "cover": "{HTML_URL}mga-apps@main/padlet/icon.png",
+        "url": "{HTML_URL}mga-apps@main/padlet/index.html",
+        "author": "Marty Games",
+        "authorLink": "https://marty-games.github.io/",
+        "special": [
+            "Apps"
+        ]
+    },
+    {
+        "id": 1,
+        "name": "Dashmetry",
+        "cover": "{HTML_URL}mga-unity@main/dashmetry/icon.png",
+        "url": "{HTML_URL}mga-unity@main/dashmetry/index.html",
+        "author": "1games.io",
+        "authorLink": "htt://1games.io/",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "R. E. P. O",
+        "cover": "{HTML_URL}mga-unity@main/repo/icon.png",
+        "url": "{HTML_URL}mga-unity@main/repo/index.html",
+        "author": "Semiwork",
+        "authorLink": "https://semiwork.se/",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Geometry Dash SubZero (Unity)",
+        "cover": "{HTML_URL}mga-unity@main/geometry-dash-subzero/icon.png",
+        "url": "{HTML_URL}mga-unity@main/geometry-dash-subzero/index.html",
+        "author": "GeometryLite.io",
+        "authorLink": "https://geometrydash.com/",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Gorilla Tag",
+        "cover": "{HTML_URL}mga-unity@main/gorilla-tag/icon.png",
+        "url": "{HTML_URL}mga-unity@main/gorilla-tag/index.html",
+        "author": "Another Axiom",
+        "authorLink": "https://www.gorillatagvr.com/",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Doblox",
+        "cover": "{HTML_URL}mga-unity@main/doblox/icon.png",
+        "url": "{HTML_URL}mga-unity@main/doblox/index.html",
+        "author": "Yandex",
+        "authorLink": "https://www.yandex.com/",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Doomz.io",
+        "cover": "{HTML_URL}mga-unity@main/doomz-io/icon.png",
+        "url": "{HTML_URL}mga-unity@main/doomz-io/index.html",
+        "author": "FuryLine",
+        "authorLink": "https://doomz.io/",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Discord (Widget)",
+        "cover": "{HTML_URL}mga-apps@main/discord-widget/icon.png",
+        "url": "{HTML_URL}mga-apps@main/discord-widget/index.html",
+        "author": "Marty Games",
+        "authorLink": "https://marty-games.github.io/",
+        "special": [
+            "Apps"
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Getting Over It",
+        "cover": "{HTML_URL}mga-unity@main/getting-over-it/icon.png",
+        "url": "{HTML_URL}mga-unity@main/getting-over-it/index.html",
+        "author": "Bennett Foddy",
+        "authorLink": "https://foddy.net/",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Rocket Goal",
+        "cover": "{HTML_URL}mga-unity@main/rocket-goal/icon.png",
+        "url": "{HTML_URL}mga-unity@main/rocket-goal/index.html",
+        "author": "PocketHaven Games",
+        "authorLink": "https://play.google.com/store/apps/details?id=com.pockethaven.rocketgoal",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Slope",
+        "cover": "{HTML_URL}mga-unity@main/slope/icon.png",
+        "url": "{HTML_URL}mga-unity@main/slope/index.html",
+        "author": "Rob Kay",
+        "authorLink": "https://www.linkedin.com/in/robkaysf/",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 11,
+        "name": "ULTRAKILL",
+        "cover": "{HTML_URL}mga-unity@main/ultrakill/icon.png",
+        "url": "{HTML_URL}mga-unity@main/ultrakill/index.html",
+        "author": "Arsi Patala",
+        "authorLink": "https://store.steampowered.com/app/1229490/ULTRAKILL/",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Buckshot Roulette",
+        "cover": "{HTML_URL}mga-godot@main/buckshot-roulette/icon.png",
+        "url": "{HTML_URL}mga-godot@main/buckshot-roulette/index.html",
+        "author": "Mike Klubnika",
+        "authorLink": "https://mikeklubnika.itch.io/buckshot-roulette/",
+        "special": [
+            "Godot"
+        ]
+    },
+    {
+        "id": 13,
+        "name": "Geometry Dash The Seven Seas",
+        "cover": "{HTML_URL}mga-unity@main/geometry-dash-the-seven-seas/icon.png",
+        "url": "{HTML_URL}mga-unity@main/geometry-dash-the-seven-seas/index.html",
+        "author": "RobTop",
+        "authorLink": "https://play.google.com/store/apps/details?id=com.robtopx.geometrydashmeltdown",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Geometry Dash World (Unity)",
+        "cover": "{HTML_URL}mga-unity@main/geometry-dash-world/icon.png",
+        "url": "{HTML_URL}mga-unity@main/geometry-dash-world/index.html",
+        "author": "RobTop",
+        "authorLink": "https://play.google.com/store/apps/details?id=com.robtopx.geometrydashworld",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 15,
+        "name": "Geometry Dash Press Start Full",
+        "cover": "{HTML_URL}mga-unity@main/geometry-dash-press-start-full/icon.png",
+        "url": "{HTML_URL}mga-unity@main/geometry-dash-press-start-full/index.html",
+        "author": "Unknown Developer",
+        "authorLink": "https://marty-games.github.io/",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 16,
+        "name": "Rocket Soccer Derby",
+        "cover": "{HTML_URL}mga-unity@main/rocket-soccer-derby/icon.png",
+        "url": "{HTML_URL}mga-unity@main/rocket-soccer-derby/index.html",
+        "author": "Rabbit Mountain",
+        "authorLink": "https://play.google.com/store/apps/details?id=com.destructioncrew.soccerleague",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 17,
+        "name": "Cat Z Studio: Beyond Time",
+        "cover": "{HTML_URL}mga-scratch@main/cat-z-studio-beyond-time/icon.png",
+        "url": "{GITHACK_URL}mga-scratch/main/cat-z-studio-beyond-time/single-file.html",
+        "author": "hawkstudio900",
+        "authorLink": "https://github.com/hawkstudio900",
+        "special": [
+            "Scratch"
+        ]
+    },
+    {
+        "id": 18,
+        "name": "xx142-b2.exe",
+        "cover": "{HTML_URL}mga-html5@main/xx142-b2-exe/icon.png",
+        "url": "{HTML_URL}mga-html5@main/xx142-b2-exe/index.html",
+        "author": "Ben Clark & Salvatore Previti",
+        "authorLink": "https://github.com/bencoder/js13k-2019",
+        "special": [
+            "HTML5"
+        ]
+    },
+    {
+        "id": 19,
+        "name": "Trigonometry Dash v1.3.5",
+        "cover": "{HTML_URL}mga-html5@main/trigonometry-dash/v1.3.5/icon.png",
+        "url": "{HTML_URL}mga-html5@main/trigonometry-dash/v1.3.5/index.html",
+        "author": "majimellow",
+        "authorLink": "https://majimellow.itch.io/trigdash",
+        "special": [
+            "HTML5"
+        ]
+    },
+    {
+        "id": 20,
+        "name": "Raft",
+        "cover": "{HTML_URL}mga-unity@main/raft/icon.png",
+        "url": "{HTML_URL}mga-unity@main/raft/index.html",
+        "author": "Redbeet Interactive",
+        "authorLink": "https://redbeetinteractive.com/",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 21,
+        "name": "TMDb",
+        "cover": "{HTML_URL}mga-apps@main/tmdb/icon.png",
+        "url": "{HTML_URL}mga-apps@main/tmdb/index.html",
+        "author": "TMBd",
+        "authorLink": "https://www.themoviedb.org/",
+        "special": [
+            "Apps"
+        ]
+    },
+    {
+        "id": 22,
+        "name": "Jumbo AI",
+        "cover": "",
+        "url": "https://jumbo-v1.web.app/",
+        "author": "Aspect_SGK",
+        "authorLink": "#",
+        "special": [
+            "Advertisement"
+        ]
+    },
+    {
+        "id": 23,
+        "name": "[!] ChatGPT",
+        "cover": "{HTML_URL}mga-apps@main/ai-chatbot/icon.png",
+        "url": "{HTML_URL}mga-apps@main/ai-chatbot/index.html",
+        "author": "Marty Games",
+        "authorLink": "https://marty-games.github.io/",
+        "special": [
+            "Apps"
+        ]
+    },
+    {
+        "id": 24,
+        "name": "[!] Google Search",
+        "cover": "{HTML_URL}mga-apps@main/google/icon.png",
+        "url": "{HTML_URL}mga-apps@main/google/index.html",
+        "author": "Marty Games",
+        "authorLink": "https://marty-games.github.io/",
+        "special": [
+            "Apps"
+        ]
+    },
+    {
+        "id": 25,
+        "name": "Geometry Dash Deadlocked",
+        "cover": "{HTML_URL}mga-unity@main/geometry-dash-deadlocked/icon.png",
+        "url": "{HTML_URL}mga-unity@main/geometry-dash-deadlocked/index.html",
+        "author": "Unknown Developer",
+        "authorLink": "https://marty-games.github.io/",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 26,
+        "name": "Geometry Dash Breeze (Unity)",
+        "cover": "{HTML_URL}mga-unity@main/geometry-dash-breeze/icon.png",
+        "url": "{HTML_URL}mga-unity@main/geometry-dash-breeze/index.html",
+        "author": "Unknown Developer",
+        "authorLink": "https://marty-games.github.io/",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 27,
+        "name": "Geometry Dash Meltdown (Unity)",
+        "cover": "{HTML_URL}mga-unity@main/geometry-dash-meltdown/icon.png",
+        "url": "{HTML_URL}mga-unity@main/geometry-dash-meltdown/index.html",
+        "author": "Unknown Developer",
+        "authorLink": "https://marty-games.github.io/",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 28,
+        "name": "Geometry Dash Bloodbath",
+        "cover": "{HTML_URL}mga-unity@main/geometry-dash-bloodbath/icon.png",
+        "url": "{HTML_URL}mga-unity@main/geometry-dash-bloodbath/index.html",
+        "author": "Unknown Developer",
+        "authorLink": "https://marty-games.github.io/",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 29,
+        "name": "Geometry Dash Lite (Unity)",
+        "cover": "{HTML_URL}mga-unity@main/geometry-dash-lite/icon.svg",
+        "url": "{HTML_URL}mga-unity@main/geometry-dash-lite/index.html",
+        "author": "Unknown Developer",
+        "authorLink": "https://marty-games.github.io/",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 30,
+        "name": "Geometry Lite",
+        "cover": "{HTML_URL}mga-unity@main/geometry-lite-classic/icon.png",
+        "url": "{HTML_URL}mga-unity@main/geometry-lite-classic/index.html",
+        "author": "GeometryLite.io",
+        "authorLink": "https://geometrydash.com/",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 31,
+        "name": "Minecraft Pocket Edition",
+        "cover": "{HTML_URL}mga-html5@main/minecraft-pocket-edition/icon.png",
+        "url": "{HTML_URL}mga-html5@main/minecraft-pocket-edition/index.html",
+        "author": "Mojang",
+        "authorLink": "https://minecraft.net/",
+        "special": [
+            "HTML5"
+        ]
+    },
+    {
+        "id": 32,
+        "name": "Eaglercraft 1.12.2",
+        "cover": "{HTML_URL}mga-html5@main/eaglercraft-1.12.2/icon.png",
+        "url": "{HTML_URL}mga-html5@main/eaglercraft-1.12.2/index.html",
+        "author": "lax1dude",
+        "authorLink": "https://eaglercraft.com/",
+        "special": [
+            "HTML5"
+        ]
+    },
+    {
+        "id": 33,
+        "name": "Eaglercraft 1.5.2",
+        "cover": "{HTML_URL}mga-html5@main/eaglercraft-1.5.2/icon.png",
+        "url": "{HTML_URL}mga-html5@main/eaglercraft-1.5.2/index.html",
+        "author": "lax1dude",
+        "authorLink": "https://eaglercraft.com/",
+        "special": [
+            "HTML5"
+        ]
+    },
+    {
+        "id": 34,
+        "name": "Eaglercraft 1.8.8",
+        "cover": "{HTML_URL}mga-html5@main/eaglercraft-1.8.8/icon.png",
+        "url": "{HTML_URL}mga-html5@main/eaglercraft-1.8.8/index.html",
+        "author": "lax1dude",
+        "authorLink": "https://eaglercraft.com/",
+        "special": [
+            "HTML5"
+        ]
+    },
+    {
+        "id": 35,
+        "name": "Eaglercraft Beta 1.3",
+        "cover": "{HTML_URL}mga-html5@main/eaglercraft-beta-1.3/icon.png",
+        "url": "{HTML_URL}mga-html5@main/eaglercraft-beta-1.3/index.html",
+        "author": "lax1dude",
+        "authorLink": "https://eaglercraft.com/",
+        "special": [
+            "HTML5"
+        ]
+    },
+    {
+        "id": 36,
+        "name": "Eaglercraft Beta 1.7.3",
+        "cover": "{HTML_URL}mga-html5@main/eaglercraft-beta-1.7.3/icon.png",
+        "url": "{HTML_URL}mga-html5@main/eaglercraft-beta-1.7.3/index.html",
+        "author": "lax1dude",
+        "authorLink": "https://eaglercraft.com/",
+        "special": [
+            "HTML5"
+        ]
+    },
+    {
+        "id": 37,
+        "name": "Eaglercraft Alpha 1.2.6",
+        "cover": "{HTML_URL}mga-html5@main/eaglercraft-alpha-1.2.6/icon.png",
+        "url": "{HTML_URL}mga-html5@main/eaglercraft-alpha-1.2.6/index.html",
+        "author": "lax1dude",
+        "authorLink": "https://eaglercraft.com/",
+        "special": [
+            "HTML5"
+        ]
+    },
+    {
+        "id": 38,
+        "name": "Eaglercraft Indev",
+        "cover": "{HTML_URL}mga-html5@main/eaglercraft-indev/icon.png",
+        "url": "{HTML_URL}mga-html5@main/eaglercraft-indev/index.html",
+        "author": "lax1dude",
+        "authorLink": "https://eaglercraft.com/",
+        "special": [
+            "HTML5"
+        ]
+    },
+    {
+        "id": 39,
+        "name": "Minecraft 1.12.2",
+        "cover": "{HTML_URL}mga-html5@main/eaglercraft-1.12.2/icon.png",
+        "url": "{HTML_URL}mga-html5@main/eaglercraft-1.12.2/index.html",
+        "author": "lax1dude",
+        "authorLink": "https://eaglercraft.com/",
+        "special": [
+            "HTML5"
+        ]
+    },
+    {
+        "id": 40,
+        "name": "Minecraft 1.5.2",
+        "cover": "{HTML_URL}mga-html5@main/eaglercraft-1.5.2/icon.png",
+        "url": "{HTML_URL}mga-html5@main/eaglercraft-1.5.2/index.html",
+        "author": "lax1dude",
+        "authorLink": "https://eaglercraft.com/",
+        "special": [
+            "HTML5"
+        ]
+    },
+    {
+        "id": 41,
+        "name": "Minecraft 1.8.8",
+        "cover": "{HTML_URL}mga-html5@main/eaglercraft-1.8.8/icon.png",
+        "url": "{HTML_URL}mga-html5@main/eaglercraft-1.8.8/index.html",
+        "author": "lax1dude",
+        "authorLink": "https://eaglercraft.com/",
+        "special": [
+            "HTML5"
+        ]
+    },
+    {
+        "id": 42,
+        "name": "Minecraft Beta 1.3",
+        "cover": "{HTML_URL}mga-html5@main/eaglercraft-beta-1.3/icon.png",
+        "url": "{HTML_URL}mga-html5@main/eaglercraft-beta-1.3/index.html",
+        "author": "lax1dude",
+        "authorLink": "https://eaglercraft.com/",
+        "special": [
+            "HTML5"
+        ]
+    },
+    {
+        "id": 36,
+        "name": "Minecraft Beta 1.7.3",
+        "cover": "{HTML_URL}mga-html5@main/eaglercraft-beta-1.7.3/icon.png",
+        "url": "{HTML_URL}mga-html5@main/eaglercraft-beta-1.7.3/index.html",
+        "author": "lax1dude",
+        "authorLink": "https://eaglercraft.com/",
+        "special": [
+            "HTML5"
+        ]
+    },
+    {
+        "id": 43,
+        "name": "Minecraft Alpha 1.2.6",
+        "cover": "{HTML_URL}mga-html5@main/eaglercraft-alpha-1.2.6/icon.png",
+        "url": "{HTML_URL}mga-html5@main/eaglercraft-alpha-1.2.6/index.html",
+        "author": "lax1dude",
+        "authorLink": "https://eaglercraft.com/",
+        "special": [
+            "HTML5"
+        ]
+    },
+    {
+        "id": 44,
+        "name": "Minecraft Indev",
+        "cover": "{HTML_URL}mga-html5@main/eaglercraft-indev/icon.png",
+        "url": "{HTML_URL}mga-html5@main/eaglercraft-indev/index.html",
+        "author": "lax1dude",
+        "authorLink": "https://eaglercraft.com/",
+        "special": [
+            "HTML5"
+        ]
+    },
+    {
+        "id": 45,
+        "name": "CloudMoon",
+        "cover": "{HTML_URL}mga-apps@main/cloudmoon/icon.png",
+        "url": "{HTML_URL}mga-apps@main/cloudmoon/index.html",
+        "author": "Nenly Limited",
+        "authorLink": "https://hk.linkedin.com/company/nenly",
+        "special": [
+            "Apps"
+        ]
+    },
+    {
+        "id": 46,
+        "name": "Five Nights at Freddy's",
+        "cover": "{HTML_URL}mga-clickteam@main/five-nights-at-freddys/icon.png",
+        "url": "{HTML_URL}mga-clickteam@main/five-nights-at-freddys/index.html",
+        "author": "Scott Cawthon",
+        "authorLink": "https://www.youtube.com/channel/UC2Xp5JeeO9sP6bhc-9yD1xA",
+        "special": [
+            "ClickTeam Fusion"
+        ]
+    },
+    {
+        "id": 47,
+        "name": "Web Dashers",
+        "cover": "{HTML_URL}mga-html5@main/web-dashers/icon.png",
+        "url": "{HTML_URL}mga-html5@main/web-dashers/index.html",
+        "author": "web-dashers.github.io",
+        "authorLink": "https://web-dashers.github.io",
+        "special": [
+            "HTML5"
+        ]
+    },
+    {
+        "id": 48,
+        "name": "Spooky Dash",
+        "cover": "{HTML_URL}mga-unity@main/spooky-dash/icon.png",
+        "url": "{HTML_URL}mga-unity@main/spooky-dash/index.html",
+        "author": "GeometryLite.io",
+        "authorLink": "https://geometrydash.com/",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 49,
+        "name": "Doki Doki Literature Club!",
+        "cover": "{HTML_URL}mga-renpy@main/doki-doki-literature-club/icon.png",
+        "url": "{HTML_URL}mga-renpy@main/doki-doki-literature-club/index.html",
+        "author": "Team Salvato",
+        "authorLink": "https://teamsalvato.itch.io/ddlc",
+        "special": [
+            "Ren'Py"
+        ]
+    },
+    {
+        "id": 50,
+        "name": "Famidash",
+        "cover": "{HTML_URL}mga-emulatorjs@main/famidash/icon.png",
+        "url": "{HTML_URL}mga-emulatorjs@main/famidash/index.html",
+        "author": "TFD Soft",
+        "authorLink": "https://github.com/tfdsoft/",
+        "special": [
+            "EmulatorJS"
+        ]
+    },
+    {
+        "id": 51,
+        "name": "Grand Theft Auto",
+        "cover": "{HTML_URL}mga-emulatorjs@main/grand-theft-auto/icon.png",
+        "url": "{HTML_URL}mga-emulatorjs@main/grand-theft-auto/playstation.html",
+        "author": "Rockstar Games",
+        "authorLink": "https://www.rockstargames.com/",
+        "special": [
+            "EmulatorJS"
+        ]
+    },
+    {
+        "id": 52,
+        "name": "Grand Theft Auto Advance",
+        "cover": "{HTML_URL}mga-emulatorjs@main/grand-theft-auto-advance/icon.png",
+        "url": "{HTML_URL}mga-emulatorjs@main/grand-theft-auto-advance/gameboy.html",
+        "author": "Rockstar Games",
+        "authorLink": "https://www.rockstargames.com/",
+        "special": [
+            "EmulatorJS"
+        ]
+    },
+    {
+        "id": 53,
+        "name": "Undertale",
+        "cover": "{HTML_URL}mga-gamemaker@main/undertale/icon.png",
+        "url": "{HTML_URL}mga-gamemaker@main/undertale/index.html",
+        "author": "Toby Fox",
+        "authorLink": "https://undertale.com/",
+        "special": [
+            "GameMaker"
+        ]
+    },
+    {
+        "id": 54,
+        "name": "Deltarune",
+        "cover": "{HTML_URL}mga-gamemaker@main/deltarune/icon.png",
+        "url": "{HTML_URL}mga-gamemaker@main/deltarune/index.html",
+        "author": "Toby Fox",
+        "authorLink": "https://undertale.com/",
+        "special": [
+            "GameMaker"
+        ]
+    },
+    {
+        "id": 55,
+        "name": "Undertale Yellow",
+        "cover": "{HTML_URL}mga-gamemaker@main/undertale-yellow/icon.png",
+        "url": "{HTML_URL}mga-gamemaker@main/undertale-yellow/index.html",
+        "author": "Team Undertale Yellow",
+        "authorLink": "https://gamejolt.com/games/UndertaleYellow/136925",
+        "special": [
+            "GameMaker"
+        ]
+    },
+    {
+        "id": 56,
+        "name": "Pizza Tower",
+        "cover": "{HTML_URL}mga-gamemaker@main/pizza-tower/icon.png",
+        "url": "{HTML_URL}mga-gamemaker@main/pizza-tower/index.html",
+        "author": "Tour De Pizza",
+        "authorLink": "https://store.steampowered.com/app/2231450/Pizza_Tower/",
+        "special": [
+            "GameMaker"
+        ]
+    },
+    {
+        "id": 57,
+        "name": "Andy's Apple Farm",
+        "cover": "{HTML_URL}mga-gamemaker@main/andys-apple-farm/icon.png",
+        "url": "{HTML_URL}mga-gamemaker@main/andys-apple-farm/index.html",
+        "author": "M36 Games",
+        "authorLink": "m36games.itch.io/applefarm",
+        "special": [
+            "GameMaker"
+        ]
+    },
+    {
+        "id": 58,
+        "name": "Retro Bowl",
+        "cover": "{HTML_URL}mga-gamemaker@main/retro-bowl/icon.png",
+        "url": "{HTML_URL}mga-gamemaker@main/retro-bowl/index.html",
+        "author": "New Star Games",
+        "authorLink": "https://www.newstargames.com/",
+        "special": [
+            "GameMaker"
+        ]
+    },
+    {
+        "id": 59,
+        "name": "Retro Bowl College",
+        "cover": "{HTML_URL}mga-gamemaker@main/retro-bowl-college/icon.png",
+        "url": "{HTML_URL}mga-gamemaker@main/retro-bowl-college/index.html",
+        "author": "New Star Games",
+        "authorLink": "https://www.newstargames.com/",
+        "special": [
+            "GameMaker"
+        ]
+    },
+    {
+        "id": 60,
+        "name": "Happy Sheepies",
+        "cover": "{HTML_URL}mga-gamemaker@main/happy-sheepies/icon.png",
+        "url": "{HTML_URL}mga-gamemaker@main/happy-sheepies/index.html",
+        "author": "Berker Games",
+        "authorLink": "https://berkergames.itch.io/happy-sheepies",
+        "special": [
+            "GameMaker"
+        ]
+    },
+    {
+        "id": 61,
+        "name": "SONIC.EXE",
+        "cover": "{HTML_URL}mga-gamemaker@main/sonic-exe/icon.png",
+        "url": "{HTML_URL}mga-gamemaker@main/sonic-exe/index.html",
+        "author": "MY5TCrimson",
+        "authorLink": "https://gamejolt.com/games/sonic-exe-the-game/16239",
+        "special": [
+            "GameMaker"
+        ]
+    },
+    {
+        "id": 62,
+        "name": "SlopeBall.io",
+        "cover": "{HTML_URL}mga-unity@main/slopeball-io/icon.png",
+        "url": "{HTML_URL}mga-unity@main/slopeball-io/index.html",
+        "author": "SlopeBall.io",
+        "authorLink": "https://slopeball.io/",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 63,
+        "name": "Soundboard",
+        "cover": "{HTML_URL}mga-apps@main/soundboard-genizy/icon.png",
+        "url": "{HTML_URL}mga-apps@main/soundboard-genizy/index.html",
+        "author": "Genizy",
+        "authorLink": "https://github.com/genizy/",
+        "special": [
+            "Apps"
+        ]
+    },
+    {
+        "id": 64,
+        "name": "EmulatorJS",
+        "cover": "{HTML_URL}mga-apps@main/emulatorjs/icon.png",
+        "url": "{HTML_URL}mga-apps@main/emulatorjs/index.html",
+        "author": "EmulatorJS.org",
+        "authorLink": "https://emulatorjs.org/",
+        "special": [
+            "Apps"
+        ]
+    },
+    {
+        "id": 65,
+        "name": "Pixel Chat",
+        "cover": "{HTML_URL}mga-apps@main/pixel-chat/icon.png",
+        "url": "{HTML_URL}mga-apps@main/pixel-chat/index.html",
+        "author": "Classroom Center",
+        "authorLink": "https://sites.google.com/classroom.center/view-1/",
+        "special": [
+            "Apps"
+        ]
+    },
+    {
+        "id": 66,
+        "name": "Grand Theft Auto 2 (Gameboy)",
+        "cover": "{HTML_URL}mga-emulatorjs@main/grand-theft-auto-2/icon.png",
+        "url": "{HTML_URL}mga-emulatorjs@main/grand-theft-auto-2/gameboy.html",
+        "author": "Rockstar Games",
+        "authorLink": "https://www.rockstargames.com/",
+        "special": [
+            "EmulatorJS"
+        ]
+    },
+    {
+        "id": 67,
+        "name": "Grand Theft Auto 2 (PlayStation)",
+        "cover": "{HTML_URL}mga-emulatorjs@main/grand-theft-auto-2/icon.png",
+        "url": "{HTML_URL}mga-emulatorjs@main/grand-theft-auto-2/playstation.html",
+        "author": "Rockstar Games",
+        "authorLink": "https://www.rockstargames.com/",
+        "special": [
+            "EmulatorJS"
+        ]
+    },
+    {
+        "id": 68,
+        "name": "Grand Theft Auto: Chinatown Wars",
+        "cover": "{HTML_URL}mga-emulatorjs@main/grand-theft-auto-chinatown-wars/icon.png",
+        "url": "{HTML_URL}mga-emulatorjs@main/grand-theft-auto-chinatown-wars/nintendo-ds.html",
+        "author": "Rockstar Games",
+        "authorLink": "https://www.rockstargames.com/",
+        "special": [
+            "EmulatorJS"
+        ]
+    },
+    {
+        "id": 69,
+        "name": "Super Smash Bros.",
+        "cover": "{HTML_URL}mga-emulatorjs@main/super-smash-bros/icon.png",
+        "url": "{HTML_URL}mga-emulatorjs@main/super-smash-bros/nintendo-64.html",
+        "author": "HAL Laboratory",
+        "authorLink": "https://www.hallab.co.jp/eng/",
+        "special": [
+            "EmulatorJS"
+        ]
+    },
+    {
+        "id": 70,
+        "name": "Grand Theft Auto: San Andreas",
+        "cover": "{HTML_URL}mga-emulatorjs@main/grand-theft-auto-san-andreas/icon.svg",
+        "url": "{HTML_URL}mga-emulatorjs@main/grand-theft-auto-san-andreas/playstation.html",
+        "author": "Rockstar Games",
+        "authorLink": "https://www.rockstargames.com/",
+        "special": [
+            "EmulatorJS"
+        ]
+    },
+    {
+        "id": 71,
+        "name": "Eaglercraft 1.20.4",
+        "cover": "{HTML_URL}mga-html5@main/eaglercraft-1.20.4/icon.svg",
+        "url": "{HTML_URL}mga-html5@main/eaglercraft-1.20.4/index.html",
+        "author": "EaglercraftZ",
+        "authorLink": "https://eaglercraftz.pages.dev/",
+        "special": [
+            "HTML5"
+        ]
+    },
+    {
+        "id": 72,
+        "name": "Minecraft 1.20.4",
+        "cover": "{HTML_URL}mga-html5@main/eaglercraft-1.20.4/icon.svg",
+        "url": "{HTML_URL}mga-html5@main/eaglercraft-1.20.4/index.html",
+        "author": "EaglercraftZ",
+        "authorLink": "https://eaglercraftz.pages.dev/",
+        "special": [
+            "HTML5"
+        ]
+    },
+    {
+        "id": 73,
+        "name": "Angry Birds",
+        "cover": "{HTML_URL}mga-flash@main/angry-birds/icon.png",
+        "url": "{HTML_URL}mga-flash@main/angry-birds/index.html",
+        "author": "Rovio",
+        "authorLink": "https://www.rovio.com/",
+        "special": [
+            "Flash"
+        ]
+    },
+    {
+        "id": 74,
+        "name": "Spotify Preview",
+        "cover": "{HTML_URL}mga-apps@main/cinify/icon.png",
+        "url": "{HTML_URL}mga-apps@main/cinify/index.html",
+        "author": "Marty Games",
+        "authorLink": "https://marty-games.github.io/",
+        "special": [
+            "Apps"
+        ]
+    },
+    {
+        "id": 75,
+        "name": "Five Nights at Freddy's 2",
+        "cover": "{HTML_URL}mga-clickteam@main/five-nights-at-freddys-2/icon.png",
+        "url": "{HTML_URL}mga-clickteam@main/five-nights-at-freddys-2/index.html",
+        "author": "Scott Cawthon",
+        "authorLink": "https://www.youtube.com/channel/UC2Xp5JeeO9sP6bhc-9yD1xA",
+        "special": [
+            "ClickTeam Fusion"
+        ]
+    },
+    {
+        "id": 76,
+        "name": "Five Nights at Freddy's 3",
+        "cover": "{HTML_URL}mga-clickteam@main/five-nights-at-freddys-3/icon.png",
+        "url": "{HTML_URL}mga-clickteam@main/five-nights-at-freddys-3/index.html",
+        "author": "Scott Cawthon",
+        "authorLink": "https://www.youtube.com/channel/UC2Xp5JeeO9sP6bhc-9yD1xA",
+        "special": [
+            "ClickTeam Fusion"
+        ]
+    },
+    {
+        "id": 77,
+        "name": "Five Nights at Freddy's 4",
+        "cover": "{HTML_URL}mga-clickteam@main/five-nights-at-freddys-4/icon.png",
+        "url": "{HTML_URL}mga-clickteam@main/five-nights-at-freddys-4/index.html",
+        "author": "Scott Cawthon",
+        "authorLink": "https://www.youtube.com/channel/UC2Xp5JeeO9sP6bhc-9yD1xA",
+        "special": [
+            "ClickTeam Fusion"
+        ]
+    },
+    {
+        "id": 78,
+        "name": "Five Nights at Freddy's 4 Halloween",
+        "cover": "{HTML_URL}mga-clickteam@main/five-nights-at-freddys-4-halloween/icon.png",
+        "url": "{HTML_URL}mga-clickteam@main/five-nights-at-freddys-4-halloween/index.html",
+        "author": "Scott Cawthon",
+        "authorLink": "https://www.youtube.com/channel/UC2Xp5JeeO9sP6bhc-9yD1xA",
+        "special": [
+            "ClickTeam Fusion"
+        ]
+    },
+    {
+        "id": 79,
+        "name": "Five Nights at Freddy's World",
+        "cover": "{HTML_URL}mga-clickteam@main/five-nights-at-freddys-world/icon.png",
+        "url": "{HTML_URL}mga-clickteam@main/five-nights-at-freddys-world/index.html",
+        "author": "Scott Cawthon",
+        "authorLink": "https://www.youtube.com/channel/UC2Xp5JeeO9sP6bhc-9yD1xA",
+        "special": [
+            "ClickTeam Fusion"
+        ]
+    },
+    {
+        "id": 80,
+        "name": "Five Nights at Freddy's: Sister Location",
+        "cover": "{HTML_URL}mga-clickteam@main/five-nights-at-freddys-sister-location/icon.png",
+        "url": "{HTML_URL}mga-clickteam@main/five-nights-at-freddys-sister-location/index.html",
+        "author": "Scott Cawthon",
+        "authorLink": "https://www.youtube.com/channel/UC2Xp5JeeO9sP6bhc-9yD1xA",
+        "special": [
+            "ClickTeam Fusion"
+        ]
+    },
+    {
+        "id": 81,
+        "name": "Freddy Fazbear's Pizzaria Simulator",
+        "cover": "{HTML_URL}mga-clickteam@main/freddy-fazbears-pizzaria-simulator/icon.png",
+        "url": "{HTML_URL}mga-clickteam@main/freddy-fazbears-pizzaria-simulator/index.html",
+        "author": "Scott Cawthon",
+        "authorLink": "https://www.youtube.com/channel/UC2Xp5JeeO9sP6bhc-9yD1xA",
+        "special": [
+            "ClickTeam Fusion"
+        ]
+    },
+    {
+        "id": 82,
+        "name": "Ultimate Custom Night",
+        "cover": "{HTML_URL}mga-clickteam@main/ultimate-custom-night/icon.png",
+        "url": "{HTML_URL}mga-clickteam@main/ultimate-custom-night/index.html",
+        "author": "Scott Cawthon",
+        "authorLink": "https://www.youtube.com/channel/UC2Xp5JeeO9sP6bhc-9yD1xA",
+        "special": [
+            "ClickTeam Fusion"
+        ]
+    },
+    {
+        "id": 83,
+        "name": "Escape Road",
+        "cover": "{HTML_URL}mga-unity@main/escape-road/icon.png",
+        "url": "{HTML_URL}mga-unity@main/escape-road/index.html",
+        "author": "1games.io",
+        "authorLink": "htt://1games.io",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 84,
+        "name": "Five Nights at Freddy's 3 Remastered",
+        "cover": "{HTML_URL}mga-godot@main/five-nights-at-freddys-3-remastered/icon.png",
+        "url": "{HTML_URL}mga-godot@main/five-nights-at-freddys-3-remastered/index.html",
+        "author": "lan4ikdev",
+        "authorLink": "https://gamejolt.com/@lan4ikdev",
+        "special": [
+            "Godot"
+        ]
+    },
+    {
+        "id": 85,
+        "name": "Dblox.io",
+        "cover": "{HTML_URL}mga-html5@main/dblox-io/icon.png",
+        "url": "{HTML_URL}mga-html5@main/dblox-io/index.html",
+        "author": "Martin_MMC",
+        "authorLink": "https://github.com/martinmmcyt",
+        "special": [
+            "HTML5"
+        ]
+    },
+    {
+        "id": 86,
+        "name": "Angry Birds Showdown",
+        "cover": "{HTML_URL}mga-html5@main/angry-birds-showdown/icon.png",
+        "url": "{HTML_URL}mga-html5@main/angry-birds-showdown/index.html",
+        "author": "Rovio",
+        "authorLink": "https://rovio.com",
+        "special": [
+            "HTML5"
+        ]
+    },
+    {
+        "id": 87,
+        "name": "Russian Car Driver",
+        "cover": "{HTML_URL}mga-unity@main/russian-car-driver/icon.png",
+        "url": "{HTML_URL}mga-unity@main/russian-car-driver/index.html",
+        "author": "IDnet",
+        "authorLink": "#",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 88,
+        "name": "Slope 2",
+        "cover": "{HTML_URL}mga-unity@main/slope-2/icon.png",
+        "url": "{HTML_URL}mga-unity@main/slope-2/index.html",
+        "author": "Unknown",
+        "authorLink": "#",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 89,
+        "name": "Slope 3",
+        "cover": "{HTML_URL}mga-unity@main/slope-3/icon.png",
+        "url": "{HTML_URL}mga-unity@main/slope-3/index.html",
+        "author": "Unknown",
+        "authorLink": "#",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 90,
+        "name": "Slope 2 Player",
+        "cover": "{HTML_URL}mga-unity@main/slope-2-player/icon.png",
+        "url": "{HTML_URL}mga-unity@main/slope-2-player/index.html",
+        "author": "Unknown",
+        "authorLink": "#",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 91,
+        "name": "Angry Birds 2",
+        "cover": "{HTML_URL}mga-unity@main/angry-birds-2/icon.png",
+        "url": "{HTML_URL}mga-unity@main/angry-birds-2/index.html",
+        "author": "Rovio",
+        "authorLink": "https://rovio.com",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 92,
+        "name": "Flying Gorilla",
+        "cover": "{HTML_URL}mga-unity@main/flying-gorilla/icon.png",
+        "url": "{HTML_URL}mga-unity@main/flying-gorilla/index.html",
+        "author": "Pinbit",
+        "authorLink": "https://play.google.com/store/apps/details?id=jp.pinbit.flygorilla",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 93,
+        "name": "Hollow Knight",
+        "cover": "{HTML_URL}mga-unity@main/hollow-knight/icon.png",
+        "url": "{HTML_URL}mga-unity@main/hollow-knight/index.html",
+        "author": "Team Cherry",
+        "authorLink": "https://www.teamcherry.com.au/",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 94,
+        "name": "Subway Surfers: Zurich",
+        "cover": "{HTML_URL}mga-unity@main/subway-surfers-zurich/icon.png",
+        "url": "{HTML_URL}mga-unity@main/subway-surfers-zurich/index.html",
+        "author": "Kiloo Games and SYBO Games",
+        "authorLink": "https://play.google.com/store/apps/dev?id=7363891306616760846&hl=en_US",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 95,
+        "name": "Fears to Fathom: Home Alone",
+        "cover": "{HTML_URL}mga-unity@main/fears-to-fathom-home-alone/icon.png",
+        "url": "{HTML_URL}mga-unity@main/fears-to-fathom-home-alone/index.html",
+        "author": "Rayll",
+        "authorLink": "https://www.rayllstudios.com/",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 96,
+        "name": "Xmas Dash",
+        "cover": "{HTML_URL}mga-unity@main/xmas-dash/icon.png",
+        "url": "{HTML_URL}mga-unity@main/xmas-dash/index.html",
+        "author": "GeometryLite.io",
+        "authorLink": "https://geometrydash.com/",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 97,
+        "name": "Escape Road 2",
+        "cover": "{HTML_URL}mga-unity@main/escape-road-2/icon.png",
+        "url": "{HTML_URL}mga-unity@main/escape-road-2/index.html",
+        "author": "1games.io",
+        "authorLink": "htt://1games.io",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 99,
+        "name": "Escape Road City 2",
+        "cover": "{HTML_URL}mga-unity@main/escape-road-city-2/icon.png",
+        "url": "{HTML_URL}mga-unity@main/escape-road-city-2/index.html",
+        "author": "1games.io",
+        "authorLink": "htt://1games.io",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 100,
+        "name": "1v1.lol",
+        "cover": "{HTML_URL}mga-unity@main/1v1-lol/icon.png",
+        "url": "{HTML_URL}mga-unity@main/1v1-lol/index.html",
+        "author": "JustPlay.io",
+        "authorLink": "https://play.google.com/store/apps/dev?id=7065081805875144950",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 101,
+        "name": "10-103",
+        "cover": "{HTML_URL}mga-unity@main/10-103/icon.png",
+        "url": "{HTML_URL}mga-unity@main/10-103/index.html",
+        "author": "Nerdspartan",
+        "authorLink": "https://nerdspartan.itch.io/",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 102,
+        "name": "10-103: Null Kelvin",
+        "cover": "{HTML_URL}mga-unity@main/10-103-null-kevin/icon.png",
+        "url": "{HTML_URL}mga-unity@main/10-103-null-kevin/index.html",
+        "author": "Nerdspartan",
+        "authorLink": "https://nerdspartan.itch.io/",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 103,
+        "name": "Subway Surfers: Iceland",
+        "cover": "{HTML_URL}mga-unity@main/subway-surfers-iceland/icon.png",
+        "url": "{HTML_URL}mga-unity@main/subway-surfers-iceland/index.html",
+        "author": "Kiloo Games and SYBO Games",
+        "authorLink": "https://play.google.com/store/apps/dev?id=7363891306616760846&hl=en_US",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 104,
+        "name": "Escape Road 3",
+        "cover": "{HTML_URL}mga-unity@main/escape-road-3/icon.png",
+        "url": "{HTML_URL}mga-unity@main/escape-road-3/index.html",
+        "author": "1games.io",
+        "authorLink": "htt://1games.io",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 105,
+        "name": "Clash of Vikings",
+        "cover": "{HTML_URL}mga-html5@main/clash-of-vikings/icon.png",
+        "url": "{HTML_URL}mga-html5@main/clash-of-vikings/index.html",
+        "author": "MarketJS",
+        "authorLink": "https://www.marketjs.com/",
+        "special": [
+            "HTML5"
+        ]
+    },
+    {
+        "id": 106,
+        "name": "Friday Night Funkin'",
+        "cover": "{HTML_URL}mga-haxeflixel@main/friday-night-funkin/icon.png",
+        "url": "{HTML_URL}mga-haxeflixel@main/friday-night-funkin/index.html",
+        "author": "The Funkin' Crew Inc.",
+        "authorLink": "https://funkin.me/",
+        "special": [
+            "HaxeFlixel"
+        ]
+    },
+    {
+        "id": 107,
+        "name": "Friday Night Funkin' vs Whitty",
+        "cover": "{HTML_URL}mga-haxeflixel@main/friday-night-funkin-vs-whitty/icon.png",
+        "url": "{HTML_URL}mga-haxeflixel@main/friday-night-funkin-vs-whitty/index.html",
+        "author": "The Funkin' Crew Inc.",
+        "authorLink": "https://funkin.me/",
+        "special": [
+            "HaxeFlixel"
+        ]
+    },
+    {
+        "id": 108,
+        "name": "Friday Night Funkin' vs Tricky",
+        "cover": "{HTML_URL}mga-haxeflixel@main/friday-night-funkin-vs-tricky/icon.png",
+        "url": "{HTML_URL}mga-haxeflixel@main/friday-night-funkin-vs-tricky/index.html",
+        "author": "The Funkin' Crew Inc.",
+        "authorLink": "https://funkin.me/",
+        "special": [
+            "HaxeFlixel"
+        ]
+    },
+    {
+        "id": 109,
+        "name": "Friday Night Funkin' vs Hex",
+        "cover": "{HTML_URL}mga-haxeflixel@main/friday-night-funkin-vs-hex/icon.png",
+        "url": "{HTML_URL}mga-haxeflixel@main/friday-night-funkin-vs-hex/index.html",
+        "author": "The Funkin' Crew Inc.",
+        "authorLink": "https://funkin.me/",
+        "special": [
+            "HaxeFlixel"
+        ]
+    },
+    {
+        "id": 110,
+        "name": "Friday Night Funkin' vs Zardy",
+        "cover": "{HTML_URL}mga-haxeflixel@main/friday-night-funkin-vs-zardy/icon.png",
+        "url": "{HTML_URL}mga-haxeflixel@main/friday-night-funkin-vs-zardy/index.html",
+        "author": "The Funkin' Crew Inc.",
+        "authorLink": "https://funkin.me/",
+        "special": [
+            "HaxeFlixel"
+        ]
+    },
+    {
+        "id": 111,
+        "name": "Friday Night Funkin' vs Hatsune Miku",
+        "cover": "{HTML_URL}mga-haxeflixel@main/friday-night-funkin-vs-hatsune-miku/icon.png",
+        "url": "{HTML_URL}mga-haxeflixel@main/friday-night-funkin-vs-hatsune-miku/index.html",
+        "author": "The Funkin' Crew Inc.",
+        "authorLink": "https://funkin.me/",
+        "special": [
+            "HaxeFlixel"
+        ]
+    },
+    {
+        "id": 112,
+        "name": "Friday Night Funkin' Undertale",
+        "cover": "{HTML_URL}mga-haxeflixel@main/friday-night-funkin-undertale/icon.png",
+        "url": "{HTML_URL}mga-haxeflixel@main/friday-night-funkin-undertale/index.html",
+        "author": "The Funkin' Crew Inc.",
+        "authorLink": "https://funkin.me/",
+        "special": [
+            "HaxeFlixel"
+        ]
+    },
+    {
+        "id": 113,
+        "name": "Animation vs Friday Night Funkin'",
+        "cover": "{HTML_URL}mga-haxeflixel@main/animation-vs-friday-night-funkin/icon.png",
+        "url": "{HTML_URL}mga-haxeflixel@main/animation-vs-friday-night-funkin/index.html",
+        "author": "The Funkin' Crew Inc.",
+        "authorLink": "https://funkin.me/",
+        "special": [
+            "HaxeFlixel"
+        ]
+    },
+    {
+        "id": 114,
+        "name": "Nazi Zombies: Portable",
+        "cover": "{HTML_URL}mga-html5@main/nazi-zombies-portable/icon.png",
+        "url": "{HTML_URL}mga-html5@main/nazi-zombies-portable/index.html",
+        "author": "NZ: P Team",
+        "authorLink": "https://github.com/nzp-team/",
+        "special": [
+            "HTML5"
+        ]
+    },
+    {
+        "id": 115,
+        "name": "Brawl Stars",
+        "cover": "{HTML_URL}mga-unity@main/brawl-simulator-3d/icon.png",
+        "url": "{HTML_URL}mga-unity@main/brawl-simulator-3d/index.html",
+        "author": "Yandex Games",
+        "authorLink": "https://yandex.com/",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 116,
+        "name": "Angry Birds Chrome",
+        "cover": "{HTML_URL}mga-html5@main/angry-birds-chrome/icon.png",
+        "url": "{HTML_URL}mga-html5@main/angry-birds-chrome/index.html",
+        "author": "Rovio",
+        "authorLink": "https://rovio.com",
+        "special": [
+            "HTML5"
+        ]
+    },
+    {
+        "id": 117,
+        "name": "Hill Climb Racing 2",
+        "cover": "{HTML_URL}mga-scratch@main/hill-climb-racing-2/icon.png",
+        "url": "{GITHACK_URL}mga-scratch/main/hill-climb-racing-2/single-file.html",
+        "author": "Martin_MMC",
+        "authorLink": "https://scratch.mit.edu/users/martin_mmc/",
+        "special": [
+            "Scratch"
+        ]
+    },
+    {
+        "id": 118,
+        "name": "Among Us",
+        "cover": "{HTML_URL}mga-scratch@main/among-us/icon.png",
+        "url": "{GITHACK_URL}mga-scratch/main/among-us/single-file.html",
+        "author": "TimMcCool & Innersloth",
+        "authorLink": "https://scratch.mit.edu/users/timmccool/",
+        "special": [
+            "Scratch"
+        ]
+    }
+]
