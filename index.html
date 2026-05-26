@@ -22,59 +22,59 @@
     <meta name="twitter:description" content="Play unbl*cked games like Geometry Dash and Gorilla Tag on Marty Games. Fast, free, no downloads—perfect for school or home.">
 
     <script>
-    (async function() {
-        // 1. Define your list of fallback URLs in order of preference
-        const fallbackUrls = [
-            "https://marty-games.github.io/",
-            "https://cdn.jsdelivr.net/gh/marty-games/marty-games.github.io@main/",
-            "https://fastly.jsdelivr.net/gh/marty-games/marty-games.github.io@main/", // Backup CDN 1
-            "https://gcore.jsdelivr.net/gh/marty-games/marty-games.github.io@main/",  // Backup CDN 2
-            "https://testingcf.jsdelivr.net/gh/marty-games/marty-games.github.io@main/", // Backup CDN 3 (Unstable)
-        ];
+        (async function() {
+            // 1. Define your list of fallback URLs in order of preference
+            const fallbackUrls = [
+                "https://marty-games.github.io/",
+                "https://cdn.jsdelivr.net/gh/marty-games/marty-games.github.io@main/",
+                "https://fastly.jsdelivr.net/gh/marty-games/marty-games.github.io@main/", // Backup CDN 1
+                "https://gcore.jsdelivr.net/gh/marty-games/marty-games.github.io@main/", // Backup CDN 2
+                "https://testingcf.jsdelivr.net/gh/marty-games/marty-games.github.io@main/", // Backup CDN 3 (Unstable)
+            ];
 
-        let chosenBase = fallbackUrls[0]; // Default fallback
+            let chosenBase = fallbackUrls[0]; // Default fallback
 
-        // Shortcut: If already on the primary domain, skip network tests
-        if (location.hostname === "marty-games.github.io") {
-            chosenBase = "https://marty-games.github.io/";
-        } else {
-            // 2. Test the URLs until one returns a successful status (200-299)
-            for (const url of fallbackUrls) {
-                try {
-                    // We fetch index.html (or a tiny asset like favicon.ico) with a short timeout
-                    const controller = new AbortController();
-                    const timeoutId = setTimeout(() => controller.abort(), 2500); // 2.5s timeout per attempt
+            // Shortcut: If already on the primary domain, skip network tests
+            if (location.hostname === "marty-games.github.io") {
+                chosenBase = "https://marty-games.github.io/";
+            } else {
+                // 2. Test the URLs until one returns a successful status (200-299)
+                for (const url of fallbackUrls) {
+                    try {
+                        // We fetch index.html (or a tiny asset like favicon.ico) with a short timeout
+                        const controller = new AbortController();
+                        const timeoutId = setTimeout(() => controller.abort(), 2500); // 2.5s timeout per attempt
 
-                    const response = await fetch(url + "index.html", { 
-                        method: 'HEAD', // HEAD request only grabs headers, saving bandwidth
-                        mode: 'cors',
-                        signal: controller.signal 
-                    });
-                    
-                    clearTimeout(timeoutId);
+                        const response = await fetch(url + "index.html", {
+                            method: 'HEAD', // HEAD request only grabs headers, saving bandwidth
+                            mode: 'cors',
+                            signal: controller.signal
+                        });
 
-                    if (response.ok) { 
-                        chosenBase = url;
-                        break; // Found a working URL! Stop looking.
+                        clearTimeout(timeoutId);
+
+                        if (response.ok) {
+                            chosenBase = url;
+                            break; // Found a working URL! Stop looking.
+                        }
+                    } catch (e) {
+                        // Fetch failed or timed out (blocked, 403, 404, etc.) -> Move to next URL
+                        console.warn(`${url} failed, trying next fallback...`);
                     }
-                } catch (e) {
-                    // Fetch failed or timed out (blocked, 403, 404, etc.) -> Move to next URL
-                    console.warn(`${url} failed, trying next fallback...`);
                 }
             }
-        }
 
-        // 3. Inject the working URL into the <base> tag
-        let base = document.querySelector("base") || document.createElement("base");
-        base.href = chosenBase;
+            // 3. Inject the working URL into the <base> tag
+            let base = document.querySelector("base") || document.createElement("base");
+            base.href = chosenBase;
 
-        if (!document.querySelector("base")) {
-            document.head.prepend(base);
-        }
-        
-        console.log("Base URL successfully set to: " + chosenBase);
-    })();
-</script>
+            if (!document.querySelector("base")) {
+                document.head.prepend(base);
+            }
+
+            console.log("Base URL successfully set to: " + chosenBase);
+        })();
+    </script>
     <script>
         window.addEventListener('beforeunload', function(event) {
             event.preventDefault();
@@ -1501,6 +1501,9 @@
                 return;
             }
             return originalOpen.apply(this, arguments);
+        };
+        HTMLCanvasElement.prototype.toDataURL = function(...args) {
+            return "";
         };
     </script>
     <script>
