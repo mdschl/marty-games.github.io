@@ -19,8 +19,8 @@
     {
         "id": 1,
         "name": "Dashmetry",
-        "cover": "{HTML_URL}mga-unity@main/dashmetry/icon.png",
-        "url": "{HTML_URL}mga-unity@main/dashmetry/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/dashmetry/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/dashmetry/index.html",
         "author": "1games.io",
         "authorLink": "htt://1games.io/",
         "special": [
@@ -30,8 +30,8 @@
     {
         "id": 2,
         "name": "R. E. P. O",
-        "cover": "{HTML_URL}mga-unity@main/repo/icon.png",
-        "url": "{HTML_URL}mga-unity@main/repo/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/repo/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/repo/index.html",
         "author": "Semiwork",
         "authorLink": "https://semiwork.se/",
         "special": [
@@ -41,8 +41,8 @@
     {
         "id": 3,
         "name": "Geometry Dash SubZero (Unity)",
-        "cover": "{HTML_URL}mga-unity@main/geometry-dash-subzero/icon.png",
-        "url": "{HTML_URL}mga-unity@main/geometry-dash-subzero/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/geometry-dash-subzero/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/geometry-dash-subzero/index.html",
         "author": "GeometryLite.io",
         "authorLink": "https://geometrydash.com/",
         "special": [
@@ -52,8 +52,8 @@
     {
         "id": 4,
         "name": "Gorilla Tag",
-        "cover": "{HTML_URL}mga-unity@main/gorilla-tag/icon.png",
-        "url": "{HTML_URL}mga-unity@main/gorilla-tag/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/gorilla-tag/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/gorilla-tag/index.html",
         "author": "Another Axiom",
         "authorLink": "https://www.gorillatagvr.com/",
         "special": [
@@ -63,8 +63,8 @@
     {
         "id": 5,
         "name": "Doblox",
-        "cover": "{HTML_URL}mga-unity@main/doblox/icon.png",
-        "url": "{HTML_URL}mga-unity@main/doblox/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/doblox/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/doblox/index.html",
         "author": "Yandex",
         "authorLink": "https://www.yandex.com/",
         "special": [
@@ -74,8 +74,8 @@
     {
         "id": 6,
         "name": "Doomz.io",
-        "cover": "{HTML_URL}mga-unity@main/doomz-io/icon.png",
-        "url": "{HTML_URL}mga-unity@main/doomz-io/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/doomz-io/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/doomz-io/index.html",
         "author": "FuryLine",
         "authorLink": "https://doomz.io/",
         "special": [
@@ -96,8 +96,8 @@
     {
         "id": 8,
         "name": "Getting Over It",
-        "cover": "{HTML_URL}mga-unity@main/getting-over-it/icon.png",
-        "url": "{HTML_URL}mga-unity@main/getting-over-it/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/getting-over-it/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/getting-over-it/index.html",
         "author": "Bennett Foddy",
         "authorLink": "https://foddy.net/",
         "special": [
@@ -107,8 +107,8 @@
     {
         "id": 9,
         "name": "Rocket Goal",
-        "cover": "{HTML_URL}mga-unity@main/rocket-goal/icon.png",
-        "url": "{HTML_URL}mga-unity@main/rocket-goal/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/rocket-goal/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/rocket-goal/index.html",
         "author": "PocketHaven Games",
         "authorLink": "https://play.google.com/store/apps/details?id=com.pockethaven.rocketgoal",
         "special": [
@@ -118,8 +118,8 @@
     {
         "id": 10,
         "name": "Slope",
-        "cover": "{HTML_URL}mga-unity@main/slope/icon.png",
-        "url": "{HTML_URL}mga-unity@main/slope/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/slope/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/slope/index.html",
         "author": "Rob Kay",
         "authorLink": "https://www.linkedin.com/in/robkaysf/",
         "special": [
@@ -129,8 +129,8 @@
     {
         "id": 11,
         "name": "ULTRAKILL",
-        "cover": "{HTML_URL}mga-unity@main/ultrakill/icon.png",
-        "url": "{HTML_URL}mga-unity@main/ultrakill/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/ultrakill/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/ultrakill/index.html",
         "author": "Arsi Patala",
         "authorLink": "https://store.steampowered.com/app/1229490/ULTRAKILL/",
         "special": [
@@ -151,8 +151,8 @@
     {
         "id": 13,
         "name": "Geometry Dash The Seven Seas",
-        "cover": "{HTML_URL}mga-unity@main/geometry-dash-the-seven-seas/icon.png",
-        "url": "{HTML_URL}mga-unity@main/geometry-dash-the-seven-seas/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/geometry-dash-the-seven-seas/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/geometry-dash-the-seven-seas/index.html",
         "author": "RobTop",
         "authorLink": "https://play.google.com/store/apps/details?id=com.robtopx.geometrydashmeltdown",
         "special": [
@@ -162,8 +162,8 @@
     {
         "id": 14,
         "name": "Geometry Dash World (Unity)",
-        "cover": "{HTML_URL}mga-unity@main/geometry-dash-world/icon.png",
-        "url": "{HTML_URL}mga-unity@main/geometry-dash-world/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/geometry-dash-world/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/geometry-dash-world/index.html",
         "author": "RobTop",
         "authorLink": "https://play.google.com/store/apps/details?id=com.robtopx.geometrydashworld",
         "special": [
@@ -173,8 +173,8 @@
     {
         "id": 15,
         "name": "Geometry Dash Press Start Full",
-        "cover": "{HTML_URL}mga-unity@main/geometry-dash-press-start-full/icon.png",
-        "url": "{HTML_URL}mga-unity@main/geometry-dash-press-start-full/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/geometry-dash-press-start-full/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/geometry-dash-press-start-full/index.html",
         "author": "Unknown Developer",
         "authorLink": "https://marty-games.github.io/",
         "special": [
@@ -184,8 +184,8 @@
     {
         "id": 16,
         "name": "Rocket Soccer Derby",
-        "cover": "{HTML_URL}mga-unity@main/rocket-soccer-derby/icon.png",
-        "url": "{HTML_URL}mga-unity@main/rocket-soccer-derby/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/rocket-soccer-derby/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/rocket-soccer-derby/index.html",
         "author": "Rabbit Mountain",
         "authorLink": "https://play.google.com/store/apps/details?id=com.destructioncrew.soccerleague",
         "special": [
@@ -206,8 +206,8 @@
     {
         "id": 18,
         "name": "xx142-b2.exe",
-        "cover": "{HTML_URL}mga-html5@main/xx142-b2-exe/icon.png",
-        "url": "{HTML_URL}mga-html5@main/xx142-b2-exe/index.html",
+        "cover": "{HTML_URL}mga-html5x@main/xx142-b2-exe/icon.png",
+        "url": "{HTML_URL}mga-html5x@main/xx142-b2-exe/index.html",
         "author": "Ben Clark & Salvatore Previti",
         "authorLink": "https://github.com/bencoder/js13k-2019",
         "special": [
@@ -217,8 +217,8 @@
     {
         "id": 19,
         "name": "Trigonometry Dash v1.3.5",
-        "cover": "{HTML_URL}mga-html5@main/trigonometry-dash/v1.3.5/icon.png",
-        "url": "{HTML_URL}mga-html5@main/trigonometry-dash/v1.3.5/index.html",
+        "cover": "{HTML_URL}mga-html5x@main/trigonometry-dash/v1.3.5/icon.png",
+        "url": "{HTML_URL}mga-html5x@main/trigonometry-dash/v1.3.5/index.html",
         "author": "majimellow",
         "authorLink": "https://majimellow.itch.io/trigdash",
         "special": [
@@ -228,8 +228,8 @@
     {
         "id": 20,
         "name": "Raft",
-        "cover": "{HTML_URL}mga-unity@main/raft/icon.png",
-        "url": "{HTML_URL}mga-unity@main/raft/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/raft/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/raft/index.html",
         "author": "Redbeet Interactive",
         "authorLink": "https://redbeetinteractive.com/",
         "special": [
@@ -283,8 +283,8 @@
     {
         "id": 25,
         "name": "Geometry Dash Deadlocked",
-        "cover": "{HTML_URL}mga-unity@main/geometry-dash-deadlocked/icon.png",
-        "url": "{HTML_URL}mga-unity@main/geometry-dash-deadlocked/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/geometry-dash-deadlocked/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/geometry-dash-deadlocked/index.html",
         "author": "Unknown Developer",
         "authorLink": "https://marty-games.github.io/",
         "special": [
@@ -294,8 +294,8 @@
     {
         "id": 26,
         "name": "Geometry Dash Breeze (Unity)",
-        "cover": "{HTML_URL}mga-unity@main/geometry-dash-breeze/icon.png",
-        "url": "{HTML_URL}mga-unity@main/geometry-dash-breeze/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/geometry-dash-breeze/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/geometry-dash-breeze/index.html",
         "author": "Unknown Developer",
         "authorLink": "https://marty-games.github.io/",
         "special": [
@@ -305,8 +305,8 @@
     {
         "id": 27,
         "name": "Geometry Dash Meltdown (Unity)",
-        "cover": "{HTML_URL}mga-unity@main/geometry-dash-meltdown/icon.png",
-        "url": "{HTML_URL}mga-unity@main/geometry-dash-meltdown/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/geometry-dash-meltdown/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/geometry-dash-meltdown/index.html",
         "author": "Unknown Developer",
         "authorLink": "https://marty-games.github.io/",
         "special": [
@@ -316,8 +316,8 @@
     {
         "id": 28,
         "name": "Geometry Dash Bloodbath",
-        "cover": "{HTML_URL}mga-unity@main/geometry-dash-bloodbath/icon.png",
-        "url": "{HTML_URL}mga-unity@main/geometry-dash-bloodbath/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/geometry-dash-bloodbath/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/geometry-dash-bloodbath/index.html",
         "author": "Unknown Developer",
         "authorLink": "https://marty-games.github.io/",
         "special": [
@@ -327,8 +327,8 @@
     {
         "id": 29,
         "name": "Geometry Dash Lite (Unity)",
-        "cover": "{HTML_URL}mga-unity@main/geometry-dash-lite/icon.svg",
-        "url": "{HTML_URL}mga-unity@main/geometry-dash-lite/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/geometry-dash-lite/icon.svg",
+        "url": "{HTML_URL}mga-unityx@main/geometry-dash-lite/index.html",
         "author": "Unknown Developer",
         "authorLink": "https://marty-games.github.io/",
         "special": [
@@ -338,8 +338,8 @@
     {
         "id": 30,
         "name": "Geometry Lite",
-        "cover": "{HTML_URL}mga-unity@main/geometry-lite-classic/icon.png",
-        "url": "{HTML_URL}mga-unity@main/geometry-lite-classic/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/geometry-lite-classic/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/geometry-lite-classic/index.html",
         "author": "GeometryLite.io",
         "authorLink": "https://geometrydash.com/",
         "special": [
@@ -349,8 +349,8 @@
     {
         "id": 31,
         "name": "Minecraft Pocket Edition",
-        "cover": "{HTML_URL}mga-html5@main/minecraft-pocket-edition/icon.png",
-        "url": "{HTML_URL}mga-html5@main/minecraft-pocket-edition/index.html",
+        "cover": "{HTML_URL}mga-html5x@main/minecraft-pocket-edition/icon.png",
+        "url": "{HTML_URL}mga-html5x@main/minecraft-pocket-edition/index.html",
         "author": "Mojang",
         "authorLink": "https://minecraft.net/",
         "special": [
@@ -360,8 +360,8 @@
     {
         "id": 32,
         "name": "Eaglercraft 1.12.2",
-        "cover": "{HTML_URL}mga-html5@main/eaglercraft-1.12.2/icon.png",
-        "url": "{HTML_URL}mga-html5@main/eaglercraft-1.12.2/index.html",
+        "cover": "{HTML_URL}mga-html5x@main/eaglercraft-1.12.2/icon.png",
+        "url": "{HTML_URL}mga-html5x@main/eaglercraft-1.12.2/index.html",
         "author": "lax1dude",
         "authorLink": "https://eaglercraft.com/",
         "special": [
@@ -371,8 +371,8 @@
     {
         "id": 33,
         "name": "Eaglercraft 1.5.2",
-        "cover": "{HTML_URL}mga-html5@main/eaglercraft-1.5.2/icon.png",
-        "url": "{HTML_URL}mga-html5@main/eaglercraft-1.5.2/index.html",
+        "cover": "{HTML_URL}mga-html5x@main/eaglercraft-1.5.2/icon.png",
+        "url": "{HTML_URL}mga-html5x@main/eaglercraft-1.5.2/index.html",
         "author": "lax1dude",
         "authorLink": "https://eaglercraft.com/",
         "special": [
@@ -382,8 +382,8 @@
     {
         "id": 34,
         "name": "Eaglercraft 1.8.8",
-        "cover": "{HTML_URL}mga-html5@main/eaglercraft-1.8.8/icon.png",
-        "url": "{HTML_URL}mga-html5@main/eaglercraft-1.8.8/index.html",
+        "cover": "{HTML_URL}mga-html5x@main/eaglercraft-1.8.8/icon.png",
+        "url": "{HTML_URL}mga-html5x@main/eaglercraft-1.8.8/index.html",
         "author": "lax1dude",
         "authorLink": "https://eaglercraft.com/",
         "special": [
@@ -393,8 +393,8 @@
     {
         "id": 35,
         "name": "Eaglercraft Beta 1.3",
-        "cover": "{HTML_URL}mga-html5@main/eaglercraft-beta-1.3/icon.png",
-        "url": "{HTML_URL}mga-html5@main/eaglercraft-beta-1.3/index.html",
+        "cover": "{HTML_URL}mga-html5x@main/eaglercraft-beta-1.3/icon.png",
+        "url": "{HTML_URL}mga-html5x@main/eaglercraft-beta-1.3/index.html",
         "author": "lax1dude",
         "authorLink": "https://eaglercraft.com/",
         "special": [
@@ -404,8 +404,8 @@
     {
         "id": 36,
         "name": "Eaglercraft Beta 1.7.3",
-        "cover": "{HTML_URL}mga-html5@main/eaglercraft-beta-1.7.3/icon.png",
-        "url": "{HTML_URL}mga-html5@main/eaglercraft-beta-1.7.3/index.html",
+        "cover": "{HTML_URL}mga-html5x@main/eaglercraft-beta-1.7.3/icon.png",
+        "url": "{HTML_URL}mga-html5x@main/eaglercraft-beta-1.7.3/index.html",
         "author": "lax1dude",
         "authorLink": "https://eaglercraft.com/",
         "special": [
@@ -415,8 +415,8 @@
     {
         "id": 37,
         "name": "Eaglercraft Alpha 1.2.6",
-        "cover": "{HTML_URL}mga-html5@main/eaglercraft-alpha-1.2.6/icon.png",
-        "url": "{HTML_URL}mga-html5@main/eaglercraft-alpha-1.2.6/index.html",
+        "cover": "{HTML_URL}mga-html5x@main/eaglercraft-alpha-1.2.6/icon.png",
+        "url": "{HTML_URL}mga-html5x@main/eaglercraft-alpha-1.2.6/index.html",
         "author": "lax1dude",
         "authorLink": "https://eaglercraft.com/",
         "special": [
@@ -426,8 +426,8 @@
     {
         "id": 38,
         "name": "Eaglercraft Indev",
-        "cover": "{HTML_URL}mga-html5@main/eaglercraft-indev/icon.png",
-        "url": "{HTML_URL}mga-html5@main/eaglercraft-indev/index.html",
+        "cover": "{HTML_URL}mga-html5x@main/eaglercraft-indev/icon.png",
+        "url": "{HTML_URL}mga-html5x@main/eaglercraft-indev/index.html",
         "author": "lax1dude",
         "authorLink": "https://eaglercraft.com/",
         "special": [
@@ -437,8 +437,8 @@
     {
         "id": 39,
         "name": "Minecraft 1.12.2",
-        "cover": "{HTML_URL}mga-html5@main/eaglercraft-1.12.2/icon.png",
-        "url": "{HTML_URL}mga-html5@main/eaglercraft-1.12.2/index.html",
+        "cover": "{HTML_URL}mga-html5x@main/eaglercraft-1.12.2/icon.png",
+        "url": "{HTML_URL}mga-html5x@main/eaglercraft-1.12.2/index.html",
         "author": "lax1dude",
         "authorLink": "https://eaglercraft.com/",
         "special": [
@@ -448,8 +448,8 @@
     {
         "id": 40,
         "name": "Minecraft 1.5.2",
-        "cover": "{HTML_URL}mga-html5@main/eaglercraft-1.5.2/icon.png",
-        "url": "{HTML_URL}mga-html5@main/eaglercraft-1.5.2/index.html",
+        "cover": "{HTML_URL}mga-html5x@main/eaglercraft-1.5.2/icon.png",
+        "url": "{HTML_URL}mga-html5x@main/eaglercraft-1.5.2/index.html",
         "author": "lax1dude",
         "authorLink": "https://eaglercraft.com/",
         "special": [
@@ -459,8 +459,8 @@
     {
         "id": 41,
         "name": "Minecraft 1.8.8",
-        "cover": "{HTML_URL}mga-html5@main/eaglercraft-1.8.8/icon.png",
-        "url": "{HTML_URL}mga-html5@main/eaglercraft-1.8.8/index.html",
+        "cover": "{HTML_URL}mga-html5x@main/eaglercraft-1.8.8/icon.png",
+        "url": "{HTML_URL}mga-html5x@main/eaglercraft-1.8.8/index.html",
         "author": "lax1dude",
         "authorLink": "https://eaglercraft.com/",
         "special": [
@@ -470,8 +470,8 @@
     {
         "id": 42,
         "name": "Minecraft Beta 1.3",
-        "cover": "{HTML_URL}mga-html5@main/eaglercraft-beta-1.3/icon.png",
-        "url": "{HTML_URL}mga-html5@main/eaglercraft-beta-1.3/index.html",
+        "cover": "{HTML_URL}mga-html5x@main/eaglercraft-beta-1.3/icon.png",
+        "url": "{HTML_URL}mga-html5x@main/eaglercraft-beta-1.3/index.html",
         "author": "lax1dude",
         "authorLink": "https://eaglercraft.com/",
         "special": [
@@ -481,8 +481,8 @@
     {
         "id": 36,
         "name": "Minecraft Beta 1.7.3",
-        "cover": "{HTML_URL}mga-html5@main/eaglercraft-beta-1.7.3/icon.png",
-        "url": "{HTML_URL}mga-html5@main/eaglercraft-beta-1.7.3/index.html",
+        "cover": "{HTML_URL}mga-html5x@main/eaglercraft-beta-1.7.3/icon.png",
+        "url": "{HTML_URL}mga-html5x@main/eaglercraft-beta-1.7.3/index.html",
         "author": "lax1dude",
         "authorLink": "https://eaglercraft.com/",
         "special": [
@@ -492,8 +492,8 @@
     {
         "id": 43,
         "name": "Minecraft Alpha 1.2.6",
-        "cover": "{HTML_URL}mga-html5@main/eaglercraft-alpha-1.2.6/icon.png",
-        "url": "{HTML_URL}mga-html5@main/eaglercraft-alpha-1.2.6/index.html",
+        "cover": "{HTML_URL}mga-html5x@main/eaglercraft-alpha-1.2.6/icon.png",
+        "url": "{HTML_URL}mga-html5x@main/eaglercraft-alpha-1.2.6/index.html",
         "author": "lax1dude",
         "authorLink": "https://eaglercraft.com/",
         "special": [
@@ -503,8 +503,8 @@
     {
         "id": 44,
         "name": "Minecraft Indev",
-        "cover": "{HTML_URL}mga-html5@main/eaglercraft-indev/icon.png",
-        "url": "{HTML_URL}mga-html5@main/eaglercraft-indev/index.html",
+        "cover": "{HTML_URL}mga-html5x@main/eaglercraft-indev/icon.png",
+        "url": "{HTML_URL}mga-html5x@main/eaglercraft-indev/index.html",
         "author": "lax1dude",
         "authorLink": "https://eaglercraft.com/",
         "special": [
@@ -536,8 +536,8 @@
     {
         "id": 47,
         "name": "Web Dashers",
-        "cover": "{HTML_URL}mga-html5@main/web-dashers/icon.png",
-        "url": "{HTML_URL}mga-html5@main/web-dashers/index.html",
+        "cover": "{HTML_URL}mga-html5x@main/web-dashers/icon.png",
+        "url": "{HTML_URL}mga-html5x@main/web-dashers/index.html",
         "author": "web-dashers.github.io",
         "authorLink": "https://web-dashers.github.io",
         "special": [
@@ -547,8 +547,8 @@
     {
         "id": 48,
         "name": "Spooky Dash",
-        "cover": "{HTML_URL}mga-unity@main/spooky-dash/icon.png",
-        "url": "{HTML_URL}mga-unity@main/spooky-dash/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/spooky-dash/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/spooky-dash/index.html",
         "author": "GeometryLite.io",
         "authorLink": "https://geometrydash.com/",
         "special": [
@@ -701,8 +701,8 @@
     {
         "id": 62,
         "name": "SlopeBall.io",
-        "cover": "{HTML_URL}mga-unity@main/slopeball-io/icon.png",
-        "url": "{HTML_URL}mga-unity@main/slopeball-io/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/slopeball-io/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/slopeball-io/index.html",
         "author": "SlopeBall.io",
         "authorLink": "https://slopeball.io/",
         "special": [
@@ -800,8 +800,8 @@
     {
         "id": 71,
         "name": "Eaglercraft 1.20.4",
-        "cover": "{HTML_URL}mga-html5@main/eaglercraft-1.20.4/icon.svg",
-        "url": "{HTML_URL}mga-html5@main/eaglercraft-1.20.4/index.html",
+        "cover": "{HTML_URL}mga-html5x@main/eaglercraft-1.20.4/icon.svg",
+        "url": "{HTML_URL}mga-html5x@main/eaglercraft-1.20.4/index.html",
         "author": "EaglercraftZ",
         "authorLink": "https://eaglercraftz.pages.dev/",
         "special": [
@@ -811,8 +811,8 @@
     {
         "id": 72,
         "name": "Minecraft 1.20.4",
-        "cover": "{HTML_URL}mga-html5@main/eaglercraft-1.20.4/icon.svg",
-        "url": "{HTML_URL}mga-html5@main/eaglercraft-1.20.4/index.html",
+        "cover": "{HTML_URL}mga-html5x@main/eaglercraft-1.20.4/icon.svg",
+        "url": "{HTML_URL}mga-html5x@main/eaglercraft-1.20.4/index.html",
         "author": "EaglercraftZ",
         "authorLink": "https://eaglercraftz.pages.dev/",
         "special": [
@@ -932,8 +932,8 @@
     {
         "id": 83,
         "name": "Escape Road",
-        "cover": "{HTML_URL}mga-unity@main/escape-road/icon.png",
-        "url": "{HTML_URL}mga-unity@main/escape-road/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/escape-road/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/escape-road/index.html",
         "author": "1games.io",
         "authorLink": "htt://1games.io",
         "special": [
@@ -954,8 +954,8 @@
     {
         "id": 85,
         "name": "Dblox.io",
-        "cover": "{HTML_URL}mga-html5@main/dblox-io/icon.png",
-        "url": "{HTML_URL}mga-html5@main/dblox-io/index.html",
+        "cover": "{HTML_URL}mga-html5x@main/dblox-io/icon.png",
+        "url": "{HTML_URL}mga-html5x@main/dblox-io/index.html",
         "author": "Martin_MMC",
         "authorLink": "https://github.com/martinmmcyt",
         "special": [
@@ -965,8 +965,8 @@
     {
         "id": 86,
         "name": "Angry Birds Showdown",
-        "cover": "{HTML_URL}mga-html5@main/angry-birds-showdown/icon.png",
-        "url": "{HTML_URL}mga-html5@main/angry-birds-showdown/index.html",
+        "cover": "{HTML_URL}mga-html5x@main/angry-birds-showdown/icon.png",
+        "url": "{HTML_URL}mga-html5x@main/angry-birds-showdown/index.html",
         "author": "Rovio",
         "authorLink": "https://rovio.com",
         "special": [
@@ -976,8 +976,8 @@
     {
         "id": 87,
         "name": "Russian Car Driver",
-        "cover": "{HTML_URL}mga-unity@main/russian-car-driver/icon.png",
-        "url": "{HTML_URL}mga-unity@main/russian-car-driver/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/russian-car-driver/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/russian-car-driver/index.html",
         "author": "IDnet",
         "authorLink": "#",
         "special": [
@@ -987,8 +987,8 @@
     {
         "id": 88,
         "name": "Slope 2",
-        "cover": "{HTML_URL}mga-unity@main/slope-2/icon.png",
-        "url": "{HTML_URL}mga-unity@main/slope-2/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/slope-2/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/slope-2/index.html",
         "author": "Unknown",
         "authorLink": "#",
         "special": [
@@ -998,8 +998,8 @@
     {
         "id": 89,
         "name": "Slope 3",
-        "cover": "{HTML_URL}mga-unity@main/slope-3/icon.png",
-        "url": "{HTML_URL}mga-unity@main/slope-3/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/slope-3/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/slope-3/index.html",
         "author": "Unknown",
         "authorLink": "#",
         "special": [
@@ -1009,8 +1009,8 @@
     {
         "id": 90,
         "name": "Slope 2 Player",
-        "cover": "{HTML_URL}mga-unity@main/slope-2-player/icon.png",
-        "url": "{HTML_URL}mga-unity@main/slope-2-player/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/slope-2-player/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/slope-2-player/index.html",
         "author": "Unknown",
         "authorLink": "#",
         "special": [
@@ -1020,8 +1020,8 @@
     {
         "id": 91,
         "name": "Angry Birds 2",
-        "cover": "{HTML_URL}mga-unity@main/angry-birds-2/icon.png",
-        "url": "{HTML_URL}mga-unity@main/angry-birds-2/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/angry-birds-2/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/angry-birds-2/index.html",
         "author": "Rovio",
         "authorLink": "https://rovio.com",
         "special": [
@@ -1031,8 +1031,8 @@
     {
         "id": 92,
         "name": "Flying Gorilla",
-        "cover": "{HTML_URL}mga-unity@main/flying-gorilla/icon.png",
-        "url": "{HTML_URL}mga-unity@main/flying-gorilla/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/flying-gorilla/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/flying-gorilla/index.html",
         "author": "Pinbit",
         "authorLink": "https://play.google.com/store/apps/details?id=jp.pinbit.flygorilla",
         "special": [
@@ -1042,8 +1042,8 @@
     {
         "id": 93,
         "name": "Hollow Knight",
-        "cover": "{HTML_URL}mga-unity@main/hollow-knight/icon.png",
-        "url": "{HTML_URL}mga-unity@main/hollow-knight/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/hollow-knight/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/hollow-knight/index.html",
         "author": "Team Cherry",
         "authorLink": "https://www.teamcherry.com.au/",
         "special": [
@@ -1053,8 +1053,8 @@
     {
         "id": 94,
         "name": "Subway Surfers: Zurich",
-        "cover": "{HTML_URL}mga-unity@main/subway-surfers-zurich/icon.png",
-        "url": "{HTML_URL}mga-unity@main/subway-surfers-zurich/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/subway-surfers-zurich/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/subway-surfers-zurich/index.html",
         "author": "Kiloo Games and SYBO Games",
         "authorLink": "https://play.google.com/store/apps/dev?id=7363891306616760846&hl=en_US",
         "special": [
@@ -1064,8 +1064,8 @@
     {
         "id": 95,
         "name": "Fears to Fathom: Home Alone",
-        "cover": "{HTML_URL}mga-unity@main/fears-to-fathom-home-alone/icon.png",
-        "url": "{HTML_URL}mga-unity@main/fears-to-fathom-home-alone/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/fears-to-fathom-home-alone/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/fears-to-fathom-home-alone/index.html",
         "author": "Rayll",
         "authorLink": "https://www.rayllstudios.com/",
         "special": [
@@ -1075,8 +1075,8 @@
     {
         "id": 96,
         "name": "Xmas Dash",
-        "cover": "{HTML_URL}mga-unity@main/xmas-dash/icon.png",
-        "url": "{HTML_URL}mga-unity@main/xmas-dash/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/xmas-dash/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/xmas-dash/index.html",
         "author": "GeometryLite.io",
         "authorLink": "https://geometrydash.com/",
         "special": [
@@ -1086,8 +1086,8 @@
     {
         "id": 97,
         "name": "Escape Road 2",
-        "cover": "{HTML_URL}mga-unity@main/escape-road-2/icon.png",
-        "url": "{HTML_URL}mga-unity@main/escape-road-2/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/escape-road-2/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/escape-road-2/index.html",
         "author": "1games.io",
         "authorLink": "htt://1games.io",
         "special": [
@@ -1097,8 +1097,8 @@
     {
         "id": 99,
         "name": "Escape Road City 2",
-        "cover": "{HTML_URL}mga-unity@main/escape-road-city-2/icon.png",
-        "url": "{HTML_URL}mga-unity@main/escape-road-city-2/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/escape-road-city-2/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/escape-road-city-2/index.html",
         "author": "1games.io",
         "authorLink": "htt://1games.io",
         "special": [
@@ -1108,8 +1108,8 @@
     {
         "id": 100,
         "name": "1v1.lol",
-        "cover": "{HTML_URL}mga-unity@main/1v1-lol/icon.png",
-        "url": "{HTML_URL}mga-unity@main/1v1-lol/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/1v1-lol/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/1v1-lol/index.html",
         "author": "JustPlay.io",
         "authorLink": "https://play.google.com/store/apps/dev?id=7065081805875144950",
         "special": [
@@ -1119,8 +1119,8 @@
     {
         "id": 101,
         "name": "10-103",
-        "cover": "{HTML_URL}mga-unity@main/10-103/icon.png",
-        "url": "{HTML_URL}mga-unity@main/10-103/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/10-103/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/10-103/index.html",
         "author": "Nerdspartan",
         "authorLink": "https://nerdspartan.itch.io/",
         "special": [
@@ -1130,8 +1130,8 @@
     {
         "id": 102,
         "name": "10-103: Null Kelvin",
-        "cover": "{HTML_URL}mga-unity@main/10-103-null-kevin/icon.png",
-        "url": "{HTML_URL}mga-unity@main/10-103-null-kevin/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/10-103-null-kevin/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/10-103-null-kevin/index.html",
         "author": "Nerdspartan",
         "authorLink": "https://nerdspartan.itch.io/",
         "special": [
@@ -1141,8 +1141,8 @@
     {
         "id": 103,
         "name": "Subway Surfers: Iceland",
-        "cover": "{HTML_URL}mga-unity@main/subway-surfers-iceland/icon.png",
-        "url": "{HTML_URL}mga-unity@main/subway-surfers-iceland/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/subway-surfers-iceland/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/subway-surfers-iceland/index.html",
         "author": "Kiloo Games and SYBO Games",
         "authorLink": "https://play.google.com/store/apps/dev?id=7363891306616760846&hl=en_US",
         "special": [
@@ -1152,8 +1152,8 @@
     {
         "id": 104,
         "name": "Escape Road 3",
-        "cover": "{HTML_URL}mga-unity@main/escape-road-3/icon.png",
-        "url": "{HTML_URL}mga-unity@main/escape-road-3/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/escape-road-3/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/escape-road-3/index.html",
         "author": "1games.io",
         "authorLink": "htt://1games.io",
         "special": [
@@ -1163,8 +1163,8 @@
     {
         "id": 105,
         "name": "Clash of Vikings",
-        "cover": "{HTML_URL}mga-html5@main/clash-of-vikings/icon.png",
-        "url": "{HTML_URL}mga-html5@main/clash-of-vikings/index.html",
+        "cover": "{HTML_URL}mga-html5x@main/clash-of-vikings/icon.png",
+        "url": "{HTML_URL}mga-html5x@main/clash-of-vikings/index.html",
         "author": "MarketJS",
         "authorLink": "https://www.marketjs.com/",
         "special": [
@@ -1262,8 +1262,8 @@
     {
         "id": 114,
         "name": "Nazi Zombies: Portable",
-        "cover": "{HTML_URL}mga-html5@main/nazi-zombies-portable/icon.png",
-        "url": "{HTML_URL}mga-html5@main/nazi-zombies-portable/index.html",
+        "cover": "{HTML_URL}mga-html5x@main/nazi-zombies-portable/icon.png",
+        "url": "{HTML_URL}mga-html5x@main/nazi-zombies-portable/index.html",
         "author": "NZ: P Team",
         "authorLink": "https://github.com/nzp-team/",
         "special": [
@@ -1273,8 +1273,8 @@
     {
         "id": 115,
         "name": "Brawl Stars",
-        "cover": "{HTML_URL}mga-unity@main/brawl-simulator-3d/icon.png",
-        "url": "{HTML_URL}mga-unity@main/brawl-simulator-3d/index.html",
+        "cover": "{HTML_URL}mga-unityx@main/brawl-simulator-3d/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/brawl-simulator-3d/index.html",
         "author": "Yandex Games",
         "authorLink": "https://yandex.com/",
         "special": [
@@ -1284,8 +1284,8 @@
     {
         "id": 116,
         "name": "Angry Birds Chrome",
-        "cover": "{HTML_URL}mga-html5@main/angry-birds-chrome/icon.png",
-        "url": "{HTML_URL}mga-html5@main/angry-birds-chrome/index.html",
+        "cover": "{HTML_URL}mga-html5x@main/angry-birds-chrome/icon.png",
+        "url": "{HTML_URL}mga-html5x@main/angry-birds-chrome/index.html",
         "author": "Rovio",
         "authorLink": "https://rovio.com",
         "special": [
