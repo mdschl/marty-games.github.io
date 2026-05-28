@@ -40,7 +40,7 @@
     },
     {
         "id": 3,
-        "name": "Geometry Dash SubZero (Unity)",
+        "name": "Geometry Dash SubZero (Remake)",
         "cover": "{HTML_URL}mga-unityx@main/geometry-dash-subzero/icon.png",
         "url": "{HTML_URL}mga-unityx@main/geometry-dash-subzero/index.html",
         "author": "GeometryLite.io",
@@ -84,7 +84,7 @@
     },
     {
         "id": 7,
-        "name": "Discord (Widget)",
+        "name": "Discord Widget",
         "cover": "{HTML_URL}mga-apps@main/discord-widget/icon.png",
         "url": "{HTML_URL}mga-apps@main/discord-widget/index.html",
         "author": "Marty Games",
@@ -161,7 +161,7 @@
     },
     {
         "id": 14,
-        "name": "Geometry Dash World (Unity)",
+        "name": "Geometry Dash World (Remake)",
         "cover": "{HTML_URL}mga-unityx@main/geometry-dash-world/icon.png",
         "url": "{HTML_URL}mga-unityx@main/geometry-dash-world/index.html",
         "author": "RobTop",
@@ -216,7 +216,7 @@
     },
     {
         "id": 19,
-        "name": "Trigonometry Dash v1.3.5",
+        "name": "Trigonometry Dash",
         "cover": "{HTML_URL}mga-html5x@main/trigonometry-dash/v1.3.5/icon.png",
         "url": "{HTML_URL}mga-html5x@main/trigonometry-dash/v1.3.5/index.html",
         "author": "majimellow",
@@ -293,7 +293,7 @@
     },
     {
         "id": 26,
-        "name": "Geometry Dash Breeze (Unity)",
+        "name": "Geometry Dash Breeze (Remake)",
         "cover": "{HTML_URL}mga-unityx@main/geometry-dash-breeze/icon.png",
         "url": "{HTML_URL}mga-unityx@main/geometry-dash-breeze/index.html",
         "author": "Unknown Developer",
@@ -304,7 +304,7 @@
     },
     {
         "id": 27,
-        "name": "Geometry Dash Meltdown (Unity)",
+        "name": "Geometry Dash Meltdown (Remake)",
         "cover": "{HTML_URL}mga-unityx@main/geometry-dash-meltdown/icon.png",
         "url": "{HTML_URL}mga-unityx@main/geometry-dash-meltdown/index.html",
         "author": "Unknown Developer",
@@ -1272,7 +1272,7 @@
     },
     {
         "id": 115,
-        "name": "Brawl Stars",
+        "name": "Brawl Stars (Remake)",
         "cover": "{HTML_URL}mga-unityx@main/brawl-simulator-3d/icon.png",
         "url": "{HTML_URL}mga-unityx@main/brawl-simulator-3d/index.html",
         "author": "Yandex Games",
@@ -1294,7 +1294,7 @@
     },
     {
         "id": 117,
-        "name": "Hill Climb Racing 2",
+        "name": "Hill Climb Racing 2 (Remake)",
         "cover": "{HTML_URL}mga-scratch@main/hill-climb-racing-2/icon.png",
         "url": "{GITHACK_URL}mga-scratch/main/hill-climb-racing-2/single-file.html",
         "author": "Martin_MMC",
@@ -1305,7 +1305,7 @@
     },
     {
         "id": 118,
-        "name": "Among Us",
+        "name": "Among Us (Remake)",
         "cover": "{HTML_URL}mga-scratch@main/among-us/icon.png",
         "url": "{GITHACK_URL}mga-scratch/main/among-us/single-file.html",
         "author": "TimMcCool & Innersloth",
