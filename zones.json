@@ -1313,5 +1313,71 @@
         "special": [
             "Scratch"
         ]
+    },
+    {
+        "id": 119,
+        "name": "Geometry Dash (Remake)",
+        "cover": "{HTML_URL}mga-html5x@main/geometry-dash/icon.svg",
+        "url": "{HTML_URL}mga-html5x@main/geometry-dash/index.html",
+        "author": "web-dashers.github.io",
+        "authorLink": "https://web-dashers.github.io",
+        "special": [
+            "HTML5"
+        ]
+    },
+    {
+        "id": 120,
+        "name": "Doodle Jump",
+        "cover": "{HTML_URL}mga-html5x@main/doodle-jump/icon.png",
+        "url": "{HTML_URL}mga-html5x@main/doodle-jump/index.html",
+        "author": "Browncha023",
+        "authorLink": "https://github.com/Browncha023/",
+        "special": [
+            "HTML5"
+        ]
+    },
+    {
+        "id": 121,
+        "name": "Cookie Clicker",
+        "cover": "{HTML_URL}mga-html5x@main/cookie-clicker/icon.png",
+        "url": "{HTML_URL}mga-html5x@main/cookie-clicker/index.html",
+        "author": "DashNet B.V.",
+        "authorLink": "https://cookieclicker.com/",
+        "special": [
+            "HTML5"
+        ]
+    },
+    {
+        "id": 122,
+        "name": "Trash Clash Royale",
+        "cover": "{HTML_URL}mga-html5x@main/trash-clash-royale/icon.png",
+        "url": "{HTML_URL}mga-html5x@main/trash-clash-royale/index.html",
+        "author": "Gbasire",
+        "authorLink": "https://www.greenfoot.org/users/57938",
+        "special": [
+            "HTML5"
+        ]
+    },
+    {
+        "id": 123,
+        "name": "We Become What We Behold",
+        "cover": "{HTML_URL}mga-html5x@main/we-become-what-we-behold/icon.png",
+        "url": "{HTML_URL}mga-html5x@main/we-become-what-we-behold/index.html",
+        "author": "Nicky Case",
+        "authorLink": "https://ncase.itch.io/wbwwb",
+        "special": [
+            "HTML5"
+        ]
+    },
+    {
+        "id": 124,
+        "name": "Spacebar Clicker",
+        "cover": "{HTML_URL}mga-html5x@main/spacebar-clicker/icon.png",
+        "url": "{HTML_URL}mga-html5x@main/spacebar-clicker/index.html",
+        "author": "Bruno Croci",
+        "authorLink": "https://crocidb.itch.io/spacebar-clicker",
+        "special": [
+            "HTML5"
+        ]
     }
 ]
