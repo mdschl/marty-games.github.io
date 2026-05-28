@@ -1379,5 +1379,17 @@
         "special": [
             "HTML5"
         ]
+    },
+
+    {
+        "id": 125,
+        "name": "Spacebar Clicker",
+        "cover": "{HTML_URL}mga-html5x@main/2048/icon.png",
+        "url": "{HTML_URL}mga-html5x@main/2048/index.html",
+        "author": "Gabriele Cirulli",
+        "authorLink": "https://github.com/gabrielecirulli",
+        "special": [
+            "HTML5"
+        ]
     }
 ]
