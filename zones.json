@@ -250,7 +250,7 @@
     {
         "id": 22,
         "name": "Jumbo AI",
-        "cover": "",
+        "cover": "https://jumbo-v1.web.app/logo.png",
         "url": "https://jumbo-v1.web.app/",
         "author": "Aspect_SGK",
         "authorLink": "#",
@@ -1261,7 +1261,7 @@
     },
     {
         "id": 114,
-        "name": "Nazi Zombies: Portable",
+        "name": "Nazi Zombies: Portable (Call of Duty)",
         "cover": "{HTML_URL}mga-html5x@main/nazi-zombies-portable/icon.png",
         "url": "{HTML_URL}mga-html5x@main/nazi-zombies-portable/index.html",
         "author": "NZ: P Team",
