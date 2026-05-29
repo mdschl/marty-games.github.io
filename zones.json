@@ -569,8 +569,8 @@
     {
         "id": 50,
         "name": "Famidash",
-        "cover": "{HTML_URL}mga-emulatorjs@main/famidash/icon.png",
-        "url": "{HTML_URL}mga-emulatorjs@main/famidash/index.html",
+        "cover": "{HTML_URL}mga-emulatorjs@main/nesfamidash/icon.png",
+        "url": "{HTML_URL}mga-emulatorjs@main/nes/famidash/index.html",
         "author": "TFD Soft",
         "authorLink": "https://github.com/tfdsoft/",
         "special": [
@@ -580,8 +580,8 @@
     {
         "id": 51,
         "name": "Grand Theft Auto",
-        "cover": "{HTML_URL}mga-emulatorjs@main/grand-theft-auto/icon.png",
-        "url": "{HTML_URL}mga-emulatorjs@main/grand-theft-auto/playstation.html",
+        "cover": "{HTML_URL}mga-emulatorjs@main/chd/grand-theft-auto/icon.png",
+        "url": "{HTML_URL}mga-emulatorjs@main/chd/grand-theft-auto/playstation.html",
         "author": "Rockstar Games",
         "authorLink": "https://www.rockstargames.com/",
         "special": [
@@ -591,8 +591,8 @@
     {
         "id": 52,
         "name": "Grand Theft Auto Advance",
-        "cover": "{HTML_URL}mga-emulatorjs@main/grand-theft-auto-advance/icon.png",
-        "url": "{HTML_URL}mga-emulatorjs@main/grand-theft-auto-advance/gameboy.html",
+        "cover": "{HTML_URL}mga-emulatorjs@main/gba/grand-theft-auto-advance/icon.png",
+        "url": "{HTML_URL}mga-emulatorjs@main/gba/grand-theft-auto-advance/gameboy.html",
         "author": "Rockstar Games",
         "authorLink": "https://www.rockstargames.com/",
         "special": [
