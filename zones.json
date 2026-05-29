@@ -1380,7 +1380,6 @@
             "HTML5"
         ]
     },
-
     {
         "id": 125,
         "name": "2048",
@@ -1388,6 +1387,17 @@
         "url": "{HTML_URL}mga-html5x@main/2048/index.html",
         "author": "Gabriele Cirulli",
         "authorLink": "https://github.com/gabrielecirulli",
+        "special": [
+            "HTML5"
+        ]
+    },
+    {
+        "id": 126,
+        "name": "People Playground",
+        "cover": "{HTML_URL}mga-unityx@main/people-playground/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/people-playground/index.html",
+        "author": "Zooi",
+        "authorLink": "https://store.steampowered.com/app/1118200/People_Playground/",
         "special": [
             "HTML5"
         ]
