@@ -569,7 +569,7 @@
     {
         "id": 50,
         "name": "Famidash",
-        "cover": "{HTML_URL}mga-emulatorjs@main/nesfamidash/icon.png",
+        "cover": "{HTML_URL}mga-emulatorjs@main/nes/famidash/icon.png",
         "url": "{HTML_URL}mga-emulatorjs@main/nes/famidash/index.html",
         "author": "TFD Soft",
         "authorLink": "https://github.com/tfdsoft/",
@@ -580,8 +580,8 @@
     {
         "id": 51,
         "name": "Grand Theft Auto",
-        "cover": "{HTML_URL}mga-emulatorjs@main/chd/grand-theft-auto/icon.png",
-        "url": "{HTML_URL}mga-emulatorjs@main/chd/grand-theft-auto/playstation.html",
+        "cover": "{HTML_URL}mga-emulatorjs@main/psx/grand-theft-auto/icon.png",
+        "url": "{HTML_URL}mga-emulatorjs@main/psx/grand-theft-auto/index.html",
         "author": "Rockstar Games",
         "authorLink": "https://www.rockstargames.com/",
         "special": [
@@ -592,7 +592,7 @@
         "id": 52,
         "name": "Grand Theft Auto Advance",
         "cover": "{HTML_URL}mga-emulatorjs@main/gba/grand-theft-auto-advance/icon.png",
-        "url": "{HTML_URL}mga-emulatorjs@main/gba/grand-theft-auto-advance/gameboy.html",
+        "url": "{HTML_URL}mga-emulatorjs@main/gba/grand-theft-auto-advance/index.html",
         "author": "Rockstar Games",
         "authorLink": "https://www.rockstargames.com/",
         "special": [
@@ -744,9 +744,9 @@
     },
     {
         "id": 66,
-        "name": "Grand Theft Auto 2 (Gameboy)",
-        "cover": "{HTML_URL}mga-emulatorjs@main/grand-theft-auto-2/icon.png",
-        "url": "{HTML_URL}mga-emulatorjs@main/grand-theft-auto-2/gameboy.html",
+        "name": "Grand Theft Auto 2 (GBC)",
+        "cover": "{HTML_URL}mga-emulatorjs@main/gbc/grand-theft-auto-2/icon.png",
+        "url": "{HTML_URL}mga-emulatorjs@main/gbc/grand-theft-auto-2/index.html",
         "author": "Rockstar Games",
         "authorLink": "https://www.rockstargames.com/",
         "special": [
@@ -756,8 +756,8 @@
     {
         "id": 67,
         "name": "Grand Theft Auto 2 (PlayStation)",
-        "cover": "{HTML_URL}mga-emulatorjs@main/grand-theft-auto-2/icon.png",
-        "url": "{HTML_URL}mga-emulatorjs@main/grand-theft-auto-2/playstation.html",
+        "cover": "{HTML_URL}mga-emulatorjs@main/psx/grand-theft-auto-2/icon.png",
+        "url": "{HTML_URL}mga-emulatorjs@main/psx/grand-theft-auto-2/index.html",
         "author": "Rockstar Games",
         "authorLink": "https://www.rockstargames.com/",
         "special": [
@@ -767,8 +767,8 @@
     {
         "id": 68,
         "name": "Grand Theft Auto: Chinatown Wars",
-        "cover": "{HTML_URL}mga-emulatorjs@main/grand-theft-auto-chinatown-wars/icon.png",
-        "url": "{HTML_URL}mga-emulatorjs@main/grand-theft-auto-chinatown-wars/nintendo-ds.html",
+        "cover": "{HTML_URL}mga-emulatorjs@main/nds/grand-theft-auto-chinatown-wars/icon.png",
+        "url": "{HTML_URL}mga-emulatorjs@main/nds/grand-theft-auto-chinatown-wars/index.html",
         "author": "Rockstar Games",
         "authorLink": "https://www.rockstargames.com/",
         "special": [
@@ -778,8 +778,8 @@
     {
         "id": 69,
         "name": "Super Smash Bros.",
-        "cover": "{HTML_URL}mga-emulatorjs@main/super-smash-bros/icon.png",
-        "url": "{HTML_URL}mga-emulatorjs@main/super-smash-bros/nintendo-64.html",
+        "cover": "{HTML_URL}mga-emulatorjs@main/n64/super-smash-bros/icon.png",
+        "url": "{HTML_URL}mga-emulatorjs@main/n64/super-smash-bros/index.html",
         "author": "HAL Laboratory",
         "authorLink": "https://www.hallab.co.jp/eng/",
         "special": [
@@ -789,8 +789,8 @@
     {
         "id": 70,
         "name": "Grand Theft Auto: San Andreas",
-        "cover": "{HTML_URL}mga-emulatorjs@main/grand-theft-auto-san-andreas/icon.svg",
-        "url": "{HTML_URL}mga-emulatorjs@main/grand-theft-auto-san-andreas/playstation.html",
+        "cover": "{HTML_URL}mga-emulatorjs@main/psx/grand-theft-auto-san-andreas/icon.png",
+        "url": "{HTML_URL}mga-emulatorjs@main/psx/grand-theft-auto-san-andreas/index.html",
         "author": "Rockstar Games",
         "authorLink": "https://www.rockstargames.com/",
         "special": [
