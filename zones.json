@@ -1401,5 +1401,60 @@
         "special": [
             "Unity"
         ]
+    },
+    {
+        "id": 127,
+        "name": "Call of Duty: World at War (NDS)",
+        "cover": "{HTML_URL}mga-emulatorjs@main/nds/call-of-duty-world-at-war/icon.png",
+        "url": "{HTML_URL}mga-emulatorjs@main/nds/call-of-duty-world-at-war/index.html",
+        "author": "n-Space",
+        "authorLink": "https://web.archive.org/web/20160313032539/http://www.n-space.com/",
+        "special": [
+            "EmulatorJS"
+        ]
+    },
+    {
+        "id": 128,
+        "name": "Call of Duty 4: Modern Warfare (NDS)",
+        "cover": "{HTML_URL}mga-emulatorjs@main/nds/call-of-duty-4-modern-warfare/icon.png",
+        "url": "{HTML_URL}mga-emulatorjs@main/nds/call-of-duty-4-modern-warfare/index.html",
+        "author": "n-Space",
+        "authorLink": "https://web.archive.org/web/20160313032539/http://www.n-space.com/",
+        "special": [
+            "EmulatorJS"
+        ]
+    },
+    {
+        "id": 129,
+        "name": "Call of Duty: Black Ops (NDS)",
+        "cover": "{HTML_URL}mga-emulatorjs@main/nds/call-of-duty-black-ops/icon.png",
+        "url": "{HTML_URL}mga-emulatorjs@main/nds/call-of-duty-black-ops/index.html",
+        "author": "n-Space",
+        "authorLink": "https://web.archive.org/web/20160313032539/http://www.n-space.com/",
+        "special": [
+            "EmulatorJS"
+        ]
+    },
+    {
+        "id": 130,
+        "name": "Call of Duty: Modern Warfare 3 – Defiance",
+        "cover": "{HTML_URL}mga-emulatorjs@main/nds/call-of-duty-modern-warfare-3-defiance/icon.png",
+        "url": "{HTML_URL}mga-emulatorjs@main/nds/call-of-duty-modern-warfare-3-defiance/index.html",
+        "author": "n-Space",
+        "authorLink": "https://web.archive.org/web/20160313032539/http://www.n-space.com/",
+        "special": [
+            "EmulatorJS"
+        ]
+    },
+    {
+        "id": 131,
+        "name": "Call of Duty: Modern Warfare: Mobilized",
+        "cover": "{HTML_URL}mga-emulatorjs@main/nds/call-of-duty-modern-warfare-mobilized/icon.png",
+        "url": "{HTML_URL}mga-emulatorjs@main/nds/call-of-duty-modern-warfare-mobilized/index.html",
+        "author": "n-Space",
+        "authorLink": "https://web.archive.org/web/20160313032539/http://www.n-space.com/",
+        "special": [
+            "EmulatorJS"
+        ]
     }
 ]
