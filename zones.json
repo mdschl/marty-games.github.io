@@ -1454,5 +1454,71 @@
         "special": [
             "EmulatorJS"
         ]
+    },
+    {
+        "id": 132,
+        "name": "Need for Speed: Carbon - Own the City (GBA)",
+        "cover": "{HTML_URL}mga-emulatorjs@main/gba/need-for-speed-carbon-own-the-city/icon.png",
+        "url": "{HTML_URL}mga-emulatorjs@main/gba/need-for-speed-carbon-own-the-city/index.html",
+        "author": "Pocketeers",
+        "authorLink": "https://www.mobygames.com/company/4549/pocketeers/",
+        "special": [
+            "EmulatorJS"
+        ]
+    },
+    {
+        "id": 133,
+        "name": "Need for Speed: Carbon - Own the City (NDS)",
+        "cover": "{HTML_URL}mga-emulatorjs@main/nds/need-for-speed-carbon-own-the-city/icon.png",
+        "url": "{HTML_URL}mga-emulatorjs@main/nds/need-for-speed-carbon-own-the-city/index.html",
+        "author": "Exient Entertainment",
+        "authorLink": "https://exient.com/",
+        "special": [
+            "EmulatorJS"
+        ]
+    },
+    {
+        "id": 134,
+        "name": "Need for Speed: Most Wanted",
+        "cover": "{HTML_URL}mga-emulatorjs@main/gba/need-for-speed-most-wanted/icon.png",
+        "url": "{HTML_URL}mga-emulatorjs@main/gba/need-for-speed-most-wanted/index.html",
+        "author": "Pocketeers",
+        "authorLink": "https://www.mobygames.com/company/4549/pocketeers/",
+        "special": [
+            "EmulatorJS"
+        ]
+    },
+    {
+        "id": 135,
+        "name": "Need for Speed: Underground",
+        "cover": "{HTML_URL}mga-emulatorjs@main/gba/need-for-speed-underground/icon.png",
+        "url": "{HTML_URL}mga-emulatorjs@main/gba/need-for-speed-underground/index.html",
+        "author": "Pocketeers",
+        "authorLink": "https://www.mobygames.com/company/4549/pocketeers/",
+        "special": [
+            "EmulatorJS"
+        ]
+    },
+    {
+        "id": 136,
+        "name": "Need for Speed: Underground 2",
+        "cover": "{HTML_URL}mga-emulatorjs@main/gba/need-for-speed-underground-2/icon.png",
+        "url": "{HTML_URL}mga-emulatorjs@main/gba/need-for-speed-underground-2/index.html",
+        "author": "Pocketeers",
+        "authorLink": "https://www.mobygames.com/company/4549/pocketeers/",
+        "special": [
+            "EmulatorJS"
+        ]
+    },
+    {
+        "id": 137,
+        "name": "Need for Speed: Porsche Unleashed",
+        "cover": "{HTML_URL}mga-emulatorjs@main/gba/need-for-speed-porsche-unleashed/icon.png",
+        "url": "{HTML_URL}mga-emulatorjs@main/gba/need-for-speed-porsche-unleashed/index.html",
+        "author": "Pocketeers",
+        "authorLink": "https://www.mobygames.com/company/4549/pocketeers/",
+        "special": [
+            "EmulatorJS"
+        ]
     }
 ]
