@@ -1479,7 +1479,7 @@
     },
     {
         "id": 134,
-        "name": "Need for Speed: Most Wanted",
+        "name": "Need for Speed: Most Wanted (GBA)",
         "cover": "{HTML_URL}mga-emulatorjs@main/gba/need-for-speed-most-wanted/icon.png",
         "url": "{HTML_URL}mga-emulatorjs@main/gba/need-for-speed-most-wanted/index.html",
         "author": "Pocketeers",
@@ -1490,7 +1490,7 @@
     },
     {
         "id": 135,
-        "name": "Need for Speed: Underground",
+        "name": "Need for Speed: Underground (GBA)",
         "cover": "{HTML_URL}mga-emulatorjs@main/gba/need-for-speed-underground/icon.png",
         "url": "{HTML_URL}mga-emulatorjs@main/gba/need-for-speed-underground/index.html",
         "author": "Pocketeers",
@@ -1501,7 +1501,7 @@
     },
     {
         "id": 136,
-        "name": "Need for Speed: Underground 2",
+        "name": "Need for Speed: Underground 2 (GBA)",
         "cover": "{HTML_URL}mga-emulatorjs@main/gba/need-for-speed-underground-2/icon.png",
         "url": "{HTML_URL}mga-emulatorjs@main/gba/need-for-speed-underground-2/index.html",
         "author": "Pocketeers",
@@ -1512,11 +1512,66 @@
     },
     {
         "id": 137,
-        "name": "Need for Speed: Porsche Unleashed",
+        "name": "Need for Speed: Porsche Unleashed (GBA)",
         "cover": "{HTML_URL}mga-emulatorjs@main/gba/need-for-speed-porsche-unleashed/icon.png",
         "url": "{HTML_URL}mga-emulatorjs@main/gba/need-for-speed-porsche-unleashed/index.html",
         "author": "Pocketeers",
         "authorLink": "https://www.mobygames.com/company/4549/pocketeers/",
+        "special": [
+            "EmulatorJS"
+        ]
+    },
+    {
+        "id": 138,
+        "name": "Need for Speed: Underground 2 (NDS)",
+        "cover": "{HTML_URL}mga-emulatorjs@main/nds/need-for-speed-underground-2/icon.png",
+        "url": "{HTML_URL}mga-emulatorjs@main/nds/need-for-speed-underground-2/index.html",
+        "author": "Pocketeers",
+        "authorLink": "https://www.mobygames.com/company/4549/pocketeers/",
+        "special": [
+            "EmulatorJS"
+        ]
+    },
+    {
+        "id": 139,
+        "name": "Need for Speed: Nitro (NDS)",
+        "cover": "{HTML_URL}mga-emulatorjs@main/nds/need-for-speed-nitro/icon.png",
+        "url": "{HTML_URL}mga-emulatorjs@main/nds/need-for-speed-nitro/index.html",
+        "author": "Firebrand Games",
+        "authorLink": "https://www.firebrandgames.com/",
+        "special": [
+            "EmulatorJS"
+        ]
+    },
+    {
+        "id": 139,
+        "name": "Need for Speed: Undercover (NDS)",
+        "cover": "{HTML_URL}mga-emulatorjs@main/nds/need-for-speed-undercover/icon.png",
+        "url": "{HTML_URL}mga-emulatorjs@main/nds/need-for-speed-undercover/index.html",
+        "author": "Firebrand Games",
+        "authorLink": "https://www.firebrandgames.com/",
+        "special": [
+            "EmulatorJS"
+        ]
+    },
+    {
+        "id": 140,
+        "name": "Need for Speed: Prostreet (NDS)",
+        "cover": "{HTML_URL}mga-emulatorjs@main/nds/need-for-speed-prostreet/icon.png",
+        "url": "{HTML_URL}mga-emulatorjs@main/nds/need-for-speed-prostreet/index.html",
+        "author": "Exiient Entertainment",
+        "authorLink": "https://exient.com/",
+        "special": [
+            "EmulatorJS"
+        ]
+    },
+    {
+        "id": 141,
+        "name": "Need for Speed: Most Wanted (NDS)",
+        "cover": "{HTML_URL}mga-emulatorjs@main/nds/need-for-speed-most-wanted/icon.png",
+        "url": "{HTML_URL}mga-emulatorjs@main/nds/need-for-speed-most-wanted/index.html",
+        "author": "Sensory Sweep Studios",
+        "authorLink": "https://www.mobygames.com/company/6190/sensory-sweep-studios/",
         "special": [
             "EmulatorJS"
         ]
