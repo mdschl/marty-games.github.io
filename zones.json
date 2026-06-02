@@ -1575,5 +1575,27 @@
         "special": [
             "EmulatorJS"
         ]
+    },
+    {
+        "id": 142,
+        "name": "Lego Star Wars: The Video Game",
+        "cover": "{HTML_URL}mga-emulatorjs@main/nds/lego-star-wars-the-video-game/icon.png",
+        "url": "{HTML_URL}mga-emulatorjs@main/nds/lego-star-wars-the-video-game/index.html",
+        "author": "Griptonite, Inc.",
+        "authorLink": "https://www.mobygames.com/company/3107/griptonite-inc/",
+        "special": [
+            "EmulatorJS"
+        ]
+    },
+    {
+        "id": 143,
+        "name": "Lego Star Wars II: The Original Trilogy",
+        "cover": "{HTML_URL}mga-emulatorjs@main/nds/lego-star-wars-2-the-original-trilogy/icon.png",
+        "url": "{HTML_URL}mga-emulatorjs@main/nds/lego-star-wars-2-the-original-trilogy/index.html",
+        "author": "Amaze Entertainment, Inc.",
+        "authorLink": "https://www.mobygames.com/company/3109/amaze-entertainment-inc/",
+        "special": [
+            "EmulatorJS"
+        ]
     }
 ]
