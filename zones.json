@@ -1619,5 +1619,17 @@
         "special": [
             "Unity"
         ]
+    },
+    { 
+        "id": 146,
+        "name": "CAT Z Studio",
+        "cover": "{GITHACK_URL}mga-scratch/main/cat-z-studio-beyond-time/icon.png",
+        "url": "{GITHACK_URL}mga-scratch/main/cat-z-studio-beyond-time/single-file.html",
+        "author": "Hawk Studio",
+        "authorLink": "",
+        "special": [
+            "Scratch"
+        ]
     }
+        
 ]
