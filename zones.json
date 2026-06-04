@@ -1623,13 +1623,12 @@
     { 
         "id": 146,
         "name": "CAT Z Studio",
-        "cover": "{GITHACK_URL}mga-scratch/main/cat-z-studio1/icon.png",
+        "cover": "{HTML_URL}mga-scratch@main/cat-z-studio1/icon.png",
         "url": "{GITHACK_URL}mga-scratch/main/cat-z-studio1/single-file.html",
         "author": "Hawk Studio",
-        "authorLink": "",
+        "authorLink": "https://github.com/hawkstudio900",
         "special": [
             "Scratch"
         ]
     }
-        
 ]
