@@ -1623,12 +1623,34 @@
     { 
         "id": 146,
         "name": "CAT Z Studio",
-        "cover": "{HTML_URL}mga-scratch@main/cat-z-studio1/icon.png",
-        "url": "{GITHACK_URL}mga-scratch/main/cat-z-studio1/single-file.html",
+        "cover": "{HTML_URL}mga-scratch@main/cat-z-studio/icon.png",
+        "url": "{GITHACK_URL}mga-scratch/main/cat-z-studio/single-file.html",
         "author": "Hawk Studio",
         "authorLink": "https://github.com/hawkstudio900",
         "special": [
             "Scratch"
+        ]
+    },
+    {
+        "id": 147,
+        "name": "Subway Surfers Blast",
+        "cover": "{HTML_URL}mga-html5x@main/subway-surfers-blast/icon.png",
+        "url": "{HTML_URL}mga-html5x@main/subway-surfers-blast/index.html",
+        "author": "Kiloo Games and SYBO Games",
+        "authorLink": "https://play.google.com/store/apps/dev?id=7363891306616760846&hl=en_US",
+        "special": [
+            "HTML5"
+        ]
+    },
+    {
+        "id": 148,
+        "name": "Subway Surfers Match",
+        "cover": "{HTML_URL}mga-html5x@main/subway-surfers-match/icon.png",
+        "url": "{HTML_URL}mga-html5x@main/subway-surfers-match/index.html",
+        "author": "Kiloo Games and SYBO Games",
+        "authorLink": "https://play.google.com/store/apps/dev?id=7363891306616760846&hl=en_US",
+        "special": [
+            "HTML5"
         ]
     }
 ]
