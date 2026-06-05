@@ -1652,5 +1652,38 @@
         "special": [
             "HTML5"
         ]
+    },
+    {
+        "id": 149,
+        "name": "Minecraft: Pocket Edition Remastered",
+        "cover": "{HTML_URL}mga-html5x@main/minecraft-pocket-edition-remastered/icon.png",
+        "url": "{HTML_URL}mga-html5x@main/minecraft-pocket-edition-remastered/index.html",
+        "author": "Mojang",
+        "authorLink": "https://minecraft.net/",
+        "special": [
+            "HTML5"
+        ]
+    },
+    {
+        "id": 150,
+        "name": "Slide Down (Slope)",
+        "cover": "{HTML_URL}mga-unityx@main/slide-down/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/slide-down/index.html",
+        "author": "azgames.io",
+        "authorLink": "htt://azgames.io/",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 151,
+        "name": "Slope Remastered",
+        "cover": "{HTML_URL}mga-unityx@main/slide-down/icon-alt.png",
+        "url": "{HTML_URL}mga-unityx@main/slide-down/index.html",
+        "author": "azgames.io",
+        "authorLink": "htt://azgames.io/",
+        "special": [
+            "Unity"
+        ]
     }
 ]
