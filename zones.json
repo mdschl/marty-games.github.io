@@ -1674,16 +1674,5 @@
         "special": [
             "Unity"
         ]
-    },
-    {
-        "id": 151,
-        "name": "Slope Remastered",
-        "cover": "{HTML_URL}mga-unityx@main/slide-down/icon-alt.png",
-        "url": "{HTML_URL}mga-unityx@main/slide-down/index.html",
-        "author": "azgames.io",
-        "authorLink": "htt://azgames.io/",
-        "special": [
-            "Unity"
-        ]
     }
 ]
