@@ -1685,5 +1685,16 @@
         "special": [
             "Scratch"
         ]
+    },
+    {
+        "id": 152,
+        "name": "Dashmetry (Old Version)",
+        "cover": "{HTML_URL}mga-unityx@main/dashmetry-classic/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/dashmetry-classic/index.html",
+        "author": "1games.io",
+        "authorLink": "htt://1games.io/",
+        "special": [
+            "Unity"
+        ]
     }
 ]
