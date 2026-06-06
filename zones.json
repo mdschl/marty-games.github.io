@@ -1674,5 +1674,16 @@
         "special": [
             "Unity"
         ]
+    },
+    {
+        "id": 151,
+        "name": "Among Us Jester Mod (Remake)",
+        "cover": "{HTML_URL}mga-scratch@main/among-us-jester-mod/icon.png",
+        "url": "{GITHACK_URL}mga-scratch/main/among-us-jester-mod/single-file.html",
+        "author": "TimMcCool & Innersloth",
+        "authorLink": "https://scratch.mit.edu/users/timmccool/",
+        "special": [
+            "Scratch"
+        ]
     }
 ]
