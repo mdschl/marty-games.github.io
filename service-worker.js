@@ -3,6 +3,8 @@ const urlsToCache = [
   "/",
   "/index.html",
   "/zones.json",
+  "/404.thml",
+  "/403.html",
   "/favicon.ico"
 ];
 
