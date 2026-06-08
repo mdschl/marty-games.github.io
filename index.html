@@ -818,24 +818,22 @@
         const sortOptions = document.getElementById('sortOptions');
         // https://www.jsdelivr.com/tools/purge
         const zonesurls = [
-            "https://cdn.jsdelivr.net/gh/marty-games/marty-games.github.io@latest/zones.json",
             "https://cdn.jsdelivr.net/gh/marty-games/marty-games.github.io@main/zones.json",
-            "https://cdn.jsdelivr.net/gh/marty-games/marty-games.github.io/zones.json",
-            "https://fastly.jsdelivr.net/gh/marty-games/marty-games.github.io@latest/zones.json",
             "https://fastly.jsdelivr.net/gh/marty-games/marty-games.github.io@main/zones.json",
-            "https://fastly.jsdelivr.net/gh/marty-games/marty-games.github.io/zones.json",
-            "https://gcore.jsdelivr.net/gh/marty-games/marty-games.github.io@latest/zones.json",
             "https://gcore.jsdelivr.net/gh/marty-games/marty-games.github.io@main/zones.json",
-            "https://gcore.jsdelivr.net/gh/marty-games/marty-games.github.io/zones.json",
-            "https://testingcf.jsdelivr.net/gh/marty-games/marty-games.github.io@latest/zones.json",
             "https://testingcf.jsdelivr.net/gh/marty-games/marty-games.github.io@main/zones.json",
-            "https://testingcf.jsdelivr.net/gh/marty-games/marty-games.github.io/zones.json",
-            "https://marty-games.github.io/zones.json"
+            "https://orignfastly.jsdelivr.net/gh/marty-games/marty-games.github.io@main/zones.json",
+            "https://esm.sh/gh/marty-games/marty-games.github.io@main/zones.json",
+            "https://cdn.staticdelivr.com/gh/marty-games/marty-games.github.io@main/zones.json",
+            "https://cdn.statically.io/gh/marty-games/marty-games.github.io@main/zones.json",
+            "https://marty-games.github.io/zones.json",
+            "https://raw.githack.com/marty-games/marty-games.github.io/main/zones.json",
+            "https://raw.githubusercontent.com/marty-games/marty-games.github.io/main/zones.json"
         ];
         let zonesURL = zonesurls[Math.floor(Math.random() * zonesurls.length)];
         const coverURL = "https://cdn.jsdelivr.net/gh/marty-games/";
-        const htmlURL = "https://cdn.jsdelivr.net/gh/marty-games/";
-        const jsdelivrURL = "https://cdn.jsdelivr.net/gh/marty-games/";
+        const htmlURL = "https://gcore.jsdelivr.net/gh/marty-games/";
+        const jsdelivrURL = "https://gcore.jsdelivr.net/gh/marty-games/";
         const githackURL = "https://raw.githack.com/marty-games/";
         let zones = [];
         async function listZones() {
@@ -851,7 +849,7 @@
                         shajson = await sharesponse.json();
                         sha = shajson[0]['sha'];
                         if (sha) {
-                            zonesURL = `https://cdn.jsdelivr.net/gh/marty-games/marty-games.github.io@${sha}/zones.json`;
+                            zonesURL = `https://gcore.jsdelivr.net/gh/marty-games/marty-games.github.io@${sha}/zones.json`;
                         }
                     } catch (error) {
                         try {
@@ -859,7 +857,7 @@
                             if (secondarysharesponse && secondarysharesponse.status === 200) {
                                 sha = (await secondarysharesponse.text()).trim();
                                 if (sha) {
-                                    zonesURL = `https://cdn.jsdelivr.net/gh/gn-math/assets@${sha}/zones.json`;
+                                    zonesURL = `https://gcore.jsdelivr.net/gh/gn-math/assets@${sha}/zones.json`;
                                 }
                             }
                         } catch (error) {}
