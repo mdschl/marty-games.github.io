@@ -1,5 +1,4 @@
-[
-    {
+[{
         "id": -1,
         "name": "[!] Join the Discord .gg/F8kc4FKjnw",
         "cover": "{HTML_URL}mga-apps/discord-widget/icon.png",
@@ -1620,7 +1619,7 @@
             "Unity"
         ]
     },
-    { 
+    {
         "id": 146,
         "name": "CAT Z Studio",
         "cover": "{HTML_URL}mga-scratch@main/cat-z-studio/icon.png",
@@ -1693,6 +1692,94 @@
         "url": "{HTML_URL}mga-unityx@main/dashmetry-classic/index.html",
         "author": "1games.io",
         "authorLink": "htt://1games.io/",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 153,
+        "name": "Fruit Ninja",
+        "cover": "{HTML_URL}mga-html5x@main/fruit-ninja/icon.png",
+        "url": "{HTML_URL}mga-html5x@main/fruit-ninja/index.html",
+        "author": "HalfBrick Studios",
+        "authorLink": "https://www.halfbrick.com/",
+        "special": [
+            "HTML5"
+        ]
+    },
+    {
+        "id": 154,
+        "name": "Jetpack Joyride",
+        "cover": "{HTML_URL}mga-html5x@main/jetpack-joyride/icon.png",
+        "url": "{HTML_URL}mga-html5x@main/jetpack-joyride/index.html",
+        "author": "HalfBrick Studios",
+        "authorLink": "https://www.halfbrick.com/",
+        "special": [
+            "HTML5"
+        ]
+    },
+    {
+        "id": 155,
+        "name": "Rocket League 2d",
+        "cover": "{HTML_URL}mga-html5x@main/rocket-league-2d/icon.png",
+        "url": "{HTML_URL}mga-html5x@main/rocket-league-2d/index.html",
+        "author": "Stephen Kempisty",
+        "authorLink": "https://github.com/skempisty/",
+        "special": [
+            "HTML5"
+        ]
+    },
+    {
+        "id": 156,
+        "name": "Duck Life (Unity)",
+        "cover": "{HTML_URL}mga-unityx@main/duck-life/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/duck-life/index.html",
+        "author": "Wix Games",
+        "authorLink": "https://www.wixgames.co.uk/",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 157,
+        "name": "Duck Life 2 (Unity)",
+        "cover": "{HTML_URL}mga-unityx@main/duck-life-2/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/duck-life-2/index.html",
+        "author": "Wix Games",
+        "authorLink": "https://www.wixgames.co.uk/",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 158,
+        "name": "Duck Life 3 (Unity)",
+        "cover": "{HTML_URL}mga-unityx@main/duck-life-3/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/duck-life-3/index.html",
+        "author": "Wix Games",
+        "authorLink": "https://www.wixgames.co.uk/",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 159,
+        "name": "Duck Life 4 (Unity)",
+        "cover": "{HTML_URL}mga-unityx@main/duck-life-4/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/duck-life-4/index.html",
+        "author": "Wix Games",
+        "authorLink": "https://www.wixgames.co.uk/",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 160,
+        "name": "Duck Life: Space (Unity)",
+        "cover": "{HTML_URL}mga-unityx@main/duck-life-5/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/duck-life-5/index.html",
+        "author": "Wix Games",
+        "authorLink": "https://www.wixgames.co.uk/",
         "special": [
             "Unity"
         ]
