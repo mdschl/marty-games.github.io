@@ -7,7 +7,7 @@
       <script>
         const params = new URLSearchParams(window.location.search);
         params.set("t", Date.now());
-        const safeUrl = "https://cdn.jsdelivr.net/gh/marty-games/marty-games.github.io@main/embed.html" + "?" + params.toString();
+        const safeUrl = "https://gcore.jsdelivr.net/gh/marty-games/marty-games.github.io@main/embed.html" + "?" + params.toString();
         let l = `
         \x3Cscript>
         launch();
