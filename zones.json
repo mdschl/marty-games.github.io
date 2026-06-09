@@ -216,12 +216,12 @@
     {
         "id": 19,
         "name": "Trigonometry Dash",
-        "cover": "{HTML_URL}mga-html5x@main/trigonometry-dash/v1.3.5/icon.png",
-        "url": "{HTML_URL}mga-html5x@main/trigonometry-dash/v1.3.5/index.html",
+        "cover": "{HTML_URL}mga-gdevelop@main/trigonometry-dash/v1.3.5/icon.png",
+        "url": "{HTML_URL}mga-gdevelop@main/trigonometry-dash/v1.3.5/index.html",
         "author": "majimellow",
         "authorLink": "https://majimellow.itch.io/trigdash",
         "special": [
-            "HTML5"
+            "GDevelop"
         ]
     },
     {
