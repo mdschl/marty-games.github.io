@@ -1731,69 +1731,24 @@
     },
     {
         "id": 156,
-        "name": "Duck Life (Unity)",
-        "cover": "{HTML_URL}mga-unityx@main/duck-life/icon.png",
-        "url": "{HTML_URL}mga-unityx@main/duck-life/index.html",
+        "name": "Duck Life",
+        "cover": "{HTML_URL}mga-flash@main/duck-life/icon.png",
+        "url": "{HTML_URL}mga-flash@main/duck-life/index.html",
         "author": "Wix Games",
         "authorLink": "https://www.wixgames.co.uk/",
         "special": [
-            "Unity"
+            "Flash"
         ]
     },
-    {
+    {   
         "id": 157,
-        "name": "Duck Life 2 (Unity)",
-        "cover": "{HTML_URL}mga-unityx@main/duck-life-2/icon.png",
-        "url": "{HTML_URL}mga-unityx@main/duck-life-2/index.html",
-        "author": "Wix Games",
-        "authorLink": "https://www.wixgames.co.uk/",
-        "special": [
-            "Unity"
-        ]
-    },
-    {
-        "id": 158,
-        "name": "Duck Life 3 (Unity)",
-        "cover": "{HTML_URL}mga-unityx@main/duck-life-3/icon.png",
-        "url": "{HTML_URL}mga-unityx@main/duck-life-3/index.html",
-        "author": "Wix Games",
-        "authorLink": "https://www.wixgames.co.uk/",
-        "special": [
-            "Unity"
-        ]
-    },
-    {
-        "id": 159,
-        "name": "Duck Life 4 (Unity)",
-        "cover": "{HTML_URL}mga-unityx@main/duck-life-4/icon.png",
-        "url": "{HTML_URL}mga-unityx@main/duck-life-4/index.html",
-        "author": "Wix Games",
-        "authorLink": "https://www.wixgames.co.uk/",
-        "special": [
-            "Unity"
-        ]
-    },
-    {
-        "id": 160,
-        "name": "Duck Life: Space (Unity)",
-        "cover": "{HTML_URL}mga-unityx@main/duck-life-5/icon.png",
-        "url": "{HTML_URL}mga-unityx@main/duck-life-5/index.html",
-        "author": "Wix Games",
-        "authorLink": "https://www.wixgames.co.uk/",
-        "special": [
-            "Unity"
-        ]
-   },
-   {   
-        "id": 161,
         "name": "HTV",
         "cover": "{HTML_URL}mga-html5x@main/HTV/icon.png",
         "url": "{HTML_URL}mga-html5x@main/HTV/index.html",
         "author": "HawkTech",
         "authorLink": "https://github.com/hawkstudio900/HawkTV",
-        "special": 
-            "HTML5" 
-   
-    }
-   
+        "special": [
+            "Apps"
         ]
+    }
+]
