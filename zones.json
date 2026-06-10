@@ -1,4 +1,5 @@
-[{
+[
+    {
         "id": -1,
         "name": "[!] Join the Discord .gg/F8kc4FKjnw",
         "cover": "{HTML_URL}mga-apps/discord-widget/icon.png",
@@ -1740,7 +1741,7 @@
             "Flash"
         ]
     },
-    {   
+    {
         "id": 157,
         "name": "HTV",
         "cover": "{HTML_URL}mga-html5x@main/HTV/icon.png",
