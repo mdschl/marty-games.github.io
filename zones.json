@@ -1755,8 +1755,8 @@
     {
         "id": 158,
         "name": "YouTube Video Player",
-        "cover": "{HTML_URL}mga-html5x@main/youtube-video-player/icon.png",
-        "url": "{HTML_URL}mga-html5x@main/youtube-video-player/index.html",
+        "cover": "{HTML_URL}mga-apps@main/youtube-video-player/icon.png",
+        "url": "{HTML_URL}mga-apps@main/youtube-video-player/index.html",
         "author": "Martin_MMC",
         "authorLink": "https://github.com/martinmmcyt/",
         "special": [
