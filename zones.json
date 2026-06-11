@@ -1784,5 +1784,16 @@
         "special": [
             "Apps"
         ]
+    },
+    {
+        "id": 161,
+        "name": "Hinoriti Rhythm Game",
+        "cover": "{HTML_URL}mga-unityx@main/hinotori-rhythm-game/icon.png",
+        "url": "{HTML_URL}mga-unityx@main/hinotori-rhythm-game/index.html",
+        "author": "nullrefrepro",
+        "authorLink": "https://nullrefrepro.itch.io/hinotori-rhythm",
+        "special": [
+            "Unity"
+        ]
     }
 ]
