@@ -1744,8 +1744,8 @@
     {
         "id": 157,
         "name": "HTV",
-        "cover": "{HTML_URL}mga-apps@main/HTV/icon.png",
-        "url": "{HTML_URL}mga-apps@main/HTV/index.html",
+        "cover": "{HTML_URL}mga-apps@main/htv/icon.png",
+        "url": "{HTML_URL}mga-apps@main/htv/index.html",
         "author": "HawkTech",
         "authorLink": "https://github.com/hawkstudio900/HawkTV",
         "special": [
