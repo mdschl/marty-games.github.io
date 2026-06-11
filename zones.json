@@ -831,9 +831,9 @@
     {
         "id": 74,
         "name": "Spotify Preview",
-        "cover": "{HTML_URL}mga-apps@main/cinify/icon.png",
-        "url": "{HTML_URL}mga-apps@main/cinify/index.html",
-        "author": "Marty Games",
+        "cover": "{HTML_URL}mga-apps@main/spotify-preview/icon.png",
+        "url": "{HTML_URL}mga-apps@main/spotify-preview/index.html",
+        "author": "Unknown",
         "authorLink": "https://marty-games.github.io/",
         "special": [
             "Apps"
@@ -1759,6 +1759,28 @@
         "url": "{HTML_URL}mga-apps@main/youtube-video-player/index.html",
         "author": "Martin_MMC",
         "authorLink": "https://github.com/martinmmcyt/",
+        "special": [
+            "Apps"
+        ]
+    },
+    {
+        "id": 159,
+        "name": "HTML Viewer",
+        "cover": "{HTML_URL}mga-apps@main/html-viewer/icon.png",
+        "url": "{HTML_URL}mga-apps@main/html-viewer/index.html",
+        "author": "OnlineViewer.net",
+        "authorLink": "https://html.onlineviewer.net/",
+        "special": [
+            "Apps"
+        ]
+    },
+    {
+        "id": 160,
+        "name": "Message Encrypter",
+        "cover": "{HTML_URL}mga-apps@main/message-encryptor/icon.png",
+        "url": "{HTML_URL}mga-apps@main/message-encryptor/index.html",
+        "author": "dinguschan!",
+        "authorLink": "https://github.com/dinguschan-owo",
         "special": [
             "Apps"
         ]
