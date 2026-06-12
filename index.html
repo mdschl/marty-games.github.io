@@ -40,7 +40,7 @@
 
             // Redirect: If on the old GitHub Pages domain, send them to the new domain
             if (location.hostname === "marty-games.github.io") {
-                window.location.replace("https://marty-games.great-site.net" + location.pathname + location.search);
+                window.location.replace("https://marty-games.neocities.org/" + location.search);
                 return; // Stop the rest of the script from executing while the redirect happens
             } else {
                 // 2. Test the URLs until one returns a successful status (200-299)
