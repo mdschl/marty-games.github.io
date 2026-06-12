@@ -24,32 +24,33 @@
         (async function() {
             // 1. Define your list of fallback URLs in order of preference
             const fallbackUrls = [
-                "https://marty-games.github.io/",
-                "https://cdn.jsdelivr.net/gh/marty-games/marty-games.github.io@main/",
-                "https://fastly.jsdelivr.net/gh/marty-games/marty-games.github.io@main/", // Backup CDN 1
-                "https://gcore.jsdelivr.net/gh/marty-games/marty-games.github.io@main/", // Backup CDN 2
-                "https://testingcf.jsdelivr.net/gh/marty-games/marty-games.github.io@main/", // Backup CDN 3 (Unstable)
-                "https://quantil.jsdelivr.net/gh/marty-games/marty-games.github.io@main/", // Backup CDN 4 (Unstable)
-                "https://originfastly.jsdelivr.net/gh/marty-games/marty-games.github.io@main/", //Backup CDN 5 (Unstable)
-                "https://esm.sh/gh/marty-games/marty-games.github.io@main/",
-                "https://cdn.statically.io/gh/marty-games/marty-games.github.io@main/",
-                "https://cdn.staticdelivr.com/gh/marty-games/marty-games.github.io@main/"
+                "https://cdn.jsdelivr.net/gh/marty-games/",
+                "https://fastly.jsdelivr.net/gh/marty-games/", // Backup CDN 1
+                "https://gcore.jsdelivr.net/gh/marty-games/", // Backup CDN 2
+                "https://testingcf.jsdelivr.net/gh/marty-games/", // Backup CDN 3 (Unstable)
+                "https://quantil.jsdelivr.net/gh/marty-games/", // Backup CDN 4 (Unstable)
+                "https://originfastly.jsdelivr.net/gh/marty-games/", //Backup CDN 5 (Unstable)
+                "https://esm.sh/gh/marty-games/",
+                "https://cdn.statically.io/gh/marty-games/",
+                "https://cdn.staticdelivr.com/gh/marty-games/"
             ];
 
+            const pathSuffix = "marty-games.github.io@main/";
             let chosenBase = fallbackUrls[0]; // Default fallback
 
-            // Shortcut: If already on the primary domain, skip network tests
+            // Redirect: If on the old GitHub Pages domain, send them to the new domain
             if (location.hostname === "marty-games.github.io") {
-                chosenBase = "https://marty-games.github.io/";
+                window.location.replace("https://marty-games.great-site.net" + location.pathname + location.search);
+                return; // Stop the rest of the script from executing while the redirect happens
             } else {
                 // 2. Test the URLs until one returns a successful status (200-299)
                 for (const url of fallbackUrls) {
                     try {
-                        // We fetch index.html (or a tiny asset like favicon.ico) with a short timeout
                         const controller = new AbortController();
                         const timeoutId = setTimeout(() => controller.abort(), 2500); // 2.5s timeout per attempt
 
-                        const response = await fetch(url + "index.html", {
+                        // Test the full path (CDN + Repo/Branch + index.html) to ensure it's fully available
+                        const response = await fetch(url + pathSuffix + "index.html", {
                             method: 'HEAD', // HEAD request only grabs headers, saving bandwidth
                             mode: 'cors',
                             signal: controller.signal
@@ -68,15 +69,16 @@
                 }
             }
 
-            // 3. Inject the working URL into the <base> tag
+            // 3. Inject the working URL + suffix into the <base> tag
+            const finalBaseUrl = chosenBase + pathSuffix;
             let base = document.querySelector("base") || document.createElement("base");
-            base.href = chosenBase;
+            base.href = finalBaseUrl;
 
             if (!document.querySelector("base")) {
                 document.head.prepend(base);
             }
 
-            console.log("Base URL successfully set to: " + chosenBase);
+            console.log("Base URL successfully set to: " + finalBaseUrl);
         })();
     </script>
     <script>
