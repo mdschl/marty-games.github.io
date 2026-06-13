@@ -1795,5 +1795,16 @@
         "special": [
             "Unity"
         ]
+    },
+    {
+        "id": 162,
+        "name": "Bible App",
+        "cover": "{HTML_URL}mga-apps@main/bible/icon.png",
+        "url": "{HTML_URL}mga-apps@main/bible/index.html",
+        "author": "Omar Job Abesamis",
+        "authorLink": "https://github.com/ajbodev",
+        "special": [
+            "Apps"
+        ]
     }
 ]
