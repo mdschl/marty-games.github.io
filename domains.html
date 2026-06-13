@@ -112,7 +112,7 @@
 
 <body>
 
-    <h1>Marty Games Domains</h1>
+    <h1>Marty Games</h1>
 
     <div id="domains">
         <p>Loading domains...</p>
@@ -125,13 +125,21 @@
                 const container = document.getElementById("domains");
                 container.innerHTML = "";
 
-                data.urls.forEach(url => {
+                // Fisher-Yates shuffle
+                const urls = [...data.urls];
+                for (let i = urls.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [urls[i], urls[j]] = [urls[j], urls[i]];
+                }
+
+                const selected = urls.slice(0, 4);
+
+                selected.forEach(url => {
                     const button = document.createElement("a");
                     button.href = url;
                     button.target = "_blank";
                     button.className = "domain-btn";
 
-                    // Show domain name without https://
                     button.innerHTML = `<span>${new URL(url).hostname}</span>`;
                     container.appendChild(button);
                 });
