@@ -62,13 +62,11 @@
     },
     {
         "id": 5,
-        "name": "Doblox",
-        "cover": "{HTML_URL}mga-unityx@main/doblox/icon.png",
-        "url": "{HTML_URL}mga-unityx@main/doblox/index.html",
-        "author": "Yandex",
-        "authorLink": "https://www.yandex.com/",
+        "name": "MMC Gaming",
+        "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwVhy2mHwV--uYd45YLP1PxbFktT9bretxWg&s",
+        "url": "https://www.youtube.com/@MMC-Gaming",
         "special": [
-            "Unity"
+            "Advertisement"
         ]
     },
     {
