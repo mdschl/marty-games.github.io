@@ -236,11 +236,11 @@
     },
     {
         "id": 21,
-        "name": "The Movie Database (TMDb)",
-        "cover": "{HTML_URL}mga-apps@main/tmdb/icon.png",
-        "url": "{HTML_URL}mga-apps@main/tmdb/index.html",
-        "author": "TMBd",
-        "authorLink": "https://www.themoviedb.org/",
+        "name": "Movies",
+        "cover": "{HTML_URL}mga-apps@main/movies/icon.png",
+        "url": "{HTML_URL}mga-apps@main/movies/index.html",
+        "author": "crax",
+        "authorLink": "https://crax.lol/",
         "special": [
             "Apps"
         ]
