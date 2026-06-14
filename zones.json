@@ -1815,5 +1815,27 @@
         "special": [
             "EmulatorJS"
         ]
+    },
+    {
+        "id": 164,
+        "name": "Half Life",
+        "cover": "{HTML_URL}mga-html5x@main/half-life/icon.png",
+        "url": "{HTML_URL}mga-html5x@main/half-life/index.html",
+        "author": "Valve",
+        "authorLink": "https://www.valvesoftware.com/en/",
+        "special": [
+            "HTML5"
+        ]
+    },
+    {
+        "id": 165,
+        "name": "Half Life: Opposing Force",
+        "cover": "{HTML_URL}mga-html5x@main/half-life-opposing-force/icon.png",
+        "url": "{HTML_URL}mga-html5x@main/half-life-opposing-force/index.html",
+        "author": "Gearbox Entertainment",
+        "authorLink": "https://2k.com/studios/gearbox/",
+        "special": [
+            "HTML5"
+        ]
     }
 ]
