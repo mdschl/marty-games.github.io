@@ -848,7 +848,7 @@
                         shajson = await sharesponse.json();
                         sha = shajson[0]['sha'];
                         if (sha) {
-                            zonesURL = `https://gcore.jsdelivr.net/gh/marty-games/marty-games.github.io@${sha}/zones.json`;
+                            zonesURL = `https://gcore.jsdelivr.net/gh/marty-games/zones@${sha}/zones.json`;
                         }
                     } catch (error) {
                         try {
