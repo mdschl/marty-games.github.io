@@ -841,7 +841,7 @@
                 let shajson;
                 let sha;
                 try {
-                    sharesponse = await fetch("https://api.github.com/repos/marty-games/marty-games.github.io/commits?t=" + Date.now());
+                    sharesponse = await fetch("https://api.github.com/repos/marty-games/zones/commits?t=" + Date.now());
                 } catch (error) {}
                 if (sharesponse && sharesponse.status === 200) {
                     try {
