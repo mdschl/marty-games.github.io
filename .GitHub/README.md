@@ -40,10 +40,9 @@ Welcome to **Marty Games**, the ultimate browser-based gaming destination! Play 
 marty-games.github.io(root)/
 │
 ├─ index.html           # Homepage
-├─ zones.json           # Stores game card data
-├─ style.css            # Stylesheets for the site
-├─ embed.html           # Auto-Updating embed code for external usage
 ├─ favicon.ico          # Website icon
+├─ embed.html           # Auto-Updating embed code for external usage
+├─ /zones/zones.json    # Stores game card data
 └─ /.github/README.md   # This file
 ```
 Note: this only shows the more important files in the repository.
@@ -55,6 +54,8 @@ Note: this only shows the more important files in the repository.
 - [Martin_MMC](https://github.com/martinmmcyt)
   
 - [Drag00nKnight999](https://github.com/drag00nknight999)
+
+- [HawkStudio900](https://github.com/hawkstudio900)
 
 ---
 
