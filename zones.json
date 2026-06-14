@@ -1806,5 +1806,16 @@
         "special": [
             "Apps"
         ]
+    },
+    {
+        "id": 163,
+        "name": "Geometry Dash Advance",
+        "cover": "{HTML_URL}mga-emulatorjs@main/gba/geometry-dash-advance/icon.png",
+        "url": "{HTML_URL}mga-emulatorjs@main/gba/geometry-dash-advance/index.html",
+        "author": "AleFunky",
+        "authorLink": "https://github.com/AleFunky/",
+        "special": [
+            "EmulatorJS"
+        ]
     }
 ]
