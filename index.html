@@ -818,17 +818,16 @@
         const sortOptions = document.getElementById('sortOptions');
         // https://www.jsdelivr.com/tools/purge
         const zonesurls = [
-            "https://cdn.jsdelivr.net/gh/marty-games/marty-games.github.io@main/zones.json",
-            "https://fastly.jsdelivr.net/gh/marty-games/marty-games.github.io@main/zones.json",
-            "https://gcore.jsdelivr.net/gh/marty-games/marty-games.github.io@main/zones.json",
-            "https://testingcf.jsdelivr.net/gh/marty-games/marty-games.github.io@main/zones.json",
-            "https://orignfastly.jsdelivr.net/gh/marty-games/marty-games.github.io@main/zones.json",
-            "https://esm.sh/gh/marty-games/marty-games.github.io@main/zones.json",
-            "https://cdn.staticdelivr.com/gh/marty-games/marty-games.github.io@main/zones.json",
-            "https://cdn.statically.io/gh/marty-games/marty-games.github.io@main/zones.json",
-            "https://marty-games.github.io/zones.json",
-            "https://raw.githack.com/marty-games/marty-games.github.io/main/zones.json",
-            "https://raw.githubusercontent.com/marty-games/marty-games.github.io/main/zones.json"
+            "https://cdn.jsdelivr.net/gh/marty-games/zones@main/zones.json",
+            "https://fastly.jsdelivr.net/gh/marty-games/zones@main/zones.json",
+            "https://gcore.jsdelivr.net/gh/marty-games/zones@main/zones.json",
+            "https://testingcf.jsdelivr.net/gh/marty-games/zones@main/zones.json",
+            "https://orignfastly.jsdelivr.net/gh/marty-games/zones@main/zones.json",
+            "https://esm.sh/gh/marty-games/zones@main/zones.json",
+            "https://cdn.staticdelivr.com/gh/marty-games/zones@main/zones.json",
+            "https://cdn.statically.io/gh/marty-games/zones@main/zones.json",
+            "https://raw.githack.com/marty-games/zones/main/zones.json",
+            "https://raw.githubusercontent.com/marty-games/zones/main/zones.json"
         ];
         let zonesURL = zonesurls[Math.floor(Math.random() * zonesurls.length)];
         const coverURL = "https://cdn.jsdelivr.net/gh/marty-games/";
