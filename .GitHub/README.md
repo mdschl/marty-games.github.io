@@ -1,4 +1,4 @@
-# 🎮 Marty Games – Your #1 Free Unblocked Game Hub
+🎮 Marty Games – Your #1 Free Unblocked Game Hub
 
 [![Website](https://img.shields.io/badge/website-live-gr)](https://marty-games.github.io)  
 [![License](https://img.shields.io/badge/license-nolicense-gr)](LICENSE)  
@@ -52,6 +52,8 @@ Note: this only shows the more important files in the repository.
 ## Creators
 
 - [Martin_MMC](https://github.com/martinmmcyt)
+
+- [TuffZinc](https://github.com/tuffzinc)
   
 - [Drag00nKnight999](https://github.com/drag00nknight999)
 
