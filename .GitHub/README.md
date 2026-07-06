@@ -1,4 +1,4 @@
-🎮 Marty Games – Your #1 Free Unblocked Game Hub
+# Marty Games – Tons of free unblocked games
 
 [![Website](https://img.shields.io/badge/website-live-gr)](https://marty-games.github.io)  
 [![License](https://img.shields.io/badge/license-nolicense-gr)](LICENSE)  
