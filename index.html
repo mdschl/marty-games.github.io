@@ -836,6 +836,7 @@
         let zoneFrame = document.getElementById('zoneFrame');
         const searchBar = document.getElementById('searchBar');
         const sortOptions = document.getElementById('sortOptions');
+        const zoneCount = document.getElementById('zoneCount');
         // https://www.jsdelivr.com/tools/purge
         const zonesurls = [
             "https://cdn.jsdelivr.net/gh/marty-games/zones@main/zones.json",
@@ -959,50 +960,54 @@
             displayZones(zones);
         }
 
-        function displayZones(zones) {
+        function displayZones(zonesToShow) {
             container.innerHTML = "";
-            zones.forEach((file, index) => {
+
+            zonesToShow.forEach((file) => {
                 const zoneItem = document.createElement("div");
                 zoneItem.className = "zone-item";
                 zoneItem.onclick = () => openZone(file);
+
                 const img = document.createElement("img");
-                img.dataset.src = file.cover.replace("{GITHACK_URL}", githackURL).replace("{JSDELIVR_URL}", jsdelivrURL).replace("{HTML_URL}", htmlURL);
+                img.dataset.src = file.cover
+                    .replace("{GITHACK_URL}", githackURL)
+                    .replace("{JSDELIVR_URL}", jsdelivrURL)
+                    .replace("{HTML_URL}", htmlURL);
                 img.alt = file.name;
                 img.loading = "lazy";
                 img.className = "lazy-zone-img";
                 zoneItem.appendChild(img);
+
                 const button = document.createElement("button");
-
                 button.innerHTML = `
-    <div class="zone-name">${file.name}</div>
-    <div class="zone-subtitle">
-        ${Array.isArray(file.special) ? file.special.join(" • ") : (file.special || "")}
-    </div>
-`;
+            <div class="zone-name">${file.name}</div>
+            <div class="zone-subtitle">
+                ${Array.isArray(file.special) ? file.special.join(" • ") : (file.special || "")}
+            </div>
+        `;
 
                 button.onclick = (event) => {
                     event.stopPropagation();
                     openZone(file);
                 };
 
-                zoneItem.appendChild(button);
-                button.onclick = (event) => {
-                    event.stopPropagation();
-                    openZone(file);
-                };
                 zoneItem.appendChild(button);
                 container.appendChild(zoneItem);
             });
-            if (container.innerHTML === "") {
-                container.innerHTML = "No zones found.";
+
+            if (zonesToShow.length === 0) {
+                container.innerHTML = "No results.";
+                zoneCount.textContent = "0 available";
+                document.getElementById("allSummary").textContent = "All Zones (0)";
             } else {
-                document.getElementById("allSummary").textContent = `All Zones (${zones.length})`;
+                zoneCount.textContent = `${zonesToShow.length} available`;
+                document.getElementById("allSummary").textContent = `All Zones (${zonesToShow.length})`;
             }
 
             const lazyImages = document.querySelectorAll('img.lazy-zone-img');
             const imageObserver = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
-                    if (entry.isIntersecting && !zoneViewer.hidden) {
+                    if (entry.isIntersecting) {
                         const img = entry.target;
                         img.src = img.dataset.src;
                         img.classList.remove("lazy-zone-img");
