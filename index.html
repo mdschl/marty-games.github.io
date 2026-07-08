@@ -371,6 +371,21 @@
             box-shadow: var(--shadow-sm);
         }
 
+        /* Styling for the fallback text wrapper when an icon is missing or broken */
+        .icon-placeholder {
+            width: 100%;
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--surface-alt);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-bottom: 1px solid var(--border);
+            letter-spacing: 0.02em;
+        }
+
         .card:hover,
         .zone-item:hover {
             border-color: var(--primary);
@@ -969,14 +984,34 @@
                 zoneItem.onclick = () => openZone(file);
 
                 const img = document.createElement("img");
-                img.dataset.src = file.cover
-                    .replace("{GITHACK_URL}", githackURL)
-                    .replace("{JSDELIVR_URL}", jsdelivrURL)
-                    .replace("{HTML_URL}", htmlURL);
-                img.alt = file.name;
-                img.loading = "lazy";
-                img.className = "lazy-zone-img";
-                zoneItem.appendChild(img);
+                const placeholder = document.createElement("div");
+                placeholder.className = "icon-placeholder";
+                placeholder.textContent = "No icon";
+
+                // Fallback action if the network fails to load the image link
+                img.onerror = () => {
+                    img.style.display = "none";
+                    placeholder.style.display = "flex";
+                };
+
+                // Check if file.cover points to a valid asset configuration
+                const hasCover = file.cover && file.cover.trim() !== "" && file.cover !== "{COVER_URL}" && file.cover !== "../";
+
+                if (hasCover) {
+                    placeholder.style.display = "none";
+                    img.dataset.src = file.cover
+                        .replace("{GITHACK_URL}", githackURL)
+                        .replace("{JSDELIVR_URL}", jsdelivrURL)
+                        .replace("{HTML_URL}", htmlURL);
+                    img.alt = file.name;
+                    img.loading = "lazy";
+                    img.className = "lazy-zone-img";
+                    zoneItem.appendChild(img);
+                } else {
+                    img.style.display = "none";
+                    placeholder.style.display = "flex";
+                }
+                zoneItem.appendChild(placeholder);
 
                 const button = document.createElement("button");
                 button.innerHTML = `
@@ -1252,7 +1287,7 @@
             </p>
             <ol>
                 <li>
-                    <a href="https://discord.gg/F8kc4FKjnw" target="_blank" rel="noopener noreferrer">
+                    <a href="https://discord.gg/F8kc4FKjnw" target="_blank" rela="noopener noreferrer">
                         Join the Discord
                     </a> and DM <strong>martin_mmc</strong> or ping me in a public channel 
                     <strong>[INSTANT RESPONSE]</strong>
