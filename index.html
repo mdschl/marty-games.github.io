@@ -967,9 +967,8 @@
             if (sortBy === 'name') {
                 zones.sort((a, b) => a.name.localeCompare(b.name));
             } else if (sortBy === 'id') {
-                zones.sort((a, b) => a.id - b.id);
+                zones.sort((a, b) => b.id - a.id);
             }
-
             zones.sort((a, b) => (a.id === -1 ? -1 : b.id === -1 ? 1 : 0));
 
             displayZones(zones);
