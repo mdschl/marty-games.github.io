@@ -1210,11 +1210,31 @@
     <button id="settings-button" onclick="darkMode()">Toggle Dark Mode</button>
     <br><br>
     <button id="settings-button" onclick="tabCloak()">Tab Cloak</button>
+    <br><br>
+    <button id="settings-button" onclick="openMartyAboutBlank()">Open Marty Games in about:blank</button>
     <br>
     `;
             popupBody.contentEditable = false;
             document.getElementById('popupOverlay').style.display = "flex";
         });
+
+        function openMartyAboutBlank() {
+            const newWindow = window.open("about:blank", "_blank");
+            if (!newWindow) {
+                alert("Popup blocker prevented opening the window. Please allow popups for this site.");
+                return;
+            }
+
+            // Get the current page's HTML structure
+            const currentHtml = document.documentElement.outerHTML;
+
+            newWindow.document.open();
+            newWindow.document.write(currentHtml);
+            newWindow.document.close();
+
+            // Optional: Close the popup on the current page after launching
+            closePopup();
+        }
 
         function showContact() {
             document.getElementById('popupTitle').textContent = "Contact";
