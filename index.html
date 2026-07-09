@@ -770,8 +770,7 @@
 <body class="dark-mode">
     <header>
         <div class="nav-container">
-            <div class="logo">Marty Games</div>
-
+            <div class="logo" onclick="refreshZones()">Marty Games</div>
             <div class="search-wrapper">
                 <input type="text" id="searchBar" placeholder="Search games..." oninput="filterZones()">
                 <select id="sortOptions" onchange="sortZones()" style="width:auto; min-width:130px;">
@@ -852,6 +851,12 @@
         const searchBar = document.getElementById('searchBar');
         const sortOptions = document.getElementById('sortOptions');
         const zoneCount = document.getElementById('zoneCount');
+
+        function refreshZones() {
+            searchBar.value = '';
+            sortOptions.value = 'name';
+            listZones();
+        }
         // https://www.jsdelivr.com/tools/purge
         const zonesurls = [
             "https://cdn.jsdelivr.net/gh/marty-games/zones@main/zones.json",
