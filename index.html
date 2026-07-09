@@ -1212,28 +1212,65 @@
     <button id="settings-button" onclick="tabCloak()">Tab Cloak</button>
     <br><br>
     <button id="settings-button" onclick="openMartyAboutBlank()">Open Marty Games in about:blank</button>
+    <br><br>
+    <button id="settings-button" onclick="loadMoreLinks()">More Links</button>
     <br>
     `;
             popupBody.contentEditable = false;
             document.getElementById('popupOverlay').style.display = "flex";
         });
-
-        function openMartyAboutBlank() {
-            const newWindow = window.open("about:blank", "_blank");
-            if (!newWindow) {
-                alert("Popup blocker prevented opening the window. Please allow popups for this site.");
-                return;
-            }
-
-            // Get the current page's HTML structure
-            const currentHtml = document.documentElement.outerHTML;
-
-            newWindow.document.open();
-            newWindow.document.write(currentHtml);
-            newWindow.document.close();
-
-            // Optional: Close the popup on the current page after launching
+        async function loadMoreLinks() {
             closePopup();
+            document.getElementById('popupTitle').textContent = "Alternative Links";
+            const popupBody = document.getElementById('popupBody');
+            popupBody.innerHTML = "<p>Loading alternative domains...</p>";
+            document.getElementById('popupOverlay').style.display = "flex";
+
+            try {
+                // Fetch the encoded domains.json file
+                const response = await fetch('./domains.json?t=' + Date.now());
+                if (!response.ok) throw new Error("Could not retrieve domain list.");
+
+                const data = await response.json();
+
+                // Read from the "urls" array inside the object
+                const domains = data.urls;
+
+                if (!Array.isArray(domains) || domains.length === 0) {
+                    popupBody.innerHTML = "<p>No links found in domains.json.</p>";
+                    return;
+                }
+
+                // Shuffle domains and grab up to 4 items
+                const shuffled = [...domains].sort(() => 0.5 - Math.random());
+                const selectedLinks = shuffled.slice(0, 4);
+
+                // Build a clean grid using your existing .settings-button styles
+                let htmlContent = '<div class="settings-grid" style="margin-top: 10px; display: flex; flex-direction: column; gap: 10px;">';
+                selectedLinks.forEach(url => {
+                    // Extract just the hostname cleanly for a shorter display name
+                    let displayName = url;
+                    try {
+                        const parsed = new URL(url);
+                        displayName = parsed.hostname;
+                        // Clean up common subdomains for a cleaner button look
+                        if (displayName.startsWith('www.')) displayName = displayName.substring(4);
+                    } catch (e) {}
+
+                    htmlContent += `
+                        <a href="${url}" target="_blank" rel="noopener noreferrer" id="settings-button" style="display: block; text-decoration: none; text-align: center; line-height: 1.5;">
+                            🌐 ${displayName}
+                        </a>
+                    `;
+                });
+                htmlContent += '</div>';
+
+                popupBody.innerHTML = htmlContent;
+
+            } catch (error) {
+                console.error(error);
+                popupBody.innerHTML = `<p style="color: red;">Error fetching alternative links: ${error.message}</p>`;
+            }
         }
 
         function showContact() {
