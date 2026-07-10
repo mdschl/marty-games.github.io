@@ -877,89 +877,122 @@
         const githackURL = "https://raw.githack.com/marty-games/";
         let zones = [];
         async function listZones() {
+            let json = null;
+
+            // Tier 1: Try checking the GitHub API for the latest commit SHA
             try {
-                let sharesponse;
-                let shajson;
-                let sha;
-                try {
-                    sharesponse = await fetch("https://api.github.com/repos/marty-games/zones/commits?t=" + Date.now());
-                } catch (error) {}
-
+                const sharesponse = await fetch("https://api.github.com/repos/marty-games/zones/commits?t=" + Date.now());
                 if (sharesponse && sharesponse.status === 200) {
-                    try {
-                        shajson = await sharesponse.json();
-                        sha = shajson[0]['sha'];
-                        if (sha) {
-                            zonesURL = `../zones@${sha}/zones.json`;
-                        }
-                    } catch (error) {
-                        console.warn("Primary SHA check failed parsing JSON:", error);
-                        // defaults to the random zonesURL assignment
-                    }
-                }
-                const response = await fetch(zonesURL + "?t=" + Date.now());
-                const json = await response.json();
-                zones = json;
-                zones[0].featured = true; // always gonna be the discord
-                sortZones();
-                const search = new URLSearchParams(window.location.search);
-                const id = search.get('id');
-                const embed = window.location.hash.includes("embed");
-                if (id) {
-                    const zone = zones.find(zone => zone.id + '' == id + '');
-                    if (zone) {
-                        if (embed) {
-                            if (zone.url.startsWith("http")) {
-                                window.open(zone.url, "_blank");
-                            } else {
-                                const url = zone.url.replace("{GITHACK_URL}", githackURL).replace("{JSDELIVR_URL}", jsdelivrURL).replace("{HTML_URL}", htmlURL);
-                                fetch(url + "?t=" + Date.now()).then(response => response.text()).then(html => {
-                                    document.documentElement.innerHTML = html;
-                                    const popup = document.createElement("div");
-                                    popup.style.position = "fixed";
-                                    popup.style.bottom = "20px";
-                                    popup.style.right = "20px";
-                                    popup.style.backgroundColor = "#cce5ff";
-                                    popup.style.color = "#004085";
-                                    popup.style.padding = "10px";
-                                    popup.style.border = "1px solid #b8daff";
-                                    popup.style.borderRadius = "5px";
-                                    popup.style.boxShadow = "0px 0px 10px rgba(0,0,0,0.1)";
-                                    popup.style.fontFamily = "Arial, sans-serif";
-
-                                    popup.innerHTML = `Play more games at <a href="https://marty-games.github.io" target="_blank" style="color:#004085; font-weight:bold;">https://marty-games.github.io</a>!`;
-
-                                    const closeBtn = document.createElement("button");
-                                    closeBtn.innerText = "✖";
-                                    closeBtn.style.marginLeft = "10px";
-                                    closeBtn.style.background = "none";
-                                    closeBtn.style.border = "none";
-                                    closeBtn.style.cursor = "pointer";
-                                    closeBtn.style.color = "#004085";
-                                    closeBtn.style.fontWeight = "bold";
-
-                                    closeBtn.onclick = () => popup.remove();
-                                    popup.appendChild(closeBtn);
-                                    document.body.appendChild(popup);
-                                    document.documentElement.querySelectorAll('script').forEach(oldScript => {
-                                        const newScript = document.createElement('script');
-                                        if (oldScript.src) {
-                                            newScript.src = oldScript.src;
-                                        } else {
-                                            newScript.textContent = oldScript.textContent;
-                                        }
-                                        document.body.appendChild(newScript);
-                                    });
-                                }).catch(error => alert("Failed to load zone: " + error));
-                            }
-                        } else {
-                            openZone(zone);
+                    const shajson = await sharesponse.json();
+                    const sha = shajson[0]?.['sha'];
+                    if (sha) {
+                        const shaUrl = `../zones@${sha}/zones.json?t=` + Date.now();
+                        const response = await fetch(shaUrl);
+                        if (response.ok) {
+                            json = await response.json();
                         }
                     }
                 }
             } catch (error) {
-                console.error(error);
-                container.innerHTML = `Error loading zones: ${error}`;
+                console.warn("Tier 1 (GitHub API SHA strategy) failed, parsing backup...", error);
+            }
+
+            // Tier 2: Backup strategy if SHA strategy failed
+            if (!json) {
+                try {
+                    console.log("Attempting Tier 2 backup: ../zones@main/zones.json");
+                    const response = await fetch("../zones@main/zones.json?t=" + Date.now());
+                    if (response.ok) {
+                        json = await response.json();
+                    }
+                } catch (error) {
+                    console.warn("Tier 2 backup failed, parsing fallback array...", error);
+                }
+            }
+
+            // Tier 3: Last resort fallback loops through zonesurls array from top to bottom
+            if (!json) {
+                console.log("Attempting Tier 3 fallback checklist...");
+                for (const url of zonesurls) {
+                    try {
+                        const response = await fetch(url + "?t=" + Date.now());
+                        if (response.ok) {
+                            json = await response.json();
+                            break; // Successfully loaded data, break loop!
+                        }
+                    } catch (error) {
+                        console.warn(`${url} failed, checking next in list...`);
+                    }
+                }
+            }
+
+            // Process data if any strategy succeeded
+            if (json) {
+                try {
+                    zones = json;
+                    zones[0].featured = true; // always gonna be the discord
+                    sortZones();
+                    const search = new URLSearchParams(window.location.search);
+                    const id = search.get('id');
+                    const embed = window.location.hash.includes("embed");
+                    if (id) {
+                        const zone = zones.find(zone => zone.id + '' == id + '');
+                        if (zone) {
+                            if (embed) {
+                                if (zone.url.startsWith("http")) {
+                                    window.open(zone.url, "_blank");
+                                } else {
+                                    const url = zone.url.replace("{GITHACK_URL}", githackURL).replace("{JSDELIVR_URL}", jsdelivrURL).replace("{HTML_URL}", htmlURL);
+                                    fetch(url + "?t=" + Date.now()).then(response => response.text()).then(html => {
+                                        document.documentElement.innerHTML = html;
+                                        const popup = document.createElement("div");
+                                        popup.style.position = "fixed";
+                                        popup.style.bottom = "20px";
+                                        popup.style.right = "20px";
+                                        popup.style.backgroundColor = "#cce5ff";
+                                        popup.style.color = "#004085";
+                                        popup.style.padding = "10px";
+                                        popup.style.border = "1px solid #b8daff";
+                                        popup.style.borderRadius = "5px";
+                                        popup.style.boxShadow = "0px 0px 10px rgba(0,0,0,0.1)";
+                                        popup.style.fontFamily = "Arial, sans-serif";
+
+                                        popup.innerHTML = `Play more games at <a href="https://marty-games.github.io" target="_blank" style="color:#004085; font-weight:bold;">https://marty-games.github.io</a>!`;
+
+                                        const closeBtn = document.createElement("button");
+                                        closeBtn.innerText = "✖";
+                                        closeBtn.style.marginLeft = "10px";
+                                        closeBtn.style.background = "none";
+                                        closeBtn.style.border = "none";
+                                        closeBtn.style.cursor = "pointer";
+                                        closeBtn.style.color = "#004085";
+                                        closeBtn.style.fontWeight = "bold";
+
+                                        closeBtn.onclick = () => popup.remove();
+                                        popup.appendChild(closeBtn);
+                                        document.body.appendChild(popup);
+                                        document.documentElement.querySelectorAll('script').forEach(oldScript => {
+                                            const newScript = document.createElement('script');
+                                            if (oldScript.src) {
+                                                newScript.src = oldScript.src;
+                                            } else {
+                                                newScript.textContent = oldScript.textContent;
+                                            }
+                                            document.body.appendChild(newScript);
+                                        });
+                                    }).catch(error => alert("Failed to load zone: " + error));
+                                }
+                            } else {
+                                openZone(zone);
+                            }
+                        }
+                    }
+                } catch (error) {
+                    console.error(error);
+                    container.innerHTML = `Error loading zones content: ${error}`;
+                }
+            } else {
+                container.innerHTML = `Error loading zones: All fallbacks failed.`;
             }
         }
 
