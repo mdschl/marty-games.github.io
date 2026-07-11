@@ -884,6 +884,7 @@
         let zones = [];
         async function listZones() {
             let json = null;
+            let resolvedURL = ""; // Tracks the working URL configuration
 
             // Tier 1: Try checking the GitHub API for the latest commit SHA
             try {
@@ -896,6 +897,9 @@
                         const response = await fetch(shaUrl);
                         if (response.ok) {
                             json = await response.json();
+                            // If running locally or on a domain that routes relative paths, 
+                            // we can fall back to using one of your standard CDN arrays for assets
+                            resolvedURL = zonesurls[0];
                         }
                     }
                 }
@@ -910,6 +914,7 @@
                     const response = await fetch("../zones/zones.json?t=" + Date.now());
                     if (response.ok) {
                         json = await response.json();
+                        resolvedURL = zonesurls[0]; // Map fallback base reference
                     }
                 } catch (error) {
                     console.warn("Tier 2 backup failed, parsing fallback array...", error);
@@ -924,20 +929,8 @@
                         const response = await fetch(url + "?t=" + Date.now());
                         if (response.ok) {
                             json = await response.json();
-
-                            // NEW: Extract strictly the account root URL (e.g., https://cdn.statically.io/gh/marty-games/)
-                            if (window.location.hostname === "marty-games.github.io") {
-                                // This regex captures everything up to and including "marty-games/"
-                                const match = url.match(/^https?:\/\/[^\/]+\/[^\/]+\/marty-games\//);
-                                if (match) {
-                                    const cdnBase = match[0];
-                                    htmlURL = cdnBase;
-                                    coverURL = cdnBase;
-                                    console.log("Matching HTML and Cover URLs to account root CDN: " + cdnBase);
-                                }
-                            }
-
-                            break; // Successfully loaded data, break loop!
+                            resolvedURL = url; // Remember which CDN worked!
+                            break;
                         }
                     } catch (error) {
                         console.warn(`${url} failed, checking next in list...`);
@@ -947,6 +940,17 @@
 
             // Process data if any strategy succeeded
             if (json) {
+                // NEW: Handle primary domain override regardless of which Tier succeeded
+                if (window.location.hostname === "marty-games.github.io" && resolvedURL) {
+                    const match = resolvedURL.match(/^https?:\/\/[^\/]+\/[^\/]+\/marty-games\//);
+                    if (match) {
+                        const cdnBase = match[0];
+                        htmlURL = cdnBase;
+                        coverURL = cdnBase;
+                        console.log("Primary Domain detected. Bound asset URLs to root CDN: " + cdnBase);
+                    }
+                }
+
                 try {
                     zones = json;
                     zones[0].featured = true; // always gonna be the discord
