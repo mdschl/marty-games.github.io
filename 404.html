@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>404 Not Found | Marty Games</title>
@@ -107,102 +108,104 @@
         }
     </style>
 </head>
+
 <body>
 
-<canvas id="bg-canvas"></canvas>
+    <canvas id="bg-canvas"></canvas>
 
-<div class="error-container">
-    <h2>404</h2>
-    <p>The page you are looking for does not exist.</p>
+    <div class="error-container">
+        <h2>404</h2>
+        <p>The page you are looking for does not exist.</p>
 
-    <a href="/" class="btn-primary">
-        Return to main page
-    </a>
-</div>
+        <a href="/" class="btn-primary">
+            Return to main page
+        </a>
+    </div>
 
-<script>
-    const canvas = document.getElementById('bg-canvas');
-    const ctx = canvas.getContext('2d');
+    <script>
+        const canvas = document.getElementById('bg-canvas');
+        const ctx = canvas.getContext('2d');
 
-    let particlesArray = [];
-    const MAX_PARTICLES = 45;
-    const MAX_DISTANCE = 110;
-    // Modified canvas colors to match the blue/grey core aesthetic
-    const COLORS = ['#2f80ed', '#569aff', '#8a8d91', '#14161d'];
+        let particlesArray = [];
+        const MAX_PARTICLES = 45;
+        const MAX_DISTANCE = 110;
+        // Modified canvas colors to match the blue/grey core aesthetic
+        const COLORS = ['#2f80ed', '#569aff', '#8a8d91', '#14161d'];
 
-    class Particle {
-        constructor() {
-            this.x = Math.random() * canvas.width;
-            this.y = Math.random() * canvas.height;
-            this.size = Math.random() * 2 + 1;
-            this.speedX = (Math.random() - 0.5) * 0.8;
-            this.speedY = (Math.random() - 0.5) * 0.8;
-            this.color = COLORS[Math.floor(Math.random() * COLORS.length)];
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 1;
+                this.speedX = (Math.random() - 0.5) * 0.8;
+                this.speedY = (Math.random() - 0.5) * 0.8;
+                this.color = COLORS[Math.floor(Math.random() * COLORS.length)];
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.x > canvas.width) this.x = 0;
+                if (this.x < 0) this.x = canvas.width;
+                if (this.y > canvas.height) this.y = 0;
+                if (this.y < 0) this.y = canvas.height;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+            }
         }
-        update() {
-            this.x += this.speedX;
-            this.y += this.speedY;
-            if (this.x > canvas.width) this.x = 0;
-            if (this.x < 0) this.x = canvas.width;
-            if (this.y > canvas.height) this.y = 0;
-            if (this.y < 0) this.y = canvas.height;
+
+        function init() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            particlesArray = [];
+
+            for (let i = 0; i < MAX_PARTICLES; i++) {
+                particlesArray.push(new Particle());
+            }
         }
-        draw() {
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-            ctx.fillStyle = this.color;
-            ctx.fill();
-        }
-    }
 
-    function init() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        particlesArray = [];
+        function connect() {
+            let opacityValue = 1;
+            for (let a = 0; a < particlesArray.length; a++) {
+                for (let b = a + 1; b < particlesArray.length; b++) {
+                    let dx = particlesArray[a].x - particlesArray[b].x;
+                    let dy = particlesArray[a].y - particlesArray[b].y;
+                    let distance = Math.sqrt(dx * dx + dy * dy);
 
-        for (let i = 0; i < MAX_PARTICLES; i++) {
-            particlesArray.push(new Particle());
-        }
-    }
-
-    function connect() {
-        let opacityValue = 1;
-        for (let a = 0; a < particlesArray.length; a++) {
-            for (let b = a + 1; b < particlesArray.length; b++) {
-                let dx = particlesArray[a].x - particlesArray[b].x;
-                let dy = particlesArray[a].y - particlesArray[b].y;
-                let distance = Math.sqrt(dx * dx + dy * dy);
-
-                if (distance < MAX_DISTANCE) {
-                    opacityValue = 1 - (distance / MAX_DISTANCE);
-                    ctx.strokeStyle = `rgba(47, 128, 237, ${opacityValue * 0.18})`; 
-                    ctx.lineWidth = 1;
-                    ctx.beginPath();
-                    ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
-                    ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
-                    ctx.stroke();
+                    if (distance < MAX_DISTANCE) {
+                        opacityValue = 1 - (distance / MAX_DISTANCE);
+                        ctx.strokeStyle = `rgba(47, 128, 237, ${opacityValue * 0.18})`;
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+                        ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
+                        ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
+                        ctx.stroke();
+                    }
                 }
             }
         }
-    }
 
-    function animate() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        particlesArray.forEach(p => {
-            p.update();
-            p.draw();
-        });
+            particlesArray.forEach(p => {
+                p.update();
+                p.draw();
+            });
 
-        connect();
-        requestAnimationFrame(animate);
-    }
+            connect();
+            requestAnimationFrame(animate);
+        }
 
-    window.addEventListener('resize', init);
+        window.addEventListener('resize', init);
 
-    init();
-    animate();
-</script>
+        init();
+        animate();
+    </script>
 
 </body>
+
 </html>
