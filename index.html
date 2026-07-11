@@ -25,44 +25,50 @@
     <!-- base url -->
     <script>
         (async function() {
-            const fallbackUrls = [
-                "https://cdn.jsdelivr.net/gh/",
-                "https://fastly.jsdelivr.net/gh/",
-                "https://gcore.jsdelivr.net/gh/",
-                "https://testingcf.jsdelivr.net/gh/",
-                "https://quantil.jsdelivr.net/gh/",
-                "https://originfastly.jsdelivr.net/gh/",
-                "https://esm.sh/gh/",
-                "https://cdn.statically.io/gh/",
-                "https://cdn.staticdelivr.com/gh/"
-            ];
+            let finalBaseUrl = "";
+            if (window.location.hostname === "marty-games.github.io") {
+                finalBaseUrl = "https://marty-games.github.io/";
+                console.log("Running on primary domain. Setting base directly.");
+            } else {
+                const fallbackUrls = [
+                    "https://cdn.jsdelivr.net/gh/",
+                    "https://fastly.jsdelivr.net/gh/",
+                    "https://gcore.jsdelivr.net/gh/",
+                    "https://testingcf.jsdelivr.net/gh/",
+                    "https://quantil.jsdelivr.net/gh/",
+                    "https://originfastly.jsdelivr.net/gh/",
+                    "https://esm.sh/gh/",
+                    "https://cdn.statically.io/gh/",
+                    "https://cdn.staticdelivr.com/gh/"
+                ];
 
-            const pathSuffix = "marty-games/marty-games.github.io@main/";
-            let chosenBase = fallbackUrls[0];
+                const pathSuffix = "marty-games/marty-games.github.io@main/";
+                let chosenBase = fallbackUrls[0];
 
-            for (const url of fallbackUrls) {
-                try {
-                    const controller = new AbortController();
-                    const timeoutId = setTimeout(() => controller.abort(), 2500);
+                for (const url of fallbackUrls) {
+                    try {
+                        const controller = new AbortController();
+                        const timeoutId = setTimeout(() => controller.abort(), 2500);
 
-                    const response = await fetch(url + pathSuffix + "index.html", {
-                        method: 'HEAD',
-                        mode: 'cors',
-                        signal: controller.signal
-                    });
+                        const response = await fetch(url + pathSuffix + "index.html", {
+                            method: 'HEAD',
+                            mode: 'cors',
+                            signal: controller.signal
+                        });
 
-                    clearTimeout(timeoutId);
-
-                    if (response.ok) {
-                        chosenBase = url;
-                        break;
+                        clearTimeout(timeoutId);
+                        if (response.ok) {
+                            chosenBase = url;
+                            break;
+                        }
+                    } catch (e) {
+                        console.warn(`${url} failed, trying next fallback...`);
                     }
-                } catch (e) {
-                    console.warn(`${url} failed, trying next fallback...`);
                 }
+                finalBaseUrl = chosenBase + pathSuffix;
             }
 
-            const finalBaseUrl = chosenBase + pathSuffix;
+            // Apply the base URL to the document
             let base = document.querySelector("base") || document.createElement("base");
             base.href = finalBaseUrl;
 
@@ -871,8 +877,8 @@
             "https://cdn.statically.io/gh/marty-games/zones@main/zones.json"
         ];
         let zonesURL = zonesurls[Math.floor(Math.random() * zonesurls.length)];
-        const coverURL = "../";
-        const htmlURL = "../";
+        let coverURL = "../";
+        let htmlURL = "../";
         const jsdelivrURL = "https://gcore.jsdelivr.net/gh/marty-games/";
         const githackURL = "https://raw.githack.com/marty-games/";
         let zones = [];
@@ -900,8 +906,8 @@
             // Tier 2: Backup strategy if SHA strategy failed
             if (!json) {
                 try {
-                    console.log("Attempting Tier 2 backup: ../zones@main/zones.json");
-                    const response = await fetch("../zones@main/zones.json?t=" + Date.now());
+                    console.log("Attempting Tier 2 backup: ../zones/zones.json");
+                    const response = await fetch("../zones/zones.json?t=" + Date.now());
                     if (response.ok) {
                         json = await response.json();
                     }
@@ -918,6 +924,19 @@
                         const response = await fetch(url + "?t=" + Date.now());
                         if (response.ok) {
                             json = await response.json();
+
+                            // NEW: Extract strictly the account root URL (e.g., https://cdn.statically.io/gh/marty-games/)
+                            if (window.location.hostname === "marty-games.github.io") {
+                                // This regex captures everything up to and including "marty-games/"
+                                const match = url.match(/^https?:\/\/[^\/]+\/[^\/]+\/marty-games\//);
+                                if (match) {
+                                    const cdnBase = match[0];
+                                    htmlURL = cdnBase;
+                                    coverURL = cdnBase;
+                                    console.log("Matching HTML and Cover URLs to account root CDN: " + cdnBase);
+                                }
+                            }
+
                             break; // Successfully loaded data, break loop!
                         }
                     } catch (error) {
