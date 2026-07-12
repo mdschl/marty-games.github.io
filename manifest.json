@@ -2,7 +2,7 @@
     "name": "Marty Games",
     "short_name": "Marty Games",
     "id": "/?utm_source=pwa",
-    "start_url": "/",
+    "start_url": "/?utm_source=pwa",
     "display": "standalone",
     "orientation": "any",
     "description": "Marty Games — Your #1 free game hub.",
