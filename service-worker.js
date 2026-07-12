@@ -2,8 +2,7 @@ const CACHE_NAME = "my-site-cache-v1";
 const urlsToCache = [
   "/",
   "/index.html",
-  "/404.thml",
-  "/403.html",
+  "/404.html",
   "/favicon.ico",
   "/domains.json",
   "/manifest.json",
@@ -20,7 +19,8 @@ self.addEventListener("install", event => {
 
 self.addEventListener("fetch", event => {
   event.respondWith(
-    caches.match(event.request).then(response => {
+    // ignoreSearch: true ensures /?utm_source=pwa matches the cached "/"
+    caches.match(event.request, { ignoreSearch: true }).then(response => {
       return response || fetch(event.request);
     })
   );
