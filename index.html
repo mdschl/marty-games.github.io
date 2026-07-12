@@ -767,7 +767,7 @@
 <script>
     if ("serviceWorker" in navigator && location.hostname === "marty-games.github.io") {
         window.addEventListener("load", () => {
-            navigator.serviceWorker.register("https://marty-games.github.io/service-worker.js")
+            navigator.serviceWorker.register("service-worker.js")
                 .then(reg => console.log("Service Worker registered"))
                 .catch(err => console.log("Service Worker failed:", err));
         });
@@ -1463,6 +1463,20 @@
     `;
             popupBody.contentEditable = false;
             document.getElementById('popupOverlay').style.display = "flex";
+        }
+
+        function openMartyAboutBlank() {
+            const newWindow = window.open("about:blank", "_blank");
+            if (!newWindow) {
+                alert("Pop-up blocked! Please allow pop-ups for this site.");
+                return;
+            }
+
+            const currentHtml = document.documentElement.outerHTML;
+
+            newWindow.document.open();
+            newWindow.document.write(currentHtml);
+            newWindow.document.close();
         }
 
         function closePopup() {
