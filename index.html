@@ -431,6 +431,13 @@
             text-overflow: ellipsis;
         }
 
+        /* Unwraps the game title when you hover over the card */
+        .zone-item:hover .zone-name {
+            white-space: normal;
+            overflow: visible;
+            text-overflow: unset;
+        }
+
         .card-subtitle,
         .zone-subtitle {
             font-size: 0.78rem;
@@ -777,7 +784,7 @@
 <body class="dark-mode">
     <header>
         <div class="nav-container">
-            <div class="logo" onclick="refreshZones()">Marty Games</div>
+            <div class="logo" onclick="refreshZones()" title="Refresh zones">Marty Games</div>
             <div class="search-wrapper">
                 <input type="text" id="searchBar" placeholder="Search games..." oninput="filterZones()">
                 <select id="sortOptions" onchange="sortZones()" style="width:auto; min-width:130px;">
@@ -1070,6 +1077,7 @@
                 zoneItem.appendChild(placeholder);
 
                 const button = document.createElement("button");
+                button.setAttribute("title", file.name);
                 button.innerHTML = `
             <div class="zone-name">${file.name}</div>
             <div class="zone-subtitle">
