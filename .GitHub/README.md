@@ -1,10 +1,10 @@
-# Marty Games – Tons of free unblocked games
+# Marty Games – Your #1 Free Unblocked Game Hub
 
 [![Website](https://img.shields.io/badge/website-live-gr)](https://marty-games.github.io)  
 [![License](https://img.shields.io/badge/license-nolicense-gr)](LICENSE)  
 [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-gr)](#contributing)
 
-Welcome to **Marty Games**, the ultimate browser-based gaming destination! Play hundreds of free games across action, adventure, puzzle, sports, and multiplayer categories—all directly from your browser. No downloads, no accounts, just pure fun.  
+Welcome to **Marty Games**, the ultimate browser-based gaming destination! Play hundreds of free games across action, adventure, puzzle, sports, and multiplayer categories—all directly from your browser—no downloads, no accounts, just pure fun.  
 
 ---
 
@@ -41,11 +41,17 @@ marty-games.github.io(root)/
 │
 ├─ index.html           # Homepage
 ├─ favicon.ico          # Website icon
-├─ embed.html           # Auto-Updating embed code for external usage
-├─ /zones/zones.json    # Stores game card data
-└─ /.github/README.md   # This file
+├─ embed.html           # Auto-Updating page for external uses
+├─ manifest.json        # Configuration
+├─ service-worker.js    # Catches site data
+├─ 404.html             # Error page
+├─ tynker.html          # Embed version for tynker
+├─ icon-180.png         # 180x180 icon
+├─ icon-192.png         # 192x192 icon
+├─ icon-512.png         # 512x512 icon
+├─ domains.json         # alternate domains
+└─ /.GitHub/README.md   # This file
 ```
-Note: this only shows the more important files in the repository.
 
 ---
 
@@ -73,17 +79,13 @@ Note: this only shows the more important files in the repository.
 
 - Classic gn-math (Template)
 
--  **[HTML Online Viewer](https://html.onlineviewer.net/)** (Used for compiling HTML5, CSS3, JavaScript code, and previewing web pages.)
-
-
-
 ---
 
 # Contributing
 
 1. Fork the repository
 
-2. Make your changes (add games, fix bugs, improve styles)
+2. Make your changes (add functions, fix bugs, improve styles)
 
 3. Submit a Pull Request
 
@@ -93,7 +95,7 @@ Please follow the repository structure when adding new content.
 
 ## Tips for Contributors
 
-- Add new games inside the ```zones.json``` file
+- Add games in the  ```marty-games/zones``` repository
 
 ---
 
