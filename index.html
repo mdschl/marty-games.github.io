@@ -930,39 +930,25 @@
             let json = null;
             let resolvedURL = ""; // Tracks the working URL configuration
 
-            // NEW OVERRIDE: If running on the primary domain, strictly force-fetch the local zones.json
-            if (window.location.hostname === "marty-games.github.io") {
-                try {
-                    console.log("Primary domain detected. Forcing local fetch: ../zones/zones.json");
-                    const response = await fetch("../zones/zones.json?t=" + Date.now());
-                    if (response.ok) {
-                        json = await response.json();
-                        resolvedURL = "https://marty-games.github.io/zones/"; // Anchor base asset reference locally
-                    }
-                } catch (error) {
-                    console.warn("Forced primary local fetch failed, slipping back to CDN fallbacks...", error);
-                }
-            }
-
-            // Tier 1: Try checking the GitHub API for the latest commit SHA (Only runs if json wasn't populated above)
-            if (!json) {
-                try {
-                    const sharesponse = await fetch("https://api.github.com/repos/marty-games/zones/commits?t=" + Date.now());
-                    if (sharesponse && sharesponse.status === 200) {
-                        const shajson = await sharesponse.json();
-                        const sha = shajson[0]?.['sha'];
-                        if (sha) {
-                            const shaUrl = `../zones@${sha}/zones.json?t=` + Date.now();
-                            const response = await fetch(shaUrl);
-                            if (response.ok) {
-                                json = await response.json();
-                                resolvedURL = zonesurls[0];
-                            }
+            // Tier 1: Try checking the GitHub API for the latest commit SHA
+            try {
+                const sharesponse = await fetch("https://api.github.com/repos/marty-games/zones/commits?t=" + Date.now());
+                if (sharesponse && sharesponse.status === 200) {
+                    const shajson = await sharesponse.json();
+                    const sha = shajson[0]?.['sha'];
+                    if (sha) {
+                        const shaUrl = `../zones@${sha}/zones.json?t=` + Date.now();
+                        const response = await fetch(shaUrl);
+                        if (response.ok) {
+                            json = await response.json();
+                            // If running locally or on a domain that routes relative paths, 
+                            // we can fall back to using one of your standard CDN arrays for assets
+                            resolvedURL = zonesurls[0];
                         }
                     }
-                } catch (error) {
-                    console.warn("Tier 1 (GitHub API SHA strategy) failed, parsing backup...", error);
                 }
+            } catch (error) {
+                console.warn("Tier 1 (GitHub API SHA strategy) failed, parsing backup...", error);
             }
 
             // Tier 2: Backup strategy if SHA strategy failed
@@ -1006,10 +992,6 @@
                         htmlURL = cdnBase;
                         coverURL = cdnBase;
                         console.log("Primary Domain detected. Bound asset URLs to root CDN: " + cdnBase);
-                    } else if (resolvedURL.includes("marty-games.github.io")) {
-                        // If our new override code succeeded, set fallback paths gracefully
-                        htmlURL = "../";
-                        coverURL = "../";
                     }
                 }
 
