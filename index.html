@@ -457,14 +457,15 @@
             text-overflow: ellipsis;
         }
 
-        #zoneViewer {
-            position: fixed;
-            inset: 0;
-            background-color: var(--bg-color);
-            z-index: 2000;
-            display: none;
-            flex-direction: column;
-        }
+#zoneViewer {
+    position: fixed;
+    inset: 0;
+    background-color: var(--bg-color);
+    z-index: 2000;
+    display: none;
+    flex-direction: column;
+    overflow: hidden; /* Prevents the container itself from scrolling off-screen */
+}
 
         .viewer-header,
         .zone-header {
@@ -531,13 +532,14 @@
             transform: translateY(-1px);
         }
 
-        #zoneFrame {
-            flex: 1;
-            width: 100%;
-            height: 90%;
-            border: none;
-            background: #000;
-        }
+#zoneFrame {
+    flex: 1; /* Tells the iframe to fill all remaining space */
+    width: 100%;
+    min-height: 0; /* Crucial: Allows the flex item to shrink and prevents overflow */
+    border: none;
+    background: #000;
+    display: block; /* Removes the tiny gap standard inline-frames leave at the bottom */
+}
 
         #popupOverlay {
             position: fixed;
@@ -1199,7 +1201,7 @@
                     if (file.authorLink) {
                         document.getElementById('zoneAuthor').href = file.authorLink;
                     }
-                    zoneViewer.style.display = "block";
+                    zoneViewer.style.display = "flex";
                     const url = new URL(window.location);
                     url.searchParams.set('id', file.id);
                     history.pushState(null, '', url.toString());
