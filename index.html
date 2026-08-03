@@ -1000,7 +1000,7 @@
 
                 try {
                     zones = json;
-                    zones[0].featured = true; // always gonna be the discord
+                    zones[0].featured = true; // always gonna be the discord and chat
                     sortZones();
                     const search = new URLSearchParams(window.location.search);
                     const id = search.get('id');
@@ -1073,7 +1073,16 @@
             } else if (sortBy === 'id') {
                 zones.sort((a, b) => b.id - a.id);
             }
-            zones.sort((a, b) => (a.id === -1 ? -1 : b.id === -1 ? 1 : 0));
+            const pinnedIds = [-1, 0];
+            zones.sort((a, b) => {
+                const indexA = pinnedIds.indexOf(a.id);
+                const indexB = pinnedIds.indexOf(b.id);
+
+                if (indexA !== -1 && indexB !== -1) return indexA - indexB;
+                if (indexA !== -1) return -1;
+                if (indexB !== -1) return 1;
+                return 0;
+            });
 
             displayZones(zones);
         }
