@@ -877,6 +877,14 @@
         const sortOptions = document.getElementById('sortOptions');
         const zoneCount = document.getElementById('zoneCount');
 
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', (e) => {
+            // Prevent the mini-infobar from appearing on mobile
+            e.preventDefault();
+            // Stash the event so it can be triggered later
+            deferredPrompt = e;
+        });
+
         // Load saved settings on page load
         document.addEventListener("DOMContentLoaded", () => {
             // 1. Restore Dark/Light Mode
@@ -1300,6 +1308,7 @@
         <label for="tab-cloak-textbox" style="font-weight: bold;">Set Tab Icon:</label><br>
         <input type="text" id="tab-cloak-textbox" placeholder="Enter new tab icon..." oninput='cloakIcon(this.value)'>
         <br><br><br>
+        <button id="settings-button" onclick="document.getElementById('settings').click()" style="background-color: var(--surface-alt); text-align: center;">← Back to Settings</button>
     `;
             popupBody.contentEditable = false;
             document.getElementById('popupOverlay').style.display = "flex";
@@ -1310,18 +1319,21 @@
             document.getElementById('popupTitle').textContent = "Settings";
             const popupBody = document.getElementById('popupBody');
             popupBody.innerHTML = `
-    <button id="settings-button" onclick="darkMode()">Toggle Dark Mode</button>
-    <br><br>
-    <button id="settings-button" onclick="tabCloak()">Tab Cloak Settings</button>
-    <br><br>
-    <button id="settings-button" onclick="openMartyAboutBlank()">Open in about:blank</button>
-    <br><br>
-    <button id="settings-button" onclick="loadMoreLinks()">More Links</button>
-    <br>
-    `;
+<button id="settings-button" onclick="darkMode()">Toggle Dark Mode</button>
+<br><br>
+<button id="settings-button" onclick="tabCloak()">Tab Cloak Settings</button>
+<br><br>
+<button id="settings-button" onclick="openMartyAboutBlank()">Open in about:blank</button>
+<br><br>
+<button id="settings-button" onclick="loadMoreLinks()">More Links</button>
+<br><br>
+<button id="settings-button" onclick="showDownloadMenu()">Download</button>
+<br>
+`;
             popupBody.contentEditable = false;
             document.getElementById('popupOverlay').style.display = "flex";
         });
+
         async function loadMoreLinks() {
             closePopup();
             document.getElementById('popupTitle').textContent = "Alternative Links";
@@ -1361,18 +1373,80 @@
                     } catch (e) {}
 
                     htmlContent += `
-                        <a href="${url}" target="_blank" rel="noopener noreferrer" id="settings-button" style="display: block; text-decoration: none; text-align: center; line-height: 1.5;">
-                            🌐 ${displayName}
-                        </a>
-                    `;
+                <a href="${url}" target="_blank" rel="noopener noreferrer" id="settings-button" style="display: block; text-decoration: none; text-align: center; line-height: 1.5;">
+                    🌐 ${displayName}
+                </a>
+            `;
                 });
                 htmlContent += '</div>';
+
+                // Add the Back to Settings button
+                htmlContent += '<br><button id="settings-button" onclick="document.getElementById(\'settings\').click()" style="background-color: var(--surface-alt); text-align: center;">← Back to Settings</button>';
 
                 popupBody.innerHTML = htmlContent;
 
             } catch (error) {
                 console.error(error);
                 popupBody.innerHTML = `<p style="color: red;">Error fetching alternative links: ${error.message}</p>`;
+            }
+        }
+
+        function showDownloadMenu() {
+            document.getElementById('popupTitle').textContent = "Download Options";
+            const popupBody = document.getElementById('popupBody');
+            popupBody.innerHTML = `
+        <button id="settings-button" onclick="promptPWAInstall()">Download App (PWA)</button>
+        <br><br>
+        <button id="settings-button" onclick="downloadEmbedHTML()">Download HTML</button>
+        <br><br>
+        <button id="settings-button" onclick="document.getElementById('settings').click()" style="background-color: var(--surface-alt); text-align: center;">← Back to Settings</button>
+    `;
+        }
+
+        async function promptPWAInstall() {
+            if (deferredPrompt) {
+                // Show the install prompt
+                deferredPrompt.prompt();
+                // Wait for the user to respond to the prompt
+                const {
+                    outcome
+                } = await deferredPrompt.userChoice;
+                if (outcome === 'accepted') {
+                    console.log('User accepted the install prompt');
+                } else {
+                    console.log('User dismissed the install prompt');
+                }
+                // We can only use the prompt once, so clear it
+                deferredPrompt = null;
+            } else {
+                alert("App installation isn't available right now. You might have already installed it, or your browser doesn't support PWAs.");
+            }
+        }
+
+        async function downloadEmbedHTML() {
+            try {
+                // Fetch the file with a cache-buster to ensure we get the latest version
+                const response = await fetch('./embed.html?t=' + Date.now());
+                if (!response.ok) throw new Error("Network response was not ok");
+
+                const text = await response.text();
+                const blob = new Blob([text], {
+                    type: "text/html;charset=utf-8"
+                });
+                const url = URL.createObjectURL(blob);
+
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'Marty Games.html';
+                document.body.appendChild(a);
+                a.click();
+
+                // Clean up
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            } catch (error) {
+                console.error("Failed to download HTML:", error);
+                alert("Failed to download the HTML file.");
             }
         }
 
