@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    <!-- a buncha internal meta stuff -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marty Games</title>
@@ -36,7 +35,7 @@
     <meta name="twitter:description" content="Play awesome unbl*cked games like Geometry Dash and Gorilla Tag on Marty Games. Fast, free, no downloads—perfect for school or home.">
     <meta name="twitter:image" content="https://marty-games.github.io/preview.png">
 
-    <!-- base url -->
+
     <script>
         (async function() {
             let finalBaseUrl = "";
@@ -94,14 +93,14 @@
         })();
     </script>
 
-    <!-- prevents accidental tab closement -->
+
     <script>
         window.addEventListener('beforeunload', function(event) {
             event.preventDefault();
         });
     </script>
 
-    <!-- for future ads -->
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WCGV1617WM"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -136,7 +135,7 @@
         })();
     </script>
 
-    <!-- styling -->
+
     <style>
         :root {
             --bg-color: #f4f6f9;
@@ -784,7 +783,7 @@
     </style>
 </head>
 
-<!-- service worker -->
+
 <script>
     if ("serviceWorker" in navigator && location.hostname === "marty-games.github.io") {
         window.addEventListener("load", () => {
@@ -864,7 +863,7 @@
             <a href="#" onclick="showContact(); return false;">Contact</a>
             <a href="#" onclick="loadPrivacy(); return false;">Privacy Policy</a>
         </div>
-        <!-- view counter (temporary) -->
+
         <div class="footer-counter">
             <a href="https://www.hitwebcounter.com/" target="_blank" rel="noopener" title="Fast Counter">
                 <img src="https://www.hitwebcounter.com/counter/counter.php?page=21493765&amp;style=0036&amp;nbdigits=9&amp;type=page" alt="Fast Counter" decoding="async">
@@ -872,7 +871,7 @@
         </div>
     </footer>
 
-    <!-- main script -->
+
     <script>
         const container = document.getElementById('container');
         const zoneViewer = document.getElementById('zoneViewer');
@@ -883,33 +882,27 @@
 
         let deferredPrompt;
         window.addEventListener('beforeinstallprompt', (e) => {
-            // Prevent the mini-infobar from appearing on mobile
             e.preventDefault();
-            // Stash the event so it can be triggered later
             deferredPrompt = e;
         });
 
         document.addEventListener("DOMContentLoaded", () => {
-            // 1. Restore Dark/Light Mode and Meta Theme Color
             const savedTheme = localStorage.getItem("theme");
             const themeMeta = document.querySelector('meta[name="theme-color"]');
 
             if (savedTheme === "light") {
                 document.body.classList.remove("dark-mode");
-                if (themeMeta) themeMeta.setAttribute("content", "#ffffff"); // Light mode hex
+                if (themeMeta) themeMeta.setAttribute("content", "#ffffff");
             } else {
-                document.body.classList.add("dark-mode"); // default
-                if (themeMeta) themeMeta.setAttribute("content", "#14161d"); // Dark mode hex
+                document.body.classList.add("dark-mode");
+                if (themeMeta) themeMeta.setAttribute("content", "#14161d");
             }
 
-            // 2. Restore Tab Cloak Name
             const savedName = localStorage.getItem("cloakName");
             if (savedName) {
                 document.title = savedName;
-                // Optional: populate the input field if it's open
             }
 
-            // 3. Restore Tab Cloak Icon
             const savedIcon = localStorage.getItem("cloakIcon");
             if (savedIcon) {
                 const link = document.querySelector("link[rel~='icon']") || document.createElement("link");
@@ -919,7 +912,6 @@
             }
         });
 
-        // https://www.jsdelivr.com/tools/purge
         const zonesurls = [
             "https://cdn.jsdelivr.net/gh/marty-games/zones@main/zones.json",
             "https://fastly.jsdelivr.net/gh/marty-games/zones@main/zones.json",
@@ -938,9 +930,8 @@
         let zones = [];
         async function listZones() {
             let json = null;
-            let resolvedURL = ""; // Tracks the working URL configuration
+            let resolvedURL = "";
 
-            // Tier 1: Try checking the GitHub API for the latest commit SHA
             try {
                 const sharesponse = await fetch("https://api.github.com/repos/marty-games/zones/commits?t=" + Date.now());
                 if (sharesponse && sharesponse.status === 200) {
@@ -951,8 +942,6 @@
                         const response = await fetch(shaUrl);
                         if (response.ok) {
                             json = await response.json();
-                            // If running locally or on a domain that routes relative paths, 
-                            // we can fall back to using one of your standard CDN arrays for assets
                             resolvedURL = zonesurls[0];
                         }
                     }
@@ -961,21 +950,19 @@
                 console.warn("Tier 1 (GitHub API SHA strategy) failed, parsing backup...", error);
             }
 
-            // Tier 2: Backup strategy if SHA strategy failed
             if (!json) {
                 try {
                     console.log("Attempting Tier 2 backup: ../zones/zones.json");
                     const response = await fetch("../zones/zones.json?t=" + Date.now());
                     if (response.ok) {
                         json = await response.json();
-                        resolvedURL = zonesurls[0]; // Map fallback base reference
+                        resolvedURL = zonesurls[0];
                     }
                 } catch (error) {
                     console.warn("Tier 2 backup failed, parsing fallback array...", error);
                 }
             }
 
-            // Tier 3: Last resort fallback loops through zonesurls array from top to bottom
             if (!json) {
                 console.log("Attempting Tier 3 fallback checklist...");
                 for (const url of zonesurls) {
@@ -983,7 +970,7 @@
                         const response = await fetch(url + "?t=" + Date.now());
                         if (response.ok) {
                             json = await response.json();
-                            resolvedURL = url; // Remember which CDN worked!
+                            resolvedURL = url;
                             break;
                         }
                     } catch (error) {
@@ -992,9 +979,7 @@
                 }
             }
 
-            // Process data if any strategy succeeded
             if (json) {
-                // NEW: Handle primary domain override regardless of which Tier succeeded
                 if (window.location.hostname === "marty-games.github.io" && resolvedURL) {
                     const match = resolvedURL.match(/^https?:\/\/[^\/]+\/[^\/]+\/marty-games\//);
                     if (match) {
@@ -1007,7 +992,7 @@
 
                 try {
                     zones = json;
-                    zones[0].featured = true; // always gonna be the discord and chat
+                    zones[0].featured = true;
                     sortZones();
                     const search = new URLSearchParams(window.location.search);
                     const id = search.get('id');
@@ -1107,13 +1092,11 @@
                 placeholder.className = "icon-placeholder";
                 placeholder.textContent = "No icon";
 
-                // Fallback action if the network fails to load the image link
                 img.onerror = () => {
                     img.style.display = "none";
                     placeholder.style.display = "flex";
                 };
 
-                // Check if file.cover points to a valid asset configuration
                 const hasCover = file.cover && file.cover.trim() !== "" && file.cover !== "{COVER_URL}" && file.cover !== "../";
 
                 if (hasCover) {
@@ -1364,13 +1347,11 @@
             document.getElementById('popupOverlay').style.display = "flex";
 
             try {
-                // Fetch the encoded domains.json file
                 const response = await fetch('./domains.json?t=' + Date.now());
                 if (!response.ok) throw new Error("Could not retrieve domain list.");
 
                 const data = await response.json();
 
-                // Read from the "urls" array inside the object
                 const domains = data.urls;
 
                 if (!Array.isArray(domains) || domains.length === 0) {
@@ -1378,19 +1359,15 @@
                     return;
                 }
 
-                // Shuffle domains and grab up to 4 items
                 const shuffled = [...domains].sort(() => 0.5 - Math.random());
                 const selectedLinks = shuffled.slice(0, 4);
 
-                // Build a clean grid using your existing .settings-button styles
                 let htmlContent = '<div class="settings-grid" style="margin-top: 10px; display: flex; flex-direction: column; gap: 10px;">';
                 selectedLinks.forEach(url => {
-                    // Extract just the hostname cleanly for a shorter display name
                     let displayName = url;
                     try {
                         const parsed = new URL(url);
                         displayName = parsed.hostname;
-                        // Clean up common subdomains for a cleaner button look
                         if (displayName.startsWith('www.')) displayName = displayName.substring(4);
                     } catch (e) {}
 
@@ -1402,7 +1379,6 @@
                 });
                 htmlContent += '</div>';
 
-                // Add the Back to Settings button
                 htmlContent += '<br><button id="settings-button" onclick="document.getElementById(\'settings\').click()" style="background-color: var(--surface-alt); text-align: center;">← Back to Settings</button>';
 
                 popupBody.innerHTML = htmlContent;
@@ -1427,9 +1403,7 @@
 
         async function promptPWAInstall() {
             if (deferredPrompt) {
-                // Show the install prompt
                 deferredPrompt.prompt();
-                // Wait for the user to respond to the prompt
                 const {
                     outcome
                 } = await deferredPrompt.userChoice;
@@ -1438,7 +1412,6 @@
                 } else {
                     console.log('User dismissed the install prompt');
                 }
-                // We can only use the prompt once, so clear it
                 deferredPrompt = null;
             } else {
                 alert("App installation isn't available right now. You might have already installed it, or your browser doesn't support PWAs.");
@@ -1447,7 +1420,6 @@
 
         async function downloadEmbedHTML() {
             try {
-                // Fetch the file with a cache-buster to ensure we get the latest version
                 const response = await fetch('./embed.html?t=' + Date.now());
                 if (!response.ok) throw new Error("Network response was not ok");
 
@@ -1463,7 +1435,6 @@
                 document.body.appendChild(a);
                 a.click();
 
-                // Clean up
                 document.body.removeChild(a);
                 URL.revokeObjectURL(url);
             } catch (error) {
@@ -1476,26 +1447,19 @@
             document.getElementById('popupTitle').textContent = "Contact";
             const popupBody = document.getElementById('popupBody');
             popupBody.innerHTML = `
-        <div style="font-family: inherit; line-height: 1.6; color: var(--text-main); max-height: 60vh; overflow-y: auto; padding-right: 10px;">
-            <p style="margin-bottom: 1.25rem;">Have questions, feedback, or need help? You can reach out to us through the platforms below:</p>
-            
-            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
-                <div style="background-color: var(--surface-alt); border: 1px solid var(--border); padding: 0.85rem 1rem; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: space-between; gap: 1rem;">
-                    <div>
-                        <strong style="display: block; font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.03em;">Discord Server</strong>
-                        <a href="https://discord.gg/F8kc4FKjnw" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none; font-weight: 600; font-size: 0.95rem;">discord.gg/F8kc4FKjnw</a>
-                    </div>
-                </div>
+<div style="max-height: 60vh; overflow-y: auto; font-family: inherit; line-height: 1.6; color: var(--text-main); padding-right: 10px;">
 
-                <div style="background-color: var(--surface-alt); border: 1px solid var(--border); padding: 0.85rem 1rem; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: space-between; gap: 1rem;">
-                    <div>
-                        <strong style="display: block; font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.03em;">Email Address</strong>
-                        <a href="mailto:marty-games@outlook.com" style="color: var(--primary); text-decoration: none; font-weight: 600; font-size: 0.95rem;">[email protected]</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    `;
+    <p style="margin-bottom: 1.25rem;">Get in touch with us using the methods below:</p>
+    
+    <ul style="padding-left: 1.25rem; margin-bottom: 1.25rem; color: var(--text-muted);">
+        <li style="margin-bottom: 0.5rem;"><strong style="color: var(--text-main);">Discord:</strong> <a href="https://discord.gg/F8kc4FKjnw" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 600;">https://discord.gg/F8kc4FKjnw</a></li>
+        <li style="margin-bottom: 0.5rem;"><strong style="color: var(--text-main);">Email:</strong> <a href="mailto:marty-games@outlook.com" style="color: var(--primary); text-decoration: none; font-weight: 600;">marty-games@outlook.com</a></li>
+    </ul>
+
+    <p style="text-align: center; margin-top: 20px;">
+        <a href="https://discord.gg/F8kc4FKjnw" target="_blank" style="display: inline-block; background: #5865F2; color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: var(--radius-sm); font-weight: 600; box-shadow: var(--shadow-sm); transition: var(--transition);">Join Our Discord</a>
+    </p>
+</div>`;
             popupBody.contentEditable = false;
             document.getElementById('popupOverlay').style.display = "flex";
         }
@@ -1504,31 +1468,65 @@
             document.getElementById('popupTitle').textContent = "Credits";
             const popupBody = document.getElementById('popupBody');
             popupBody.innerHTML = `
-        <div style="font-family: inherit; line-height: 1.6; color: var(--text-main); max-height: 60vh; overflow-y: auto; padding-right: 10px;">
-            <div style="background-color: var(--surface-alt); border: 1px solid var(--border); padding: 1rem; border-radius: var(--radius-sm); margin-bottom: 1.25rem;">
-                <p style="margin: 0;">
-                    This site is a fork of gn-math, originally made by 
-                    <a href="https://github.com/genizy" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none; font-weight: 600;">Genizy</a>, 
-                    remade by <a href="https://github.com/martinmmcyt" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none; font-weight: 600;">Martin_MMC</a> 
-                    and <a href="https://github.com/tuffzinc" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none; font-weight: 600;">TuffZinc</a>.
-                </p>
-            </div>
-            
-            <p style="margin-bottom: 1rem;">
-                Other contributers also inclue 
-                <a href="https://github.com/Drag00nKnight999" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none; font-weight: 600;">Drag00nKnight999</a>, 
-                <a href="https://github.com/hawkstudio900" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none; font-weight: 600;">Hawk Studio</a>, 
-                <a href="https://github.com/KingShedew" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none; font-weight: 600;">KingShedew</a>, 
-                and others.
-            </p>
-            
-            <hr style="border: 0; border-top: 1px solid var(--border); margin: 1.25rem 0;">
-            
-            <p style="color: var(--text-muted); font-size: 0.9rem; font-style: italic; border-left: 3px solid var(--primary); padding-left: 10px;">
-                We do not claim ownership of these games. All games belong to their respective owners.
-            </p>
-        </div>
-    `;
+<div style="max-height: 60vh; overflow-y: auto; font-family: inherit; line-height: 1.6; color: var(--text-main); padding-right: 10px;">
+
+    <p style="margin-bottom: 1.25rem;">
+        This site is a fork of gn-math, originally made by 
+        <a href="https://github.com/genizy" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none; font-weight: 600;">Genizy</a>, 
+        remade by <a href="https://github.com/martinmmcyt" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none; font-weight: 600;">Martin_MMC</a> 
+        and <a href="https://github.com/tuffzinc" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none; font-weight: 600;">TuffZinc</a>.
+    </p>
+
+    <p style="margin-bottom: 1.25rem;">
+        Other contributors also include 
+        <a href="https://github.com/Drag00nKnight999" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none; font-weight: 600;">Drag00nKnight999</a>, 
+        <a href="https://github.com/hawkstudio900" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none; font-weight: 600;">Hawk Studio</a>, 
+        <a href="https://github.com/KingShedew" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none; font-weight: 600;">KingShedew</a>, 
+        and others.
+    </p>
+
+    <hr style="border: 0; border-top: 1px solid var(--border); margin: 15px 0;">
+
+    <p style="margin-bottom: 1.25rem; font-size: 0.9em; color: var(--text-muted);">
+        We do not claim ownership of these games. All games belong to their respective owners.
+    </p>
+</div>`;
+            popupBody.contentEditable = false;
+            document.getElementById('popupOverlay').style.display = "flex";
+        }
+
+        function loadDMCA() {
+            document.getElementById('popupTitle').textContent = "DMCA";
+            const popupBody = document.getElementById('popupBody');
+            popupBody.innerHTML = `
+<div style="max-height: 60vh; overflow-y: auto; font-family: inherit; line-height: 1.6; color: var(--text-main); padding-right: 10px;">
+    <h2 style="margin-top: 0; color: var(--primary); font-size: 1.3rem; font-weight: 700; letter-spacing: -0.02em;">DMCA</h2>
+    
+    <p style="margin-bottom: 1.25rem;">
+        If you own or have developed a game that is on <strong>Marty Games</strong> 
+        and would like it removed, please do one of the following:
+    </p>
+
+    <ol style="padding-left: 1.25rem; margin-bottom: 1.25rem; color: var(--text-muted);">
+        <li style="margin-bottom: 1rem;">
+            <strong style="color: var(--text-main);">
+                <a href="https://discord.gg/F8kc4FKjnw" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none; font-weight: 600;">Join the Discord</a>
+            </strong> 
+            and DM <strong>martin_mmc</strong> or ping me in a public channel.
+            <br><span style="font-size: 0.82em; color: var(--text-muted);">[INSTANT RESPONSE]</span>
+        </li>
+        <li style="margin-bottom: 1rem;">
+            <strong style="color: var(--text-main);">Email me at</strong> 
+            <a href="mailto:marty-games@outlook.com" style="color: var(--primary); text-decoration: none; font-weight: 600;">marty-games@outlook.com</a> 
+            with the subject starting with <code style="background: var(--surface-alt); padding: 0.2rem 0.4rem; border-radius: var(--radius-sm); color: var(--text-main);">!DMCA</code>.
+            <br><span style="font-size: 0.82em; color: var(--text-muted);">[DELAYED RESPONSE]</span>
+        </li>
+    </ol>
+
+    <p style="margin-bottom: 1.25rem; font-size: 0.9em; border-left: 3px solid var(--primary); padding-left: 10px; background: var(--surface-alt); padding: 10px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;">
+        <strong>Note:</strong> If you are going to do an email, please show proof that you own the game before I have to ask.
+    </p>
+</div>`;
             popupBody.contentEditable = false;
             document.getElementById('popupOverlay').style.display = "flex";
         }
@@ -1573,40 +1571,6 @@
             document.getElementById('popupOverlay').style.display = "flex";
         }
 
-        function loadDMCA() {
-            document.getElementById('popupTitle').textContent = "DMCA";
-            const popupBody = document.getElementById('popupBody');
-            popupBody.innerHTML = `
-        <div class="dmca-content" style="font-family: inherit; line-height: 1.6; color: var(--text-main);">
-            <p style="margin-bottom: 1.25rem;">
-                If you own or have developed a game that is on <strong style="color: var(--primary);">Marty Games</strong> 
-                and would like it removed, please do one of the following:
-            </p>
-            <ol style="padding-left: 1.25rem; margin-bottom: 1.25rem; display: flex; flex-direction: column; gap: 1rem;">
-                <li style="color: var(--text-muted);">
-                    <a href="https://discord.gg/F8kc4FKjnw" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #5865F2; color: white; padding: 0.4rem 0.8rem; text-decoration: none; border-radius: var(--radius-sm); font-weight: 600; margin-bottom: 0.25rem; font-size: 0.9rem;">
-                        Join the Discord
-                    </a> <span style="color: var(--text-main);">and DM <strong style="color: var(--primary);">martin_mmc</strong> or ping me in a public channel.</span>
-                    <br><small style="color: #2ea44f; font-weight: 700; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em;">[INSTANT RESPONSE]</small>
-                </li>
-                <li style="color: var(--text-muted);">
-                    <span style="color: var(--text-main);">Email me at</span> 
-                    <a href="mailto:marty-games@outlook.com" style="display: inline-block; background-color: var(--surface-color); color: var(--text-main); border: 1px solid var(--border); padding: 0.4rem 0.8rem; text-decoration: none; border-radius: var(--radius-sm); font-weight: 600; margin-bottom: 0.25rem; font-size: 0.9rem; transition: var(--transition);">
-                        [email protected]
-                    </a> 
-                    <span style="color: var(--text-main);">with the subject starting with <code style="background-color: var(--surface-alt); padding: 0.2rem 0.4rem; border-radius: 4px; font-family: monospace; border: 1px solid var(--border);">!DMCA</code>.</span>
-                    <br><small style="color: var(--text-muted); font-weight: 700; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em;">[DELAYED RESPONSE]</small>
-                </li>
-            </ol>
-            <p style="margin-top: 1.5rem; color: var(--text-muted); font-style: italic; font-size: 0.9rem; border-left: 3px solid var(--primary); padding-left: 0.75rem;">
-                If you are going to do an email, please show proof that you own the game before I have to ask.
-            </p>
-        </div>
-    `;
-            popupBody.contentEditable = false;
-            document.getElementById('popupOverlay').style.display = "flex";
-        }
-
         function openMartyAboutBlank() {
             const newWindow = window.open("about:blank", "_blank");
             if (!newWindow) {
@@ -1629,16 +1593,13 @@
         const schoolList = ["deledao", "goguardian", "lightspeed", "linewize", "securly", ".edu/"];
 
         function isBlockedDomain(url) {
-            // Safety check: ensure url is present and is a string
             if (!url || typeof url !== 'string') return false;
 
             try {
-                // Fallback to a dummy base if location.origin is invalid/null
                 const base = (location.origin && location.origin !== 'null') ? location.origin : 'https://localhost';
                 const domain = new URL(url, base).hostname + "/";
                 return schoolList.some(school => domain.includes(school));
             } catch (e) {
-                // If it still fails to parse, safely assume it's not a blocked school domain
                 console.warn("URL parsing failed:", e);
                 return false;
             }
