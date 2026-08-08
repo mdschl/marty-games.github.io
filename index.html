@@ -36,92 +36,62 @@
     <meta name="twitter:image" content="https://marty-games.github.io/preview.png">
 
 
-<script>
-    (async function() {
-        // Define all CDNs and classify them by their required URL structures
-        const cdnList = [
-            { url: "https://raw.githubusercontent.com/", type: "raw" },
-            { url: "https://raw.githack.com/", type: "raw" },
-            { url: "https://raw.gitmirror.com/", type: "raw" },
-            { url: "https://cdn.jsdelivr.net/", type: "@" },
-            { url: "https://esm.sh/", type: "@"},
-            { url: "https://cdn.staticdelivr.com/", type: "gh-slash" },
-            { url: "https://fastly.jsdelivr.net/", type: "@" },
-            { url: "https://gcore.jsdelivr.net/", type: "@" },
-            { url: "https://quantil.jsdelivr.net/", type: "@" },
-            { url: "https://originfastly.jsdelivr.net/", type: "@" },
-            { url: "https://testingcf.jsdelivr.net/", type: "@" },
-            { url: "https://cdn.statically.io/", type: "@" }
-        ];
+    <script>
+        (async function() {
+            let finalBaseUrl = "";
+            if (window.location.hostname === "marty-games.github.io") {
+                finalBaseUrl = "https://marty-games.github.io/";
+                console.log("Running on primary domain. Setting base directly.");
+            } else {
+                const fallbackUrls = [
+                    "https://cdn.jsdelivr.net/gh/",
+                    "https://fastly.jsdelivr.net/gh/",
+                    "https://gcore.jsdelivr.net/gh/",
+                    "https://testingcf.jsdelivr.net/gh/",
+                    "https://quantil.jsdelivr.net/gh/",
+                    "https://originfastly.jsdelivr.net/gh/",
+                    "https://esm.sh/gh/",
+                    "https://cdn.statically.io/gh/",
+                    "https://cdn.staticdelivr.com/gh/"
+                ];
 
-        // Global helper to construct the path based on CDN type classification
-        window.buildCdnUrl = function(cdn, username, repo, branch, filepath) {
-            if (cdn.type === "@") {
-                return `${cdn.url}gh/${username}/${repo}@${branch}/${filepath}`;
-            } else if (cdn.type === "gh-slash") {
-                return `${cdn.url}gh/${username}/${repo}/${branch}/${filepath}`;
-            } else if (cdn.type === "raw") {
-                return `${cdn.url}${username}/${repo}/${branch}/${filepath}`;
-            }
-        };
+                const pathSuffix = "marty-games/marty-games.github.io@main/";
+                let chosenBase = fallbackUrls[0];
 
-        // Export list to window so the zones function can use it later
-        window.cdnList = cdnList;
+                for (const url of fallbackUrls) {
+                    try {
+                        const controller = new AbortController();
+                        const timeoutId = setTimeout(() => controller.abort(), 2500);
 
-        let finalBaseUrl = "";
-        
-        if (window.location.hostname === "marty-games.github.io") {
-            finalBaseUrl = "https://marty-games.github.io/";
-            console.log("Running on primary domain. Setting base directly.");
-        } else {
-            let chosenUrl = "";
-            const username = "marty-games";
-            const repo = "marty-games.github.io";
-            const branch = "main";
-            
-            // Loop through CDNs until we find one that resolves successfully
-            for (const cdn of cdnList) {
-                try {
-                    const testUrl = window.buildCdnUrl(cdn, username, repo, branch, "index.html");
-                    const controller = new AbortController();
-                    const timeoutId = setTimeout(() => controller.abort(), 2500);
+                        const response = await fetch(url + pathSuffix + "index.html", {
+                            method: 'HEAD',
+                            mode: 'cors',
+                            signal: controller.signal
+                        });
 
-                    const response = await fetch(testUrl, {
-                        method: 'HEAD',
-                        mode: 'cors',
-                        signal: controller.signal
-                    });
-
-                    clearTimeout(timeoutId);
-                    if (response.ok) {
-                        // Keep the path structure but omit 'index.html' to establish the base directory
-                        chosenUrl = window.buildCdnUrl(cdn, username, repo, branch, "");
-                        console.log(`[Base Script] Chosen CDN type: ${cdn.type} - URL: ${cdn.url}`);
-                        break;
+                        clearTimeout(timeoutId);
+                        if (response.ok) {
+                            chosenBase = url;
+                            break;
+                        }
+                    } catch (e) {
+                        console.warn(`${url} failed, trying next fallback...`);
                     }
-                } catch (e) {
-                    console.warn(`[Base Script] ${cdn.url} failed, trying next fallback...`);
                 }
+                finalBaseUrl = chosenBase + pathSuffix;
             }
-            
-            // If all CDNs fail, fallback to the primary choice to prevent breaking outright
-            if (!chosenUrl) {
-                chosenUrl = window.buildCdnUrl(cdnList[0], username, repo, branch, "");
+
+            // Apply the base URL to the document
+            let base = document.querySelector("base") || document.createElement("base");
+            base.href = finalBaseUrl;
+
+            if (!document.querySelector("base")) {
+                document.head.prepend(base);
             }
-            finalBaseUrl = chosenUrl;
-        }
 
-        // Apply the base URL to the document
-        let base = document.querySelector("base") || document.createElement("base");
-        base.href = finalBaseUrl;
-
-        if (!document.querySelector("base")) {
-            document.head.prepend(base);
-        }
-
-        console.log("Base URL successfully set to: " + finalBaseUrl);
-    })();
-</script>
+            console.log("Base URL successfully set to: " + finalBaseUrl);
+        })();
+    </script>
 
 
     <script>
@@ -947,7 +917,10 @@
             "https://fastly.jsdelivr.net/gh/marty-games/zones@main/zones.json",
             "https://gcore.jsdelivr.net/gh/marty-games/zones@main/zones.json",
             "https://testingcf.jsdelivr.net/gh/marty-games/zones@main/zones.json",
-            "https://originfastly.jsdelivr.net/gh/marty-games/zones@main/zones.json"
+            "https://originfastly.jsdelivr.net/gh/marty-games/zones@main/zones.json",
+            "https://esm.sh/gh/marty-games/zones@main/zones.json",
+            "https://cdn.staticdelivr.com/gh/marty-games/zones@main/zones.json",
+            "https://cdn.statically.io/gh/marty-games/zones@main/zones.json"
         ];
         let zonesURL = zonesurls[Math.floor(Math.random() * zonesurls.length)];
         let coverURL = "../";
