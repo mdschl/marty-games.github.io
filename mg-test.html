@@ -38,8 +38,15 @@
 
     <script>
         (async function() {
-            // Define all CDNs and classify them by their required URL structures
             const cdnList = [{
+                    url: "https://raw.githack.com/",
+                    type: "raw"
+                },
+                {
+                    url: "https://raw.githubusercontent.com/",
+                    type: "raw"
+                },
+                {
                     url: "https://cdn.jsdelivr.net/",
                     type: "@"
                 },
@@ -72,14 +79,6 @@
                     type: "@"
                 },
                 {
-                    url: "https://raw.githubusercontent.com/",
-                    type: "raw"
-                },
-                {
-                    url: "https://raw.githack.com/",
-                    type: "raw"
-                },
-                {
                     url: "https://raw.gitmirror.com/",
                     type: "raw"
                 },
@@ -89,7 +88,6 @@
                 }
             ];
 
-            // Global helper to construct the path based on CDN type classification
             window.buildCdnUrl = function(cdn, username, repo, branch, filepath) {
                 if (cdn.type === "@") {
                     return `${cdn.url}gh/${username}/${repo}@${branch}/${filepath}`;
@@ -100,53 +98,42 @@
                 }
             };
 
-            // Export list to window so the zones function can use it later
             window.cdnList = cdnList;
 
-            let finalBaseUrl = "";
+            let chosenUrl = "";
+            const username = "marty-games";
+            const repo = "marty-games.github.io";
+            const branch = "main";
 
-            if (window.location.hostname === "marty-games.github.io") {
-                finalBaseUrl = "https://marty-games.github.io/";
-                console.log("Running on primary domain. Setting base directly.");
-            } else {
-                let chosenUrl = "";
-                const username = "marty-games";
-                const repo = "marty-games.github.io";
-                const branch = "main";
+            for (const cdn of cdnList) {
+                try {
+                    const testUrl = window.buildCdnUrl(cdn, username, repo, branch, "index.html");
+                    const controller = new AbortController();
+                    const timeoutId = setTimeout(() => controller.abort(), 2500);
 
-                // Loop through CDNs until we find one that resolves successfully
-                for (const cdn of cdnList) {
-                    try {
-                        const testUrl = window.buildCdnUrl(cdn, username, repo, branch, "index.html");
-                        const controller = new AbortController();
-                        const timeoutId = setTimeout(() => controller.abort(), 2500);
+                    const response = await fetch(testUrl, {
+                        method: 'HEAD',
+                        mode: 'cors',
+                        signal: controller.signal
+                    });
 
-                        const response = await fetch(testUrl, {
-                            method: 'HEAD',
-                            mode: 'cors',
-                            signal: controller.signal
-                        });
-
-                        clearTimeout(timeoutId);
-                        if (response.ok) {
-                            // Keep the path structure but omit 'index.html' to establish the base directory
-                            chosenUrl = window.buildCdnUrl(cdn, username, repo, branch, "");
-                            console.log(`[Base Script] Chosen CDN type: ${cdn.type} - URL: ${cdn.url}`);
-                            break;
-                        }
-                    } catch (e) {
-                        console.warn(`[Base Script] ${cdn.url} failed, trying next fallback...`);
+                    clearTimeout(timeoutId);
+                    if (response.ok) {
+                        chosenUrl = window.buildCdnUrl(cdn, username, repo, branch, "");
+                        console.log(`[Base Script] Chosen CDN type: ${cdn.type} - URL: ${cdn.url}`);
+                        break;
                     }
+                } catch (e) {
+                    console.warn(`[Base Script] ${cdn.url} failed, trying next fallback...`);
                 }
-
-                // If all CDNs fail, fallback to the primary choice to prevent breaking outright
-                if (!chosenUrl) {
-                    chosenUrl = window.buildCdnUrl(cdnList[0], username, repo, branch, "");
-                }
-                finalBaseUrl = chosenUrl;
             }
 
-            // Apply the base URL to the document
+            if (!chosenUrl) {
+                chosenUrl = window.buildCdnUrl(cdnList[0], username, repo, branch, "");
+            }
+
+            const finalBaseUrl = chosenUrl;
+
             let base = document.querySelector("base") || document.createElement("base");
             base.href = finalBaseUrl;
 
@@ -977,13 +964,56 @@
             }
         });
 
-        const zonesurls = [];
-        let zonesURL = zonesurls[Math.floor(Math.random() * zonesurls.length)];
-        let coverURL = "../";
-        let htmlURL = "../";
-        const jsdelivrURL = "https://gcore.jsdelivr.net/gh/marty-games/";
-        const githackURL = "https://raw.githack.com/marty-games/";
+        let selectedCdn = null;
         let zones = [];
+
+        // Helper to resolve zone HTML/launch URL
+        function getZoneUrl(zone) {
+            if (zone.url && !zone.repository) {
+                return zone.url;
+            }
+            const cdn = selectedCdn || (window.cdnList && window.cdnList[0]) || {
+                url: "https://cdn.jsdelivr.net/",
+                type: "@"
+            };
+            const username = zone.username || "marty-games";
+            const repo = zone.repository || "";
+            const branch = zone.branch || "main";
+            const htmlFile = zone.html || "index.html";
+            const filepath = zone.path ? `${zone.path}/${htmlFile}` : htmlFile;
+
+            if (typeof window.buildCdnUrl === "function") {
+                return window.buildCdnUrl(cdn, username, repo, branch, filepath);
+            }
+            return `${cdn.url}gh/${username}/${repo}@${branch}/${filepath}`;
+        }
+
+        // Helper to resolve zone Cover/Icon image URL
+        function getZoneCoverUrl(zone) {
+            if (zone.cover && (zone.cover.startsWith("http://") || zone.cover.startsWith("https://"))) {
+                return zone.cover;
+            }
+            const imgFile = zone.icon || zone.cover;
+            if (!imgFile) return "";
+            if (imgFile.startsWith("http://") || imgFile.startsWith("https://")) {
+                return imgFile;
+            }
+
+            const cdn = selectedCdn || (window.cdnList && window.cdnList[0]) || {
+                url: "https://cdn.jsdelivr.net/",
+                type: "@"
+            };
+            const username = zone.username || "marty-games";
+            const repo = zone.repository || "";
+            const branch = zone.branch || "main";
+            const filepath = zone.path ? `${zone.path}/${imgFile}` : imgFile;
+
+            if (typeof window.buildCdnUrl === "function") {
+                return window.buildCdnUrl(cdn, username, repo, branch, filepath);
+            }
+            return `${cdn.url}gh/${username}/${repo}@${branch}/${filepath}`;
+        }
+
         async function listZones() {
             let json = null;
             let resolvedItem = null;
@@ -991,11 +1021,15 @@
             const username = "marty-games";
             const repo = "zones";
             const branch = "main";
-            const filepath = "zones.json";
+            const filepath = "zones-main.json";
 
             // 1. Get CDN list from global window object or use local fallback array
             const cdnDefinitions = window.cdnList || [{
                     url: "https://raw.githack.com/",
+                    type: "raw"
+                },
+                {
+                    url: "https://raw.githubusercontent.com/",
                     type: "raw"
                 },
                 {
@@ -1030,11 +1064,6 @@
                     url: "https://testingcf.jsdelivr.net/",
                     type: "@"
                 },
-                {
-                    url: "https://raw.githubusercontent.com/",
-                    type: "raw"
-                },
-
                 {
                     url: "https://raw.gitmirror.com/",
                     type: "raw"
@@ -1072,6 +1101,7 @@
 
                     if (response.ok) {
                         json = await response.json();
+                        selectedCdn = cdn;
                         resolvedItem = {
                             url: fetchUrl,
                             cdn: cdn
@@ -1086,18 +1116,6 @@
 
             // 3. Render zones or display error message
             if (json) {
-                if (window.location.hostname === "marty-games.github.io" && resolvedItem) {
-                    let baseCdnDir = "";
-                    if (typeof window.buildCdnUrl === "function") {
-                        baseCdnDir = window.buildCdnUrl(resolvedItem.cdn, username, repo, branch, "");
-                    } else {
-                        baseCdnDir = resolvedItem.url.replace("zones.json", "");
-                    }
-                    htmlURL = baseCdnDir;
-                    coverURL = baseCdnDir;
-                    console.log("[Zone Loader] Bound asset URLs to CDN root: " + baseCdnDir);
-                }
-
                 try {
                     zones = json;
                     if (zones.length > 0) zones[0].featured = true;
@@ -1128,15 +1146,12 @@
 
         // Helper method to embed zones directly into the document frame
         function embedZone(zone) {
-            if (zone.url.startsWith("http")) {
+            if (zone.url && !zone.repository) {
                 window.open(zone.url, "_blank");
                 return;
             }
 
-            const url = zone.url
-                .replace("{GITHACK_URL}", githackURL)
-                .replace("{JSDELIVR_URL}", jsdelivrURL)
-                .replace("{HTML_URL}", htmlURL);
+            const url = getZoneUrl(zone);
 
             fetch(url + "?t=" + Date.now())
                 .then(response => response.text())
@@ -1206,14 +1221,11 @@
                     placeholder.style.display = "flex";
                 };
 
-                const hasCover = file.cover && file.cover.trim() !== "" && file.cover !== "{COVER_URL}" && file.cover !== "../";
+                const coverSrc = getZoneCoverUrl(file);
 
-                if (hasCover) {
+                if (coverSrc) {
                     placeholder.style.display = "none";
-                    img.dataset.src = file.cover
-                        .replace("{GITHACK_URL}", githackURL)
-                        .replace("{JSDELIVR_URL}", jsdelivrURL)
-                        .replace("{HTML_URL}", htmlURL);
+                    img.dataset.src = coverSrc;
                     img.alt = file.name;
                     img.loading = "lazy";
                     img.className = "lazy-zone-img";
@@ -1287,14 +1299,10 @@
         }
 
         function openZone(file) {
-            if (file.url.startsWith("http")) {
+            if (file.url && !file.repository) {
                 window.open(file.url, "_blank");
             } else {
-                const url = file.url
-                    .replace("{GITHACK_URL}", githackURL)
-                    .replace("{JSDELIVR_URL}", jsdelivrURL)
-                    .replace("{HTML_URL}", htmlURL)
-                    .replace("{COVER_URL}", coverURL);
+                const url = getZoneUrl(file);
                 fetch(url + "?t=" + Date.now()).then(response => response.text()).then(html => {
                     if (zoneFrame.contentDocument === null) {
                         zoneFrame = document.createElement("iframe");
@@ -1306,14 +1314,14 @@
                     zoneFrame.contentDocument.close();
                     document.getElementById('zoneName').textContent = file.name;
                     document.getElementById('zoneId').textContent = file.id;
-                    document.getElementById('zoneAuthor').textContent = "by " + file.author;
+                    document.getElementById('zoneAuthor').textContent = "by " + (file.author || "Unknown");
                     if (file.authorLink) {
                         document.getElementById('zoneAuthor').href = file.authorLink;
                     }
                     zoneViewer.style.display = "flex";
-                    const url = new URL(window.location);
-                    url.searchParams.set('id', file.id);
-                    history.pushState(null, '', url.toString());
+                    const newUrl = new URL(window.location);
+                    newUrl.searchParams.set('id', file.id);
+                    history.pushState(null, '', newUrl.toString());
                     zoneViewer.hidden = true;
                 }).catch(error => alert("Failed to load zone: " + error));
             }
@@ -1321,14 +1329,18 @@
 
         function aboutBlank() {
             const newWindow = window.open("about:blank", "_blank");
-            let zone = zones.find(zone => zone.id + '' === document.getElementById('zoneId').textContent).url.replace("{GITHACK_URL}", githackURL).replace("{JSDELIVR_URL}", jsdelivrURL).replace("{HTML_URL}", htmlURL);
-            fetch(zone + "?t=" + Date.now()).then(response => response.text()).then(html => {
+            const currentZoneId = document.getElementById('zoneId').textContent;
+            const zone = zones.find(z => String(z.id) === String(currentZoneId));
+            if (!zone) return;
+
+            const url = getZoneUrl(zone);
+            fetch(url + "?t=" + Date.now()).then(response => response.text()).then(html => {
                 if (newWindow) {
                     newWindow.document.open();
                     newWindow.document.write(html);
                     newWindow.document.close();
                 }
-            })
+            });
         }
 
         function closeZone() {
@@ -1341,25 +1353,24 @@
         }
 
         function downloadZone() {
-            let zone = zones.find(zone => zone.id + '' === document.getElementById('zoneId').textContent);
-            const url = zone.url
-                .replace("{GITHACK_URL}", githackURL)
-                .replace("{JSDELIVR_URL}", jsdelivrURL)
-                .replace("{HTML_URL}", htmlURL)
-                .replace("{COVER_URL}", coverURL);
+            const currentZoneId = document.getElementById('zoneId').textContent;
+            const zone = zones.find(z => String(z.id) === String(currentZoneId));
+            if (!zone) return;
+
+            const url = getZoneUrl(zone);
 
             fetch(url + "?t=" + Date.now()).then(res => res.text()).then(text => {
                 const blob = new Blob([text], {
                     type: "text/plain;charset=utf-8"
                 });
-                const url = URL.createObjectURL(blob);
+                const blobUrl = URL.createObjectURL(blob);
                 const a = document.createElement('a');
-                a.href = url;
+                a.href = blobUrl;
                 a.download = zone.name + ".html";
                 document.body.appendChild(a);
                 a.click();
                 document.body.removeChild(a);
-                URL.revokeObjectURL(url);
+                URL.revokeObjectURL(blobUrl);
             });
         }
 
@@ -1381,7 +1392,6 @@
             const isDark = document.body.classList.contains("dark-mode");
             localStorage.setItem("theme", isDark ? "dark" : "light");
 
-            // NEW: Update the theme-color meta tag on click
             const themeMeta = document.querySelector('meta[name="theme-color"]');
             if (themeMeta) {
                 themeMeta.setAttribute("content", isDark ? "#14161d" : "#ffffff");
