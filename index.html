@@ -63,10 +63,6 @@
     <script>
         (async function() {
             const cdnList = [{
-                    url: "https://raw.githack.com/",
-                    type: "raw"
-                },
-                {
                     url: "https://raw.githubusercontent.com/",
                     type: "raw"
                 },
@@ -77,6 +73,10 @@
                 {
                     url: "https://esm.sh/",
                     type: "@"
+                },
+                {
+                    url: "https://raw.githack.com/",
+                    type: "raw"
                 },
                 {
                     url: "https://cdn.staticdelivr.com/",
@@ -1049,10 +1049,6 @@
 
             // 1. Get CDN list from global window object or use local fallback array
             const cdnDefinitions = window.cdnList || [{
-                    url: "https://raw.githack.com/",
-                    type: "raw"
-                },
-                {
                     url: "https://raw.githubusercontent.com/",
                     type: "raw"
                 },
@@ -1063,6 +1059,10 @@
                 {
                     url: "https://esm.sh/",
                     type: "@"
+                },
+                {
+                    url: "https://raw.githack.com/",
+                    type: "raw"
                 },
                 {
                     url: "https://cdn.staticdelivr.com/",
