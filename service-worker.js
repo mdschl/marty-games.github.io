@@ -32,11 +32,21 @@ self.addEventListener("activate", event => {
 });
 
 self.addEventListener("fetch", event => {
+    if (event.request.method !== "GET") return;
+
     event.respondWith(
-        caches.match(event.request, {
-            ignoreSearch: true
-        }).then(response => {
-            return response || fetch(event.request);
+        caches.open(CACHE_NAME).then(async cache => {
+            const cachedResponse = await cache.match(event.request, { ignoreSearch: true });
+
+            const fetchPromise = fetch(event.request).then(networkResponse => {
+                if (networkResponse && networkResponse.ok) {
+                    cache.put(event.request, networkResponse.clone());
+                }
+                return networkResponse;
+            }).catch(() => {
+            });
+
+            return cachedResponse || fetchPromise;
         })
     );
 });
