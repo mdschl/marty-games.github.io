@@ -177,37 +177,6 @@
     </script>
 
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WCGV1617WM"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'G-WCGV1617WM');
-    </script>
-
-    <script>
-        (function() {
-            function signalGooglefcPresent() {
-                if (!window.frames['googlefcPresent']) {
-                    if (document.body) {
-                        const iframe = document.createElement('iframe');
-                        iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;';
-                        iframe.style.display = 'none';
-                        iframe.name = 'googlefcPresent';
-                        document.body.appendChild(iframe);
-                    } else {
-                        setTimeout(signalGooglefcPresent, 0);
-                    }
-                }
-            }
-            signalGooglefcPresent();
-        })();
-    </script>
-
-
     <style>
         :root {
             --bg-color: #f4f6f9;
@@ -967,6 +936,42 @@
         let selectedCdn = null;
         let zones = [];
 
+        function stripAds(html) {
+            try {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, "text/html");
+
+                const adSelectors = [
+                    'script[src*="googlesyndication"]',
+                    'script[src*="doubleclick"]',
+                    'script[src*="adsbygoogle"]',
+                    'script[src*="pagead"]',
+                    'script[src*="/gpt.js"]',
+                    'script[src*="google.js"]',
+                    'ins.adsbygoogle',
+                    '[id*="google_ads"]',
+                    '[id*="gpt_unit"]',
+                    '[id^="ad-"]',
+                    '[class*="adsbygoogle"]'
+                ];
+
+                adSelectors.forEach(sel => {
+                    doc.querySelectorAll(sel).forEach(el => el.remove());
+                });
+
+                doc.querySelectorAll('script:not([src])').forEach(el => {
+                    if (/adsbygoogle|googletag|doubleclick/i.test(el.textContent)) {
+                        el.remove();
+                    }
+                });
+
+                return "<!DOCTYPE html>" + doc.documentElement.outerHTML;
+            } catch (e) {
+                console.warn("Ad strip failed, using raw html", e);
+                return html;
+            }
+        }
+
         function getZoneUrl(zone) {
             if (zone.url && !zone.repository) {
                 return zone.url;
@@ -1149,7 +1154,8 @@
 
             fetch(url + "?t=" + Date.now())
                 .then(response => response.text())
-                .then(html => {
+                .then(rawHtml => {
+                    const html = stripAds(rawHtml);
                     document.documentElement.innerHTML = html;
                     const popup = document.createElement("div");
                     popup.style.cssText = "position:fixed;bottom:20px;right:20px;background-color:#cce5ff;color:#004085;padding:10px;border:1px solid #b8daff;border-radius:5px;box-shadow:0px 0px 10px rgba(0,0,0,0.1);font-family:Arial,sans-serif;";
@@ -1297,7 +1303,8 @@
                 window.open(file.url, "_blank");
             } else {
                 const url = getZoneUrl(file);
-                fetch(url + "?t=" + Date.now()).then(response => response.text()).then(html => {
+                fetch(url + "?t=" + Date.now()).then(response => response.text()).then(rawHtml => {
+                    const html = stripAds(rawHtml);
                     if (zoneFrame.contentDocument === null) {
                         zoneFrame = document.createElement("iframe");
                         zoneFrame.id = "zoneFrame";
@@ -1328,7 +1335,8 @@
             if (!zone) return;
 
             const url = getZoneUrl(zone);
-            fetch(url + "?t=" + Date.now()).then(response => response.text()).then(html => {
+            fetch(url + "?t=" + Date.now()).then(response => response.text()).then(rawHtml => {
+                const html = stripAds(rawHtml);
                 if (newWindow) {
                     newWindow.document.open();
                     newWindow.document.write(html);
